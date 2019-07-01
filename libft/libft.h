@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:24:59 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/01 10:55:24 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/01 16:54:49 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,5 +114,6 @@ int					ft_intlen(int n);
 char				*ft_strrev(char *str);
 char				*ft_strndup(const char *s1, size_t n);
 int					get_next_line(const int fd, char **line);
+void				ft_sort_int_tab(int *tab, unsigned int size);
 
 #endif
