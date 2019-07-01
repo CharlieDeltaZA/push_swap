@@ -6,10 +6,17 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/01 15:00:29 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/01 16:34:47 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
 // STUFF AND THINGS
+int		main(int ac, char **av)
+{
+	if (ac < 2)
+		write(1, "\n", 1);
+	else
+		//Yes
+}

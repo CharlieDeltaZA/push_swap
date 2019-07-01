@@ -1,0 +1,21 @@
+sa: swap a - swap the first 2 elements at the top of stacka. Do nothing if thereis only one or no elements).
+
+sb: swap b - swap the first 2 elements at the top of stackb. Do nothing if thereis only one or no elements).
+
+ss: sa and sb at the same time.
+
+pa: push a - take the first element at the top ofband put it at the top ofa. Donothing ifbis empty.
+
+pb: push b - take the first element at the top ofaand put it at the top ofb. Donothing ifais empty.
+
+ra: rotate a - shift up all elements of stackaby 1. The first element becomesthe last one.
+
+rb: rotate b - shift up all elements of stackbby 1. The first element becomesthe last one.
+
+rr: ra and rb at the same time.
+
+rra: reverse rotate a - shift down all elements of stackaby 1. The flast elementbecomes the first one.
+
+rrb: reverse rotate b - shift down all elements of stackbby 1. The flast elementbecomes the first one.
+
+rrr: rra and rrb at the same time.
