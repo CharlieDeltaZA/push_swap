@@ -21,9 +21,9 @@ SRC2 = sources_here_PushSwap
 
 all: $(LIB) $(NAME1) $(NAME2)
 
-$(LIB):
-	$(MAKE) -C ./libft
-	$(MAKE) -C ./libft clean
+$(LIB): relib cleanlib
+#	$(MAKE) -C ./libft
+#	$(MAKE) -C ./libft clean
 
 $(NAME1):
 	@echo "NAME1 TODO = Needs files"
@@ -44,3 +44,12 @@ fclean: clean
 #	/bin/rm -f $(NAME1) $(NAME2)
 
 re: fclean all
+
+relib:
+	make -C ./libft re
+
+cleanlib:
+	make -C ./libft clean
+
+fcleanlib: cleanlib
+	make -C ./libft fclean
