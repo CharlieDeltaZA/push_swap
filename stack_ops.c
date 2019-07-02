@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/02 14:53:25 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/02 15:40:28 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,28 @@ void		stack_push_tail(t_stack **head, int value)
 	}
 	else
 		*head = stack_create_node(value);
+}
+
+/*
+** Get the size of the stack
+*/
+
+size_t		stack_size(t_stack *head)
+{
+	//TODO
+	size_t	i;
+	t_stack	*list;
+
+	list = head;
+	i = 0;
+	if (list)
+	{
+		i = 1;
+		while (list->next)
+		{
+			list = list->next;
+			i++;
+		}
+	}
+	return (i);
 }
