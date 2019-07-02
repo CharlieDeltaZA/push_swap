@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/02 13:17:10 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/02 14:38:42 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void		stack_add(t_stack **head, t_stack *new)
 ** Create a new node with data supplied and return pointer to it
 */
 
-t_stack		*stack_create_node()
+t_stack		*stack_create_node(int value)
 {
 	//TODO
 	t_stack	*node;
@@ -54,7 +54,7 @@ t_stack		*stack_create_node()
 ** Create and add node to end of stack
 */
 
-void		stack_push_tail(t_stack **head, ...)
+void		stack_push_tail(t_stack **head, int value)
 {
 	t_stack	*node;
 
