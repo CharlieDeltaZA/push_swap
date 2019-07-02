@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/02 12:26:29 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/02 13:16:24 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,19 @@ t_stack		*stack_create_node()
 		node->next = NULL;
 	}
 	return (node);
+}
+
+void		stack_push_tail(t_stack **head, ...)
+{
+	t_stack	*node;
+
+	node = *head;
+	if (node)
+	{
+		while (node->next)
+			node = node->next;
+		node->next = stack_create_node();
+	}
+	else
+		*head = stack_create_node();
 }
