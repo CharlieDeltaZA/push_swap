@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/02 14:36:45 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/02 14:45:02 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		main(int ac, char **av)
 	int			i;
 	int			j;
 
-	*head = NULL;
+	head = NULL;
 	i = 2;
 	j = 1;
 	if (ac < 2)
@@ -36,9 +36,9 @@ int		main(int ac, char **av)
 		//Yes
 	{
 	//	head = stack_create_node();
-		while (i <= argc)
+		while (i <= ac)
 		{
-			stack = stack_push_tail(head, ft_atoi(av[i]));
+			stack_push_tail(head, ft_atoi(av[i]));
 			i++;
 		}
 	}
