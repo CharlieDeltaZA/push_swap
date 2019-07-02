@@ -5,7 +5,7 @@
 # Before compiling the programs "checker" & "push_swap"
 #
 
-LIB = libft.a
+LIB = libft
 NAME1 = checker
 NAME2 = push_swap
 CC = gcc
@@ -14,10 +14,10 @@ OPTIONS = -c -I.
 # Compile to .o or straight to exe?
 # Would need to explicity list all .o files then,
 # for each exe. Might be worth it.
+SRC1 = checker.c stack_ops.c                         #sources_here_Checker
+SRC2 = push_swap.c                                   #sources_here_PushSwap
 OBJ1 = *.o
 OBJ2 = *.o
-SRC1 = sources_here_Checker
-SRC2 = sources_here_PushSwap
 
 all: $(LIB) $(NAME1) $(NAME2)
 
