@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/02 13:16:24 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/02 13:17:10 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,10 @@ t_stack		*stack_create_node()
 	}
 	return (node);
 }
+
+/*
+** Create and add node to end of stack
+*/
 
 void		stack_push_tail(t_stack **head, ...)
 {
