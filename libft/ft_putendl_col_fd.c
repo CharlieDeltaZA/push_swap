@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   ft_putendl_col_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/02 10:12:51 by cdiogo           ###   ########.fr       */
+/*   Created: 2019/07/02 10:32:25 by cdiogo            #+#    #+#             */
+/*   Updated: 2019/07/02 10:32:31 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-// STUFF AND THINGS
-int		main(int ac, char **av)
+void	ft_putendl_col_fd(char *colour, char *str, int fd)
 {
-	if (ac < 2)
-//		exit ;
-		return (0);
-	else
-		//Yes
-
-	return (0);
+	ft_putstr_fd(colour, fd);
+	ft_putendl_fd(str, fd);
+	ft_putstr_fd(RESET, fd);
 }

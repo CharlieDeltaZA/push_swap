@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:24:59 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/01 16:54:49 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/02 10:25:53 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@
 # define TRUE 1
 # define FALSE 0
 # define BUFF_SIZE 42
+# define RESET "\033[00m"
+# define GREEN "\033[32m"
+# define BLUE "\033[34m"
+# define WHITE "\033[37m"
+# define RED "\033[31m"
+# define CYAN "\033[36m"
 
 /*
 ** Part 1
@@ -115,5 +121,9 @@ char				*ft_strrev(char *str);
 char				*ft_strndup(const char *s1, size_t n);
 int					get_next_line(const int fd, char **line);
 void				ft_sort_int_tab(int *tab, unsigned int size);
+void				ft_putendl_col_fd(char *colour, char *str, int fd);
+void				ft_putstr_col_fd(char *colour, char *str, int fd);
+void				ft_putnbr_col_fd(char *colour, int nbr, int fd);
+void				ft_putchar_col_fd(char *colour, int c, int fd);
 
 #endif
