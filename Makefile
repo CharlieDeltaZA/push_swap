@@ -14,6 +14,8 @@ OPTIONS = -c -I.
 # Compile to .o or straight to exe?
 # Would need to explicity list all .o files then,
 # for each exe. Might be worth it.
+SRC_DIR = ./srcs
+INCLUDES = ./includes
 SRC1 = checker.c stack_ops.c                         #sources_here_Checker
 SRC2 = push_swap.c                                   #sources_here_PushSwap
 OBJ1 = *.o
