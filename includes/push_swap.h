@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/03 12:47:22 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/03 16:19:27 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ void				stack_push_tail(t_stack **head, int value);
 void				sa(t_stack *stacka);
 void				sb(t_stack *stackb);
 void				ss(t_stack *stacka, t_stack *stackb);
-void				pa();
-void				pb();
+void				pa(t_stack *stacka, t_stack *stackb);
+void				pb(t_stack *stacka, t_stack *stackb);
 void				ra();
 void				rb();
 void				rr();
