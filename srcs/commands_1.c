@@ -6,11 +6,13 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/03 12:47:36 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/03 14:22:15 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+// IDEALLY PASSING THE HEAD TO EACH FUNCTION !
 
 /*
 ** sa: swap a - swap the first 2 elements at the top of stack a. Do nothing if
@@ -72,9 +74,13 @@ void	ss(t_stack *stacka, t_stack *stackb)
 ** a. Do nothing if b is empty.
 */
 
-void	pa()
+void	pa(t_stack *stacka, t_stack *stackb)
 {
 	//TODO
+	if (stackb != NULL)
+	{
+		
+	}
 }
 
 /*
@@ -82,7 +88,11 @@ void	pa()
 ** b. Do nothing if a is empty.
 */
 
-void	pb()
+void	pb(t_stack *stacka, t_stack *stackb)
 {
 	//TODO
+	if (stacka != NULL)
+	{
+
+	}
 }

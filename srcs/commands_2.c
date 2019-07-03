@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:56:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/03 11:08:38 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/03 14:36:59 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 void	ra()
 {
 	//TODO
+	// Put the first node in a temp node, make the 2nd node the new head, iterate
+	// to the last node, point that node.next to the temp node and make temp node.next to NULL
 }
 
 /*
@@ -30,6 +32,9 @@ void	ra()
 void	rb()
 {
 	//TODO
+	// Put the first node in a temp node, make the 2nd node the new head, iterate
+	// to the last node, point that node.next to the temp node and make temp node.next to NULL
+
 }
 
 /*
@@ -39,4 +44,5 @@ void	rb()
 void	rr()
 {
 	//TODO
+	// Call both functions
 }
