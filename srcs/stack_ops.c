@@ -6,11 +6,11 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/02 15:40:28 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/03 12:48:12 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 /*
 t_stack		stack_init(t_stack *a, int ac, char **av)
 {

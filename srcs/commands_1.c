@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/03 11:07:30 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/03 12:47:36 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,19 @@
 ** there is only one or no elements).
 */
 
-void	sa()
+void	sa(t_stack *stacka)
 {
 	//TODO
+	int		val1;
+	int		val2;
+
+	if (stacka->next != NULL)
+	{
+		val1 = stacka->value;
+		val2 = stacka->next->value;
+		stacka->next->value = val1;
+		stacka->value = val2;
+	}
 }
 
 /*
@@ -27,18 +37,34 @@ void	sa()
 ** there is only one or no elements).
 */
 
-void	sb()
+void	sb(t_stack *stackb)
 {
 	//TODO
+    int     val1;
+    int     val2;
+
+    if (stackb->next != NULL)
+    {
+        val1 = stackb->value;
+        val2 = stackb->next->value;
+        stackb->next->value = val1;
+        stackb->value = val2;
+    }
 }
 
 /*
 ** ss: sa and sb at the same time.
 */
 
-void	ss()
+void	ss(t_stack *stacka, t_stack *stackb)
 {
 	//TODO
+	// Have a safety check in here even tho each function already has one?
+	if (stacka->next != NULL && stackb->next != NULL)
+	{
+		sa(stacka);
+		sb(stackb);
+	}
 }
 
 /*
