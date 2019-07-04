@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/04 09:48:56 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/04 09:55:11 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ void		stack_add_head(t_stack **head, t_stack *node)
 {
 	//TODO
 //	t_stack	*node;
-	//t_stack	*tmp;
+	t_stack	*tmp;
 
-	//tmp = *head;
-	//tmp->prev = node;
+	tmp = *head;
+	tmp->prev = node;
 //	node = stack_create_node(value);
 	node->next = *head;
 	node->prev = NULL;
@@ -60,7 +60,7 @@ t_stack		*stack_create_node(int value)
 	{
 		node->value = value; //EDIT
 		node->next = NULL;
-//		node->prev = NULL; //Do I want to use DLL? 
+		node->prev = NULL; //Do I want to use DLL? 
 	}
 	return (node);
 }
@@ -79,10 +79,8 @@ void		stack_add_tail(t_stack **head, t_stack *node)
 		while (tmp->next)
 			tmp = tmp->next;
 		tmp->next = node;
-		//node->prev = tmp;
+		node->prev = tmp;
 	}
-//	else
-//		*head = stack_create_node(value);
 }
 
 /*
