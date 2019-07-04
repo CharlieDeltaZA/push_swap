@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/04 10:13:52 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/04 10:28:48 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,19 +57,33 @@ int		main(int ac, char **av)
 {
 	t_stack *a;
 	t_stack *b;
+	t_stack	*tmp;
+	t_stack	*tmp2;
 	int	i = 1;
 
 	if (ac < 3)
 		return (0);  //Too few args, program does nothing
 
 	a = stack_init(ac, av);
-
+	printf("------Before Edit--------\n");
 	//print for debug
+	tmp = stack_init(ac, av);
+
 	while (a)
 	{
 		printf("Node %d\nValue: %d\n", i, a->value);
 		i++;
 		a = a->next;
 	}
+	printf("------After Edit--------\n");
+	i = 1;
+	sa(tmp);
+	while (tmp)
+	{
+		printf("Node %d\nValue: %d\n", i, tmp->value);
+		i++;
+		tmp = tmp->next;
+	}
+
 	return (0);
 }
