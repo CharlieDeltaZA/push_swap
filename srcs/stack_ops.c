@@ -6,30 +6,44 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/03 12:48:12 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/04 09:48:56 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-/*
-t_stack		stack_init(t_stack *a, int ac, char **av)
-{
-//	t_stack	*tmp;
 
-//	add nodes to stack starting from the rear of the args
-//	Add them to head, starting from the back, basically.
+t_stack		*stack_init(int ac, char **av)
+{
+	t_stack	*head;
+	t_stack	*node;
+	size_t	i;
+
+	head = stack_create_node(ft_atoi(av[1]));
+	i = 1;
+	while (++i < ac)
+	{
+		node = stack_create_node(ft_atoi(av[i]));
+		stack_add_tail(&head, node);
+	}
+	return (head);
 }
 
-
-** Adds a new node to the beginning of an existing list. `*new` is the node to
-** add, `**head` is a pointer to the head of the list.
+/*
+** Creates & adds a new node to the beginning of an existing list
 */
 
-void		stack_add(t_stack **head, t_stack *new)
+void		stack_add_head(t_stack **head, t_stack *node)
 {
 	//TODO
-	new->next = *head;
-	*head = new;
+//	t_stack	*node;
+	//t_stack	*tmp;
+
+	//tmp = *head;
+	//tmp->prev = node;
+//	node = stack_create_node(value);
+	node->next = *head;
+	node->prev = NULL;
+	*head = node;
 }
 
 /*
@@ -38,7 +52,7 @@ void		stack_add(t_stack **head, t_stack *new)
 
 t_stack		*stack_create_node(int value)
 {
-	//TODO
+	//TODO -- Done?
 	t_stack	*node;
 
 	node = (t_stack*)malloc(sizeof(t_stack));
@@ -46,6 +60,7 @@ t_stack		*stack_create_node(int value)
 	{
 		node->value = value; //EDIT
 		node->next = NULL;
+//		node->prev = NULL; //Do I want to use DLL? 
 	}
 	return (node);
 }
@@ -54,19 +69,20 @@ t_stack		*stack_create_node(int value)
 ** Create and add node to end of stack
 */
 
-void		stack_push_tail(t_stack **head, int value)
+void		stack_add_tail(t_stack **head, t_stack *node)
 {
-	t_stack	*node;
+	t_stack	*tmp;
 
-	node = *head;
-	if (node)
+	tmp = *head;
+	if (tmp)
 	{
-		while (node->next)
-			node = node->next;
-		node->next = stack_create_node(value);
+		while (tmp->next)
+			tmp = tmp->next;
+		tmp->next = node;
+		//node->prev = tmp;
 	}
-	else
-		*head = stack_create_node(value);
+//	else
+//		*head = stack_create_node(value);
 }
 
 /*
@@ -75,20 +91,15 @@ void		stack_push_tail(t_stack **head, int value)
 
 size_t		stack_size(t_stack *head)
 {
-	//TODO
 	size_t	i;
 	t_stack	*list;
 
 	list = head;
 	i = 0;
-	if (list)
+	while (list->next)
 	{
-		i = 1;
-		while (list->next)
-		{
-			list = list->next;
-			i++;
-		}
+		i++;
+		list = list->next;
 	}
 	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/03 12:47:53 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/04 08:35:38 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 // STUFF AND THINGS
 int		main(int ac, char **av)
 {
-	t_stack		**head;
+	t_stack		*head;
 	t_stack		*stack;
 	t_stack		*tmp;
 	int			i;

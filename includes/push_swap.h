@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/03 16:19:27 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/04 09:52:50 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,15 @@ typedef struct		s_struct
 	struct s_struct	*prev;
 }					t_stack;
 
+/*
+** Stack Ops
+*/
+
 t_stack				*stack_create_node(int value); //TODO
-void				stack_add(t_stack **head, t_stack *new);
-t_stack				stack_init(t_stack *a, int ac, char **av); //????
-void				stack_push_tail(t_stack **head, int value);
+void				stack_add_head(t_stack **head, t_stack *node);
+t_stack				*stack_init(int ac, char **av); //????
+void				stack_add_tail(t_stack **head, t_stack *node);
+size_t				stack_size(t_stack *head);
 
 /*
 ** Operation Funcs
