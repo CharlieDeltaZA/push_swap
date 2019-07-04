@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/03 14:22:15 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/04 13:42:00 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 void	sa(t_stack *stacka)
 {
-	//TODO
+	//TODO -- Seems to work
 	int		val1;
 	int		val2;
 
@@ -41,7 +41,7 @@ void	sa(t_stack *stacka)
 
 void	sb(t_stack *stackb)
 {
-	//TODO
+	//TODO -- Should work because sa works
     int     val1;
     int     val2;
 
@@ -60,7 +60,7 @@ void	sb(t_stack *stackb)
 
 void	ss(t_stack *stacka, t_stack *stackb)
 {
-	//TODO
+	//TODO -- Probably works, just calls the other 2 funcs
 	// Have a safety check in here even tho each function already has one?
 	if (stacka->next != NULL && stackb->next != NULL)
 	{
@@ -91,8 +91,18 @@ void	pa(t_stack *stacka, t_stack *stackb)
 void	pb(t_stack *stacka, t_stack *stackb)
 {
 	//TODO
+	t_stack	*tmp;
+	t_stack	*a;
+
 	if (stacka != NULL)
 	{
-
+		tmp = stacka; //hold first node
+		a = stacka;
+		stacka = a->next; //new head
+		a->prev = NULL;
+		if (stackb == NULL)
+			stackb = tmp;	//if head is null we make the new head of B the node we push
+		else if (stackb != NULL) //else we push the node to the list and make it the head
+			stack_add_head(&stackb, tmp);
 	}
 }
