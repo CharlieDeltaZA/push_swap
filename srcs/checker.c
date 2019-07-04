@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/04 10:28:48 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/04 14:34:23 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,9 @@ int		main(int ac, char **av)
 	a = stack_init(ac, av);
 	printf("------Before Edit--------\n");
 	//print for debug
-	tmp = stack_init(ac, av);
+	tmp = a;
+	tmp2 = a;
+	b = stack_create_node(15);
 
 	while (a)
 	{
@@ -78,7 +80,8 @@ int		main(int ac, char **av)
 	printf("------After Edit--------\n");
 	i = 1;
 	sa(tmp);
-	while (tmp)
+	pb(tmp, b);
+	while (tmp2)
 	{
 		printf("Node %d\nValue: %d\n", i, tmp->value);
 		i++;
