@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/04 16:29:04 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/04 21:38:53 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ int		main(int ac, char **av)
 		i++;
 		a = a->next;
 	}
+	error_out(1);
 	printf("------After Edit--------\n");
 	i = 1;
 	//a = tmp;
@@ -89,6 +90,7 @@ int		main(int ac, char **av)
 		i++;
 		b = b->next;
 	}
-
+//	error_out(1);
+//	printf("Henlo");
 	return (0);
 }

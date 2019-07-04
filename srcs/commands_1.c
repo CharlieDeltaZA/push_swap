@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/04 16:27:27 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/04 21:38:48 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ void	pa(t_stack *stacka, t_stack *stackb)
 ** b. Do nothing if a is empty.
 */
 
-void	pb(t_stack **stacka, t_stack **stackb)
+void	pb(t_stack *stacka, t_stack *stackb)
 {
 	//TODO
 	t_stack	*tmp;

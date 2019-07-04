@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/04 16:29:13 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/04 21:38:54 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,11 @@ void				rr();
 void				rra();
 void				rrb();
 void				rrr();
+
+/*
+** Other Funcs
+*/
+
+void				error_out(int code);
 
 #endif
