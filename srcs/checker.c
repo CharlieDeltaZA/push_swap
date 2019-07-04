@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/04 08:35:38 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/04 10:13:52 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <stdio.h>
 
 // STUFF AND THINGS
-int		main(int ac, char **av)
+/*int		main(int ac, char **av)
 {
 	t_stack		*head;
 	t_stack		*stack;
@@ -50,5 +50,26 @@ int		main(int ac, char **av)
 		j++;
 	}
 
+	return (0);
+}*/
+
+int		main(int ac, char **av)
+{
+	t_stack *a;
+	t_stack *b;
+	int	i = 1;
+
+	if (ac < 3)
+		return (0);  //Too few args, program does nothing
+
+	a = stack_init(ac, av);
+
+	//print for debug
+	while (a)
+	{
+		printf("Node %d\nValue: %d\n", i, a->value);
+		i++;
+		a = a->next;
+	}
 	return (0);
 }
