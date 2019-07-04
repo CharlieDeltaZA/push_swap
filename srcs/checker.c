@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/04 16:11:59 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/04 16:29:04 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,13 +81,13 @@ int		main(int ac, char **av)
 	i = 1;
 	//a = tmp;
 	sa(tmp);
-	pb(tmp, b);
-	pb(tmp2, b);
-	while (tmp2)
+	pb(a, b);
+	pb(a, b);
+	while (b)
 	{
-		printf("Node %d\nValue: %d\n", i, tmp2->value);
+		printf("Node %d\nValue: %d\n", i, b->value);
 		i++;
-		tmp2 = tmp2->next;
+		b = b->next;
 	}
 
 	return (0);
