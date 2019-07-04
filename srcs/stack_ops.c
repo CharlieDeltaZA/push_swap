@@ -6,11 +6,15 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/04 09:55:11 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/04 09:58:39 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+/*
+** Initialize a list (stack) using values received during input -- THESE STILL NEED TO BE ERROR CHECKED !
+*/
 
 t_stack		*stack_init(int ac, char **av)
 {
@@ -29,7 +33,7 @@ t_stack		*stack_init(int ac, char **av)
 }
 
 /*
-** Creates & adds a new node to the beginning of an existing list
+** Add node to the beginning of an existing list
 */
 
 void		stack_add_head(t_stack **head, t_stack *node)
@@ -66,7 +70,7 @@ t_stack		*stack_create_node(int value)
 }
 
 /*
-** Create and add node to end of stack
+** Add node to the end of an existing list
 */
 
 void		stack_add_tail(t_stack **head, t_stack *node)
@@ -84,7 +88,7 @@ void		stack_add_tail(t_stack **head, t_stack *node)
 }
 
 /*
-** Get the size of the stack
+** Get the size of the list (stack)
 */
 
 size_t		stack_size(t_stack *head)
