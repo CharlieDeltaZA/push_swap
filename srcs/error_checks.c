@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/04 21:40:01 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/05 09:12:21 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,24 @@ void	error_out(int code)
 		ft_putendl_col_fd(RED, "Error: ?", 2);
 
 	ft_putstr_col_fd(RESET, "", 2);
+}
+
+int		err_duplicate()
+{
+	//TODO
+}
+
+int		err_max()
+{
+	//TODO
+}
+
+int		err_input()
+{
+	//TODO
+}
+
+int		err_ops()
+{
+	//TODO
 }
