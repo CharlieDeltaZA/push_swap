@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:24:59 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/02 10:25:53 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/05 09:48:37 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@
 # define MININT "-2147483648"
 # define TRUE 1
 # define FALSE 0
+
 # define BUFF_SIZE 42
+
 # define RESET "\033[00m"
 # define GREEN "\033[32m"
 # define BLUE "\033[34m"
@@ -125,5 +127,6 @@ void				ft_putendl_col_fd(char *colour, char *str, int fd);
 void				ft_putstr_col_fd(char *colour, char *str, int fd);
 void				ft_putnbr_col_fd(char *colour, int nbr, int fd);
 void				ft_putchar_col_fd(char *colour, int c, int fd);
+long				ft_atol(const char *str);
 
 #endif
