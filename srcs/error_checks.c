@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/05 09:41:36 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/05 12:33:27 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void	error_out(int code)
 		ft_putendl_col_fd(RED, "Error: Duplicate Inputs", 2);
 	if (code == 5)
 		ft_putendl_col_fd(RED, "Error: Incorrect Operation", 2);
+
+	exit(1);
 }
 
 int		err_duplicate()
@@ -38,10 +40,13 @@ int		err_duplicate()
 	//TODO
 }
 
-int		err_int(const char *str)
+void		err_int(const char *str)
 {
-	//TODO
-	//if ()
+	//TODO -- Done?
+	if (ft_atol(str) > 2147483647)
+		error_out(2);
+	if (ft_atol(str) < -2147483648)
+		error_out(3);
 }
 
 int		err_input()
