@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:24:59 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/05 09:48:37 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/05 13:53:45 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,5 +128,6 @@ void				ft_putstr_col_fd(char *colour, char *str, int fd);
 void				ft_putnbr_col_fd(char *colour, int nbr, int fd);
 void				ft_putchar_col_fd(char *colour, int c, int fd);
 long				ft_atol(const char *str);
+int					ft_str_is_numeric(const char *str);
 
 #endif

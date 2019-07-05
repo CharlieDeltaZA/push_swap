@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/05 13:25:53 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/05 13:37:42 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void				rrr();
 void				error_out(int code);
 void				err_duplicate();
 void				err_int(const char *str);
-void				err_input();
+void				err_input(const char *str);
 void				err_ops();
 
 #endif
