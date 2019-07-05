@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/05 13:25:32 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/05 14:58:38 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,11 @@ void	err_int(const char *str)
 		error_out(3);
 }
 
-void	err_input()
+void	err_input(const char *str)
 {
 	//TODO
+	if (ft_str_is_numeric(str) != 1)
+		error_out(1);
 }
 
 void	err_ops()
