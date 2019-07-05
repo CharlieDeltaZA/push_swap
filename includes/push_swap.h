@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/05 09:13:53 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/05 09:33:42 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
+# define FEELSGOODMAN 1
+# define FEELSBADMAN 0
 
 //TODO
 typedef struct		s_struct
@@ -55,7 +57,7 @@ void				rrr();
 
 void				error_out(int code);
 int					err_duplicate();
-int					err_max();
+int					err_int(const char *str);
 int					err_input();
 int					err_ops();
 
