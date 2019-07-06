@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 19:50:42 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 19:52:57 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int		main(int ac, char **av)
 	tmp2 = a;
 	b = stack_create_node(15);
 
-	if (check_sorted(a))
+	if (check_sorted(&a))
 		ft_putendl_col_fd(GREEN, "OK", 1);
 	else
 		ft_putendl_col_fd(YELLOW, "KO", 1);
