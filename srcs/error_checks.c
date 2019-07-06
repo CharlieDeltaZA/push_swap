@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 14:40:27 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 15:03:03 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ void	err_input(const char *str)
 ** appropriate error and exits if there are, otherwise calls the function
 ** to be run.
 */
-
+/*
 void	err_ops(char *op)
 {
 	//TODO
@@ -132,4 +132,4 @@ void	err_ops(char *op)
 		.
 	else
 		error_out(OPS);
-}
+}*/
