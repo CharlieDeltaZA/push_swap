@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 19:24:16 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 19:32:34 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@
 		
 	}
 
-	if (check_sorted() == 1)
+	if (check_sorted(&a) == 1)
 		ft_putendl_col_fd(GREEN, "OK", 1);
 	else
 		ft_putendl_col_fd(YELLOW, "KO", 1);
@@ -71,6 +71,10 @@ int		main(int ac, char **av)
 		i++;
 		a = a->next;
 	}
+	if (check_sorted(a) == 1)
+		ft_putendl_col_fd(GREEN, "OK", 1);
+	else
+		ft_putendl_col_fd(YELLOW, "KO", 1);
 //	error_out(1);
 	//err_ops("pa");
 	printf("------After Edit--------\n");
