@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 15:03:03 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 21:58:52 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	error_out(int code)
 	if (code == OPS)
 		ft_putendl_col_fd(RED, "Error: Incorrect Operation", 2);
 
-	exit(1);
+//	exit(1);
 }
 
 /*
@@ -104,10 +104,10 @@ void	err_input(const char *str)
 ** appropriate error and exits if there are, otherwise calls the function
 ** to be run.
 */
-/*
-void	err_ops(char *op)
+
+int		err_ops(char *op)
 {
-	//TODO
+	//TODO -- Done??
 	if (ft_strequ(op, "pa"))
 		return (1);
 	else if (ft_strequ(op, "pb"))
@@ -119,17 +119,18 @@ void	err_ops(char *op)
 	else if (ft_strequ(op, "ra"))
 		return (1);
 	else if (ft_strequ(op, "rb"))
-		.	
+		return (1);
 	else if (ft_strequ(op, "rra"))
-		.	
+		return (1);
 	else if (ft_strequ(op, "rrb"))
-		.
+		return (1);
 	else if (ft_strequ(op, "ss"))
-		.
+		return (1);
 	else if (ft_strequ(op, "rr"))
-		.
+		return (1);
 	else if (ft_strequ(op, "rrr"))
-		.
+		return (1);
 	else
 		error_out(OPS);
-}*/
+	return (0);
+}

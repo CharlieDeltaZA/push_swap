@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 19:52:57 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 21:58:04 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,13 @@
 	// GNL to read commands
 	while (get_next_line(0, &line))
 	{
-		
+		if (err_ops(line))
+			do_op(a, b, line);
+		else
+		{
+			free(line);
+		//	stack free
+		}
 	}
 
 	if (check_sorted(a))
@@ -53,6 +59,7 @@ int		main(int ac, char **av)
 	t_stack	*tmp;
 	t_stack	*tmp2;
 	int	i = 1;
+	char	*line;
 
 	if (ac < 3)
 		return (0);  //Too few args, program does nothing
@@ -69,6 +76,17 @@ int		main(int ac, char **av)
 		ft_putendl_col_fd(GREEN, "OK", 1);
 	else
 		ft_putendl_col_fd(YELLOW, "KO", 1);
+
+	while (get_next_line(0, &line))
+	{
+		if (err_ops(line))
+			do_op(a, b, line);
+		else
+		{
+			free(line);
+		//	stack free
+		}
+	}
 	while (a)
 	{
 		printf("Node %d\nValue: %d\n", i, a->value);
