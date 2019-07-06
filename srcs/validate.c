@@ -6,11 +6,17 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 15:08:38 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 15:55:23 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+/*
+** Perform error checking on the input values. Validate() calls 3 functions to
+** ensure that there are no duplicates, no invalid inputs and no breaches of
+** limits of an INT.
+*/
 
 void	validate(int ac, char **av)
 {
