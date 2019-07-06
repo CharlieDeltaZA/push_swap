@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 19:30:45 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 19:50:51 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	validate(int ac, char **av)
 
 int		check_sorted(t_stack *stack_a)
 {
-	//TODO -- Needs Test
+	//TODO -- Done
 	t_stack	*node;
 	node = stack_a;
 	while (node->next != NULL)
