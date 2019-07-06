@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/05 21:49:35 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 13:32:35 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include "../libft/libft.h"
 # define FEELSGOODMAN 1
 # define FEELSBADMAN 0
+
+# define INPUT 1
+# define MAXSIZE 2
+# define MINSIZE 3
+# define DUPE 4
+# define OPS 5
 
 //TODO
 typedef struct		s_struct

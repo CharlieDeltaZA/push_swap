@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 10:03:04 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 14:40:27 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,24 @@
 
 void	error_out(int code)
 {
-	if (code == 1)
+	if (code == INPUT)
 		ft_putendl_col_fd(RED, "Error: Inputs Invalid", 2);
-	if (code == 2)
+	if (code == MAXSIZE)
 		ft_putendl_col_fd(RED, "Error: Input Over INT_MAX", 2);
-	if (code == 3)
+	if (code == MINSIZE)
 		ft_putendl_col_fd(RED, "Error: Input Over INT_MIN", 2);
-	if (code == 4)
+	if (code == DUPE)
 		ft_putendl_col_fd(RED, "Error: Duplicate Inputs", 2);
-	if (code == 5)
+	if (code == OPS)
 		ft_putendl_col_fd(RED, "Error: Incorrect Operation", 2);
 
 	exit(1);
 }
+
+/*
+** Determines whether there are any duplicate numbers in the argv input,
+** and outputs an appropriate error and exits if there are.
+*/
 
 void	err_duplicate(int ac, char **av)
 {
@@ -59,7 +64,7 @@ void	err_duplicate(int ac, char **av)
 		while (k < ac)
 		{
 			if (args[i] == args[k])
-				error_out(4);
+				error_out(DUPE);
 			k++;
 		}
 		i++;
@@ -67,23 +72,64 @@ void	err_duplicate(int ac, char **av)
 	free(args);
 }
 
+/*
+** Determines whether there are any numbers that are greater than INT_MAX
+** or smaller than INT_MIN in the argv input and outputs an appropriate error
+** and exits if there are.
+*/
+
 void	err_int(const char *str)
 {
 	//TODO -- Done?
 	if (ft_atol(str) > 2147483647)
-		error_out(2);
+		error_out(MAXSIZE);
 	if (ft_atol(str) < -2147483648)
-		error_out(3);
+		error_out(MINSIZE);
 }
+
+/*
+** Determines whether there are any non-numeric inputs in the argv input string
+** and outputs an appropriate error and exits if there are.
+*/
 
 void	err_input(const char *str)
 {
 	//TODO -- Done?
 	if (ft_str_is_numeric(str) != 1)
-		error_out(1);
+		error_out(INPUT);
 }
 
-void	err_ops()
+/*
+** Determines whether the operations given are valid or not and outputs an
+** appropriate error and exits if there are, otherwise calls the function
+** to be run.
+*/
+
+void	err_ops(char *op)
 {
 	//TODO
+	if (ft_strequ(op, "pa"))
+		return (1);
+	else if (ft_strequ(op, "pb"))
+		return (1);
+	else if (ft_strequ(op, "sa"))
+		return (1);
+	else if (ft_strequ(op, "sb"))
+		return (1);
+	else if (ft_strequ(op, "ra"))
+		return (1);
+	else if (ft_strequ(op, "rb"))
+		.	
+	else if (ft_strequ(op, "rra"))
+		.	
+	else if (ft_strequ(op, "rrb"))
+		.
+	else if (ft_strequ(op, "ss"))
+		.
+	else if (ft_strequ(op, "rr"))
+		.
+	else if (ft_strequ(op, "rrr"))
+		.
+	else
+		error_out(OPS);
 }
