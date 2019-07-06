@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/05 22:10:40 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 10:03:04 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	error_out(int code)
 
 void	err_duplicate(int ac, char **av)
 {
-	//TODO
+	//TODO -- Done?
 	int		i;
 	int		j;
 	int		k;
@@ -46,13 +46,14 @@ void	err_duplicate(int ac, char **av)
 	i = 1;
 	j = 0;
 	args = (int*)malloc((ac - 1) * sizeof(int));
-	while (j++ < ac)
+	while (i < ac)
 	{
 		args[j] = ft_atoi(av[i]);
+		j++;
 		i++;
 	}
-	i =  2;
-	while (i < ac)
+	i = 0;
+	while (i < ac - 1)
 	{
 		k = i + 1;
 		while (k < ac)
