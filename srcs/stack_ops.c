@@ -6,14 +6,14 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 14:54:47 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 16:07:47 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
 /*
-** Initialize a list (stack) using values received during input -- THESE STILL NEED TO BE ERROR CHECKED !
+** Initialize a list (stack) using values received during input
 */
 
 t_stack		*stack_init(int ac, char **av)
@@ -22,9 +22,6 @@ t_stack		*stack_init(int ac, char **av)
 	t_stack	*node;
 	size_t	i;
 
-	// err_duplicate(ac, av);
-	// err_int(av[1]);
-	// err_input(av[1]);
 	head = stack_create_node(ft_atoi(av[1]));
 	i = 1;
 	while (++i < ac)

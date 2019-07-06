@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 15:02:28 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 16:13:12 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,25 @@
 	t_stack		*a;
 	t_stack		*b;
 //	t_stack		*tmp;
-	int			i;
-	int			j;
+//	int			i;
 	char		*line;
 
 	if (ac < 3)
 //	{
-//		ft_putstr_col_fd(RED, "Too few args!\n", 1);
+//		ft_putendl_col_fd(RED, "Too few args!", 1);
 		return (0);
 //	}
 	//things
-	
+	validate(ac, av);
+	a = stack_init(ac, av);
+	b = NULL;
+	// GNL to read commands
+	while (gnl....)
+
+	if (check_sorted() == 1)
+		ft_putendl_col_fd(GREEN, "OK", 1);
+	else
+		ft_putendl_col_fd(YELLOW, "KO", 1);
 	return (0);
 }*/
 

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 15:55:23 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 16:13:40 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,13 @@ void	validate(int ac, char **av)
 		i++;
 	}
 	err_duplicate(ac, av);
+}
+
+/*
+** Check whether the function has been sorted and print appropriate message
+*/
+
+int		check_sorted()
+{
+	//TODO
 }
