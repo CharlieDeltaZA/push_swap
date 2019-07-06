@@ -9,17 +9,18 @@ LIB = libft
 NAME1 = checker
 NAME2 = push_swap
 CC = gcc
-FLAGS = -Wall -Werror -Wextra
-OPTIONS = -c -I.
+FLAGS = -Wall -Werror -Wextra -c
 # Compile to .o or straight to exe?
 # Would need to explicity list all .o files then,
 # for each exe. Might be worth it.
-SRC_DIR = ./srcs
-INCLUDES = ./includes
-SRC1 = checker.c stack_ops.c                         #sources_here_Checker
+SRC_DIR = ./srcs/
+INCLUDES = ./includes/
+OPTIONS = -I./includes -I./libft
+SRC1 = $(SRC_DIR)checker.c $(SRC_DIR)stack_ops.c $(SRC_DIR)commands_*.c \
+					$(SRC_DIR)error_checks.c $(SRC_DIR)validate.c #sources_here_Checker
 SRC2 = push_swap.c                                   #sources_here_PushSwap
-OBJ1 = *.o
-OBJ2 = *.o
+OBJ1 = $(SRC1:.c=.o)
+OBJ2 = $(SRC2:.c=.o)
 
 all: $(LIB) $(NAME1) $(NAME2)
 
@@ -27,7 +28,7 @@ $(LIB): relib cleanlib
 #	$(MAKE) -C ./libft
 #	$(MAKE) -C ./libft clean
 
-$(NAME1):
+$(NAME1): 
 	@echo "NAME1 TODO = Needs files"
 #	$(CC) $(FLAGS) $(OPTIONS) $(SRC1)
 #	$(CC) -o $(NAME1) $(OBJ1)
@@ -48,10 +49,10 @@ fclean: clean
 re: fclean all
 
 relib:
-	make -C ./libft re
+	@$(MAKE) -C ./libft re
 
 cleanlib:
-	make -C ./libft clean
+	@$(MAKE) -C ./libft clean
 
 fcleanlib: cleanlib
-	make -C ./libft fclean
+	@$(MAKE) -C ./libft fclean

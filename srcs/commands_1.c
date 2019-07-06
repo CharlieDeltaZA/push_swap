@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 19:23:40 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 21:06:14 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,9 +77,19 @@ void	ss(t_stack *stack_a, t_stack *stack_b)
 void	pa(t_stack *stack_a, t_stack *stack_b)
 {
 	//TODO
+	t_stack	*tmp;
+	t_stack	*b;
+
 	if (stack_b != NULL)
 	{
-		
+		tmp = stack_b; //hold first node
+		b = stack_b;
+		stack_b = b->next; //new head
+		b->prev = NULL;
+		if (stack_a == NULL)
+			stack_a = tmp;	//if head is null we make the new head of B the node we push
+		else if (stack_a != NULL) //else we push the node to the list and make it the head
+			stack_add_head(&stack_a, tmp);
 	}
 }
 

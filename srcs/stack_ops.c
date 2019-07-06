@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 16:07:47 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 21:05:10 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_stack		*stack_init(int ac, char **av)
 {
 	t_stack	*head;
 	t_stack	*node;
-	size_t	i;
+	int	i;
 
 	head = stack_create_node(ft_atoi(av[1]));
 	i = 1;

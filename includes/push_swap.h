@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 19:52:46 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 21:42:18 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void				rr();
 void				rra();
 void				rrb();
 void				rrr();
+void				do_op(t_stack *stack_a, t_stack *stack_b, char **str);
 
 /*
 ** Other Funcs

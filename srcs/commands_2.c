@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:56:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/03 14:36:59 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 21:41:23 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,9 @@ void	rr()
 {
 	//TODO
 	// Call both functions
+}
+
+void	do_op(t_stack *stack_a, t_stack *stack_b, char **str)
+{
+	//TODO
 }
