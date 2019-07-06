@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 16:13:40 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 19:24:08 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,13 @@ void	validate(int ac, char **av)
 }
 
 /*
-** Check whether the function has been sorted and print appropriate message
+** Check whether the function has been sorted and return a value to allow
+** printing of an appropriate message.
 */
 
-int		check_sorted()
+int		check_sorted(t_stack *stack_a)
 {
 	//TODO
+	
+	return (FEELSGOODMAN); //sorted
 }

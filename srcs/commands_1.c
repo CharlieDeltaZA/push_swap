@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/04 21:38:48 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 19:23:40 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,18 @@
 ** there is only one or no elements).
 */
 
-void	sa(t_stack *stacka)
+void	sa(t_stack *stack_a)
 {
 	//TODO -- Seems to work
 	int		val1;
 	int		val2;
 
-	if (stacka->next != NULL)
+	if (stack_a->next != NULL)
 	{
-		val1 = stacka->value;
-		val2 = stacka->next->value;
-		stacka->next->value = val1;
-		stacka->value = val2;
+		val1 = stack_a->value;
+		val2 = stack_a->next->value;
+		stack_a->next->value = val1;
+		stack_a->value = val2;
 	}
 }
 
@@ -39,18 +39,18 @@ void	sa(t_stack *stacka)
 ** there is only one or no elements).
 */
 
-void	sb(t_stack *stackb)
+void	sb(t_stack *stack_b)
 {
 	//TODO -- Should work because sa works
     int     val1;
     int     val2;
 
-    if (stackb->next != NULL)
+    if (stack_b->next != NULL)
     {
-        val1 = stackb->value;
-        val2 = stackb->next->value;
-        stackb->next->value = val1;
-        stackb->value = val2;
+        val1 = stack_b->value;
+        val2 = stack_b->next->value;
+        stack_b->next->value = val1;
+        stack_b->value = val2;
     }
 }
 
@@ -58,14 +58,14 @@ void	sb(t_stack *stackb)
 ** ss: sa and sb at the same time.
 */
 
-void	ss(t_stack *stacka, t_stack *stackb)
+void	ss(t_stack *stack_a, t_stack *stack_b)
 {
 	//TODO -- Probably works, just calls the other 2 funcs
 	// Have a safety check in here even tho each function already has one?
-	if (stacka->next != NULL && stackb->next != NULL)
+	if (stack_a->next != NULL && stack_b->next != NULL)
 	{
-		sa(stacka);
-		sb(stackb);
+		sa(stack_a);
+		sb(stack_b);
 	}
 }
 
@@ -74,10 +74,10 @@ void	ss(t_stack *stacka, t_stack *stackb)
 ** a. Do nothing if b is empty.
 */
 
-void	pa(t_stack *stacka, t_stack *stackb)
+void	pa(t_stack *stack_a, t_stack *stack_b)
 {
 	//TODO
-	if (stackb != NULL)
+	if (stack_b != NULL)
 	{
 		
 	}
@@ -88,21 +88,21 @@ void	pa(t_stack *stacka, t_stack *stackb)
 ** b. Do nothing if a is empty.
 */
 
-void	pb(t_stack *stacka, t_stack *stackb)
+void	pb(t_stack *stack_a, t_stack *stack_b)
 {
 	//TODO
 	t_stack	*tmp;
 	t_stack	*a;
 
-	if (stacka != NULL)
+	if (stack_a != NULL)
 	{
-		tmp = stacka; //hold first node
-		a = stacka;
-		stacka = a->next; //new head
+		tmp = stack_a; //hold first node
+		a = stack_a;
+		stack_a = a->next; //new head
 		a->prev = NULL;
-		if (stackb == NULL)
-			stackb = tmp;	//if head is null we make the new head of B the node we push
-		else if (stackb != NULL) //else we push the node to the list and make it the head
-			stack_add_head(&stackb, tmp);
+		if (stack_b == NULL)
+			stack_b = tmp;	//if head is null we make the new head of B the node we push
+		else if (stack_b != NULL) //else we push the node to the list and make it the head
+			stack_add_head(&stack_b, tmp);
 	}
 }

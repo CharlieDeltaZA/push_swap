@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 16:13:12 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/06 19:24:16 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,10 @@
 	a = stack_init(ac, av);
 	b = NULL;
 	// GNL to read commands
-	while (gnl....)
+	while (get_next_line(0, &line))
+	{
+		
+	}
 
 	if (check_sorted() == 1)
 		ft_putendl_col_fd(GREEN, "OK", 1);
