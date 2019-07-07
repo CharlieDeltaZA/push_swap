@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 11:12:40 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 11:25:17 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,23 @@ int		check_sorted(t_stack **stack_a, t_stack **stack_b)
 		node = node->next;
 	}
 	return (FEELSGOODMAN); //sorted
+}
+
+/*
+** Get the size of the list (stack)
+*/
+
+size_t		stack_size(t_stack **head)
+{
+	size_t	i;
+	t_stack	*list;
+
+	list = *head;
+	i = 0;
+	while (list->next)
+	{
+		i++;
+		list = list->next;
+	}
+	return (i);
 }

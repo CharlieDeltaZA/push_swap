@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 11:08:12 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 11:25:09 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,23 +85,4 @@ void		stack_add_tail(t_stack **head, t_stack *node)
 		tmp->next = node;
 		node->prev = tmp;
 	}
-}
-
-/*
-** Get the size of the list (stack)
-*/
-
-size_t		stack_size(t_stack **head)
-{
-	size_t	i;
-	t_stack	*list;
-
-	list = *head;
-	i = 0;
-	while (list->next)
-	{
-		i++;
-		list = list->next;
-	}
-	return (i);
 }
