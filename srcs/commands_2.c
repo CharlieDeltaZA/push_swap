@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:56:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 16:37:17 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 19:45:40 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,9 +85,9 @@ void	do_op(t_stack **stack_a, t_stack **stack_b, char *str)
 	else if (ft_strequ(str, "rb"))
 		rb(stack_b);
 	else if (ft_strequ(str, "rra"))
-		rra();
+		rra(stack_a);
 	else if (ft_strequ(str, "rrb"))
-		rrb();
+		rrb(stack_b);
 	else if (ft_strequ(str, "ss"))
 		ss(stack_a, stack_b);
 	else if (ft_strequ(str, "rr"))

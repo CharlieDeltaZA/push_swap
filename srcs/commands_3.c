@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:58:45 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/03 14:42:34 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 19:46:19 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,24 @@
 ** element becomes the first one.
 */
 
-void	rra()
+void	rra(t_stack **stack_a)
 {
-	//TODO
+	//TODO -- Seems to work, might need some protection
 	// Store last node in temp, make 2nd last node point to NULL, make temp node new head
+	t_stack	*last;
+	t_stack	*second_last;
+
+	last = *stack_a;
+	second_last = NULL;
+	while (last->next != NULL)
+	{
+		second_last = last;
+		last = last->next;
+	}
+	second_last->next = NULL;
+	last->prev = NULL;
+	last->next = *stack_a;
+	*stack_a = last;
 }
 
 /*
@@ -28,10 +42,24 @@ void	rra()
 ** element becomes the first one.
 */
 
-void	rrb()
+void	rrb(t_stack **stack_b)
 {
-	//TODO
+	//TODO -- Seems to work, might need some protection
 	// Store last node in temp, make 2nd last node point to NULL, make temp node new head
+	t_stack	*last;
+	t_stack	*second_last;
+
+	last = *stack_b;
+	second_last = NULL;
+	while (last->next != NULL)
+	{
+		second_last = last;
+		last = last->next;
+	}
+	second_last->next = NULL;
+	last->prev = NULL;
+	last->next = *stack_b;
+	*stack_b = last;
 }
 
 /*

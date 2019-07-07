@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 16:19:34 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 19:44:23 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ void				pb(t_stack **stack_a, t_stack **stack_b);
 void				ra(t_stack **stack_a);
 void				rb(t_stack **stack_b);
 void				rr();
-void				rra();
-void				rrb();
+void				rra(t_stack **stack_a);
+void				rrb(t_stack **stack_b);
 void				rrr();
 void				do_op(t_stack **stack_a, t_stack **stack_b, char *str);
 
