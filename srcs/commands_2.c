@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:56:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 15:40:04 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 16:37:17 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,22 @@
 ** becomes the last one.
 */
 
-void	ra()
+void	ra(t_stack **stack_a)
 {
-	//TODO
+	//TODO -- Seems to work, might need some protection
 	// Put the first node in a temp node, make the 2nd node the new head, iterate
 	// to the last node, point that node.next to the temp node and make temp node.next to NULL
+	t_stack	*first;
+	t_stack	*last;
+
+	first = *stack_a;
+	last = *stack_a;
+	while (last->next != NULL)
+		last = last->next;
+	*stack_a = first->next;
+	first->next = NULL;
+	last->next = first;
+	first->prev = last;
 }
 
 /*
@@ -29,12 +40,22 @@ void	ra()
 ** becomes the last one.
 */
 
-void	rb()
+void	rb(t_stack **stack_b)
 {
-	//TODO
+	//TODO -- Seems to work, might need some protection
 	// Put the first node in a temp node, make the 2nd node the new head, iterate
 	// to the last node, point that node.next to the temp node and make temp node.next to NULL
+	t_stack	*first;
+	t_stack	*last;
 
+	first = *stack_b;
+	last = *stack_b;
+	while (last->next != NULL)
+		last = last->next;
+	*stack_b = first->next;
+	first->next = NULL;
+	last->next = first;
+	first->prev = last;
 }
 
 /*
@@ -60,9 +81,9 @@ void	do_op(t_stack **stack_a, t_stack **stack_b, char *str)
 	else if (ft_strequ(str, "sb"))
 		sb(stack_b);
 	else if (ft_strequ(str, "ra"))
-		ra();
+		ra(stack_a);
 	else if (ft_strequ(str, "rb"))
-		rb();
+		rb(stack_b);
 	else if (ft_strequ(str, "rra"))
 		rra();
 	else if (ft_strequ(str, "rrb"))

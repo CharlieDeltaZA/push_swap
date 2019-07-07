@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 15:24:23 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 16:35:35 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,26 +72,26 @@ int		main(int ac, char **av)
 	tmp2 = a;
 	b = stack_create_node(15);
 
-	if (check_sorted(&a))
-		ft_putendl_col_fd(GREEN, "OK", 1);
-	else
-		ft_putendl_col_fd(YELLOW, "KO", 1);
+	// if (check_sorted(&a))
+	// 	ft_putendl_col_fd(GREEN, "OK", 1);
+	// else
+	// 	ft_putendl_col_fd(YELLOW, "KO", 1);
 
-	while (get_next_line(0, &line))
+	// while (get_next_line(0, &line))
+	// {
+	// 	if (err_ops(line))
+	// 		do_op(a, b, line);
+	// 	else
+	// 	{
+	// 		free(line);
+	// 	//	stack free
+	// 	}
+	// }
+	while (tmp)
 	{
-		if (err_ops(line))
-			do_op(a, b, line);
-		else
-		{
-			free(line);
-		//	stack free
-		}
-	}
-	while (a)
-	{
-		printf("Node %d\nValue: %d\n", i, a->value);
+		printf("Node %d\nValue: %d\n", i, tmp->value);
 		i++;
-		a = a->next;
+		tmp = tmp->next;
 	}
 	// if (check_sorted(a) == 1)
 	// 	ft_putendl_col_fd(GREEN, "OK", 1);
@@ -102,9 +102,17 @@ int		main(int ac, char **av)
 	printf("------After Edit--------\n");
 	i = 1;
 	//a = tmp;
-	sa(tmp);
-	pb(a, b);
-	pb(a, b);
+	ra(&tmp2);
+	while (tmp2)
+	{
+		printf("Node %d\nValue: %d\n", i, tmp2->value);
+		i++;
+		tmp2 = tmp2->next;
+	}
+	//pb(a, b);
+	//pb(a, b);
+	i = 1;
+	printf("-----B------\n");
 	while (b)
 	{
 		printf("Node %d\nValue: %d\n", i, b->value);

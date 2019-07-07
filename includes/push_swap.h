@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 15:36:34 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 16:19:34 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,13 @@ void				sb(t_stack **stack_b);
 void				ss(t_stack **stack_a, t_stack **stack_b);
 void				pa(t_stack **stack_a, t_stack **stack_b);
 void				pb(t_stack **stack_a, t_stack **stack_b);
-void				ra();
-void				rb();
+void				ra(t_stack **stack_a);
+void				rb(t_stack **stack_b);
 void				rr();
 void				rra();
 void				rrb();
 void				rrr();
-void				do_op(t_stack *stack_a, t_stack *stack_b, char *str);
+void				do_op(t_stack **stack_a, t_stack **stack_b, char *str);
 
 /*
 ** Other Funcs
@@ -74,6 +74,6 @@ int					err_ops(char *op);
 
 void				validate(int ac, char **av);
 int					check_sorted(t_stack **stack_a, t_stack **stack_b);
-size_t				stack_size(t_stack *head);
+size_t				stack_size(t_stack **head);
 
 #endif

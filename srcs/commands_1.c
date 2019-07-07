@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 15:51:56 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 16:04:57 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ void	sa(t_stack **stack_a)
 {
 	//TODO -- Seems to work
 	int		val1;
-	int		val2;
+//	int		val2;
 
-	if (stack_a->next != NULL)
+	if ((*stack_a)->next != NULL)
 	{
-		val1 = stack_a->value;
-		val2 = stack_a->next->value;
-		stack_a->next->value = val1;
-		stack_a->value = val2;
+	//	val1 = (*stack_a)->value;
+		val1 = (*stack_a)->next->value;
+		(*stack_a)->next->value = (*stack_a)->value;
+		(*stack_a)->value = val1;
 	}
 }
 
@@ -43,15 +43,15 @@ void	sb(t_stack **stack_b)
 {
 	//TODO -- Should work because sa works
     int     val1;
-    int     val2;
+//   int     val2;
 
-    if (stack_b->next != NULL)
-    {
-        val1 = stack_b->value;
-        val2 = stack_b->next->value;
-        stack_b->next->value = val1;
-        stack_b->value = val2;
-    }
+	if ((*stack_b)->next != NULL)
+	{
+	//	val1 = stack_b->value;
+		val1 = (*stack_b)->next->value;
+		(*stack_b)->next->value = (*stack_b)->value;
+		(*stack_b)->value = val1;
+	}
 }
 
 /*
@@ -82,14 +82,14 @@ void	pa(t_stack **stack_a, t_stack **stack_b)
 
 	if (stack_b != NULL)
 	{
-		tmp = stack_b; //hold first node
-		b = stack_b;
-		stack_b = b->next; //new head
+		tmp = *stack_b; //hold first node
+		b = *stack_b;
+		stack_b = &b->next; //new head
 		b->prev = NULL;
 		if (stack_a == NULL)
-			stack_a = tmp;	//if head is null we make the new head of B the node we push
+			stack_a = &tmp;	//if head is null we make the new head of B the node we push
 		else if (stack_a != NULL) //else we push the node to the list and make it the head
-			stack_add_head(&stack_a, tmp);
+			stack_add_head(stack_a, tmp);
 	}
 }
 
@@ -106,13 +106,13 @@ void	pb(t_stack **stack_a, t_stack **stack_b)
 
 	if (stack_a != NULL)
 	{
-		tmp = stack_a; //hold first node
-		a = stack_a;
-		stack_a = a->next; //new head
+		tmp = *stack_a; //hold first node
+		a = *stack_a;
+		stack_a = &a->next; //new head
 		a->prev = NULL;
 		if (stack_b == NULL)
-			stack_b = tmp;	//if head is null we make the new head of B the node we push
+			stack_b = &tmp;	//if head is null we make the new head of B the node we push
 		else if (stack_b != NULL) //else we push the node to the list and make it the head
-			stack_add_head(&stack_b, tmp);
+			stack_add_head(stack_b, tmp);
 	}
 }
