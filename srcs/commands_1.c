@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 16:04:57 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 20:25:04 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	ss(t_stack **stack_a, t_stack **stack_b)
 
 void	pa(t_stack **stack_a, t_stack **stack_b)
 {
-	//TODO
+	//TODO -- Done?
 	t_stack	*tmp;
 	t_stack	*b;
 
@@ -100,7 +100,7 @@ void	pa(t_stack **stack_a, t_stack **stack_b)
 
 void	pb(t_stack **stack_a, t_stack **stack_b)
 {
-	//TODO
+	//TODO -- Done?
 	t_stack	*tmp;
 	t_stack	*a;
 

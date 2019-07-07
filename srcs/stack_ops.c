@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 11:25:09 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 20:26:28 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 t_stack		*stack_init(int ac, char **av)
 {
+	//TODO -- Done?
 	t_stack	*head;
 	t_stack	*node;
 	int	i;
@@ -38,7 +39,7 @@ t_stack		*stack_init(int ac, char **av)
 
 void		stack_add_head(t_stack **head, t_stack *node)
 {
-	//TODO
+	//TODO -- Done?
 //	t_stack	*node;
 	t_stack	*tmp;
 
@@ -75,6 +76,7 @@ t_stack		*stack_create_node(int value)
 
 void		stack_add_tail(t_stack **head, t_stack *node)
 {
+	//TODO -- Done?
 	t_stack	*tmp;
 
 	tmp = *head;
@@ -85,4 +87,24 @@ void		stack_add_tail(t_stack **head, t_stack *node)
 		tmp->next = node;
 		node->prev = tmp;
 	}
+}
+
+/*
+** Frees the stack pointed to by **head
+*/
+
+void		free_stack(t_stack **head)
+{
+	//TODO -- Done?
+	t_stack	*current;
+	t_stack	*next;
+
+	current = *head;
+	while (current != NULL)
+	{
+		next = current->next;
+		free(current);
+		current = next;
+	}
+	*head = NULL;
 }

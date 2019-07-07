@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 19:44:23 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 20:21:54 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ typedef struct		s_struct
 ** Stack Ops
 */
 
-t_stack				*stack_create_node(int value); //TODO
+t_stack				*stack_create_node(int value);
 void				stack_add_head(t_stack **head, t_stack *node);
-t_stack				*stack_init(int ac, char **av); //????
+t_stack				*stack_init(int ac, char **av);
 void				stack_add_tail(t_stack **head, t_stack *node);
-//free_stack
+void				free_stack(t_stack **head);
 
 /*
 ** Operation Funcs
@@ -52,10 +52,10 @@ void				pa(t_stack **stack_a, t_stack **stack_b);
 void				pb(t_stack **stack_a, t_stack **stack_b);
 void				ra(t_stack **stack_a);
 void				rb(t_stack **stack_b);
-void				rr();
+void				rr(t_stack **stack_a, t_stack **stack_b);
 void				rra(t_stack **stack_a);
 void				rrb(t_stack **stack_b);
-void				rrr();
+void				rrr(t_stack **stack_a, t_stack **stack_b);
 void				do_op(t_stack **stack_a, t_stack **stack_b, char *str);
 
 /*

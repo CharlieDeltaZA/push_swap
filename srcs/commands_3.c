@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:58:45 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 19:46:19 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 20:25:13 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,10 @@ void	rrb(t_stack **stack_b)
 ** rrr: rra and rrb at the same time.
 */
 
-void	rrr()
+void	rrr(t_stack **stack_a, t_stack **stack_b)
 {
-	//TODO
-	// Call both at ones
+	//TODO -- Done?
+	// Call both at once
+	rra(stack_a);
+	rrb(stack_b);
 }
