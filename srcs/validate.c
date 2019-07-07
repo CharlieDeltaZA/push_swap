@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 11:09:39 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 11:12:40 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	validate(int ac, char **av)
 ** printing of an appropriate message.
 */
 
-int		check_sorted(t_stack **stack_a)
+int		check_sorted(t_stack **stack_a, t_stack **stack_b)
 {
 	//TODO -- Done
 	t_stack	*node;

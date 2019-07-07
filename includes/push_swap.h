@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 21:53:54 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 11:10:54 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,6 @@ void				err_int(const char *str);
 void				err_input(const char *str);
 int					err_ops(char *op);
 void				validate(int ac, char **av);
-int					check_sorted(t_stack **stack_a);
+int					check_sorted(t_stack **stack_a, t_stack **stack_b);
 
 #endif
