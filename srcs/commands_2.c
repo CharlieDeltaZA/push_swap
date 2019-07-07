@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:56:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 21:54:21 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 15:40:04 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,30 @@ void	rr()
 	// Call both functions
 }
 
-void	do_op(t_stack *stack_a, t_stack *stack_b, char *str)
+void	do_op(t_stack **stack_a, t_stack **stack_b, char *str)
 {
 	//TODO
 	write(1, "Hep\n", 4);
+	if (ft_strequ(str, "pa"))
+		pa(stack_a, stack_b);
+	else if (ft_strequ(str, "pb"))
+		pb(stack_a, stack_b);
+	else if (ft_strequ(str, "sa"))
+		sa(stack_a);
+	else if (ft_strequ(str, "sb"))
+		sb(stack_b);
+	else if (ft_strequ(str, "ra"))
+		ra();
+	else if (ft_strequ(str, "rb"))
+		rb();
+	else if (ft_strequ(str, "rra"))
+		rra();
+	else if (ft_strequ(str, "rrb"))
+		rrb();
+	else if (ft_strequ(str, "ss"))
+		ss(stack_a, stack_b);
+	else if (ft_strequ(str, "rr"))
+		rr();
+	else if (ft_strequ(str, "rrr"))
+		rrr();
 }

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/06 21:06:14 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 15:51:56 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** there is only one or no elements).
 */
 
-void	sa(t_stack *stack_a)
+void	sa(t_stack **stack_a)
 {
 	//TODO -- Seems to work
 	int		val1;
@@ -39,7 +39,7 @@ void	sa(t_stack *stack_a)
 ** there is only one or no elements).
 */
 
-void	sb(t_stack *stack_b)
+void	sb(t_stack **stack_b)
 {
 	//TODO -- Should work because sa works
     int     val1;
@@ -58,15 +58,15 @@ void	sb(t_stack *stack_b)
 ** ss: sa and sb at the same time.
 */
 
-void	ss(t_stack *stack_a, t_stack *stack_b)
+void	ss(t_stack **stack_a, t_stack **stack_b)
 {
 	//TODO -- Probably works, just calls the other 2 funcs
 	// Have a safety check in here even tho each function already has one?
-	if (stack_a->next != NULL && stack_b->next != NULL)
-	{
-		sa(stack_a);
-		sb(stack_b);
-	}
+//	if (stack_a->next != NULL && stack_b->next != NULL)
+//	{
+	sa(stack_a);
+	sb(stack_b);
+//	}
 }
 
 /*
@@ -74,7 +74,7 @@ void	ss(t_stack *stack_a, t_stack *stack_b)
 ** a. Do nothing if b is empty.
 */
 
-void	pa(t_stack *stack_a, t_stack *stack_b)
+void	pa(t_stack **stack_a, t_stack **stack_b)
 {
 	//TODO
 	t_stack	*tmp;
@@ -98,7 +98,7 @@ void	pa(t_stack *stack_a, t_stack *stack_b)
 ** b. Do nothing if a is empty.
 */
 
-void	pb(t_stack *stack_a, t_stack *stack_b)
+void	pb(t_stack **stack_a, t_stack **stack_b)
 {
 	//TODO
 	t_stack	*tmp;

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 11:24:18 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/07 15:24:23 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@
 	while (get_next_line(0, &line))
 	{
 		if (err_ops(line))
-			do_op(a, b, line);
+			do_op(&a, &b, line);
 		else
 		{
 			free(line);
