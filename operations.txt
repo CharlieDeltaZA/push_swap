@@ -19,3 +19,6 @@ rra: reverse rotate a - shift down all elements of stack a by 1. The last elemen
 rrb: reverse rotate b - shift down all elements of stack b by 1. The last element becomes the first one.
 
 rrr: rra and rrb at the same time.
+
+COMMANDS TO RUN PROGRAM:
+ARG=`ruby -e "puts (0..99).to_a.shuffle.join(' ')"`; ./push_swap $ARG | ./checker $ARG
