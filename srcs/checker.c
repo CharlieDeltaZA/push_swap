@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 19:44:56 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/08 09:30:24 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int		main(int ac, char **av)
 	t_stack *b;
 	t_stack	*tmp;
 	t_stack	*tmp2;
+	t_stack	*hep;
 	int	i = 1;
 	char	*line;
 
@@ -87,6 +88,8 @@ int		main(int ac, char **av)
 	// 	//	stack free
 	// 	}
 	// }
+	hep = a;
+	printf("%zu\n", stack_size(&hep));
 	while (tmp)
 	{
 		printf("Node %d\nValue: %d\n", i, tmp->value);
@@ -99,10 +102,11 @@ int		main(int ac, char **av)
 	// 	ft_putendl_col_fd(YELLOW, "KO", 1);
 //	error_out(1);
 	//err_ops("pa");
+	
 	printf("------After Edit--------\n");
 	i = 1;
 	//a = tmp;
-	rra(&tmp2);
+	ra(&tmp2);
 	while (tmp2)
 	{
 		printf("Node %d\nValue: %d\n", i, tmp2->value);
@@ -112,7 +116,8 @@ int		main(int ac, char **av)
 	//pb(a, b);
 	//pb(a, b);
 	i = 1;
-	printf("-----B------\n");
+	
+	printf("-----B-----\n");
 	while (b)
 	{
 		printf("Node %d\nValue: %d\n", i, b->value);
