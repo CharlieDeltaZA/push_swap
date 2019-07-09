@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/09 12:35:19 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 14:27:38 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,22 +77,19 @@ void	pa(t_stack **stack_a, t_stack **stack_b)
 	//t_stack	*b;
 	//size_t	size;
 
+	if (!*stack_b)
+		return ;
 	if (stack_b != NULL)
 	{
 		tmp = *stack_b; //hold first node
-		//b = *stack_b;
-		// if (stack_size(stack_b) == 1)
-		// 		stack_b = NULL;
 		if ((*stack_b)->next)
 			*stack_b = (*stack_b)->next;
 		else
 			*stack_b = NULL;
 		if (*stack_b)
 			(*stack_b)->prev = NULL;
-//		*stack_b = (*stack_b)->next; //new head
-//		(*stack_b)->prev = NULL;
 		if (stack_a == NULL)
-			(*stack_a) = tmp;	//if head is null we make the new head of A the node we push
+			stack_add_head(stack_a, tmp);	//if head is null we make the new head of A the node we push
 		else if (stack_a != NULL) //else we push the node to the list and make it the head
 			stack_add_head(stack_a, tmp);
 	}
@@ -109,20 +106,20 @@ void	pb(t_stack **stack_a, t_stack **stack_b)
 	t_stack	*tmp;
 	//t_stack	*a;
 
+	if (!*stack_a)
+		return ;
 	if (stack_a != NULL)
 	{
 		tmp = *stack_a; //hold first node
-		//a = *stack_a;
 		if ((*stack_a)->next)
 			*stack_a = (*stack_a)->next;
 		else
 			*stack_a = NULL;
 		if (*stack_a)
 			(*stack_a)->prev = NULL;
-	//	*stack_a = (*stack_a)->next; //new head
-	//	(*stack_a)->prev = NULL;
 		if (stack_b == NULL)
-			(*stack_b) = tmp;	//if head is null we make the new head of B the node we push
+			//(*stack_b) = tmp;	//if head is null we make the new head of B the node we push
+			stack_add_head(stack_b, tmp);
 		else if (stack_b != NULL) //else we push the node to the list and make it the head
 			stack_add_head(stack_b, tmp);
 	}

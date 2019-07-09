@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/09 11:50:46 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 14:21:20 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,11 +63,21 @@ void		stack_add_head(t_stack **head, t_stack *node)
 	t_stack	*tmp;
 
 	tmp = *head;
-	tmp->prev = node;
-//	node = stack_create_node(value);
-	node->next = *head;
-	node->prev = NULL;
-	*head = node;
+	if (tmp)
+	{
+		tmp->prev = node;
+		node->next = *head;
+		node->prev = NULL;
+		*head = node;
+	}
+	else
+	{
+		node->next = NULL;
+		node->prev = NULL;
+		*head = node;
+	}
+	
+//	*head = node;
 }
 
 /*
