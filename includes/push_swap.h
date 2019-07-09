@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/09 08:49:22 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 11:49:45 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
+//FOR TESTING
+# include <stdio.h>
+//FOR TESTING
 # define FEELSGOODMAN 1
 # define FEELSBADMAN 0
 
@@ -40,6 +43,7 @@ void				stack_add_head(t_stack **head, t_stack *node);
 t_stack				*stack_init(int ac, char **av);
 void				stack_add_tail(t_stack **head, t_stack *node);
 void				free_stack(t_stack **head);
+void				print_stack(t_stack **head, char stack_id);
 
 /*
 ** Operation Funcs
