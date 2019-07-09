@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/08 11:25:09 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 11:20:08 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,26 @@ int		check_sorted(t_stack **stack_a, t_stack **stack_b)
 {
 	//TODO -- Done
 	t_stack	*node;
+	
 	node = *stack_a;
 	if (stack_size(stack_b) > 0)
+	{
+		free_stack(stack_a);
+		free_stack(stack_b);
 		return (FEELSBADMAN); //still values in stack b after last command given
+	}
 	while (node->next != NULL)
 	{
 		if (node->value > node->next->value)
+		{
+			free_stack(stack_a);
+			free_stack(stack_b);
 			return (FEELSBADMAN); //not sorted
+		}
 		node = node->next;
 	}
+	free_stack(stack_a);
+	free_stack(stack_b);
 	return (FEELSGOODMAN); //sorted
 }
 

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/09 09:55:14 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 11:16:26 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		main(int ac, char **av)
 //	int			i;
 	char		*line;
 
-	if (ac < 3)
+	if (ac < 2)
 //	{
 //		ft_putendl_col_fd(RED, "Too few args!", 1);
 		return (0);
@@ -42,6 +42,8 @@ int		main(int ac, char **av)
 		{
 			free(line);
 		//	stack free
+			free_stack(&a);
+			free_stack(&b);
 		}
 	}
 
@@ -62,7 +64,7 @@ int		main(int ac, char **av)
 	int	i = 1;
 	char	*line;
 
-	if (ac < 3)
+	if (ac < 2)
 		return (0);  //Too few args, program does nothing
 
 	validate(ac, av);
