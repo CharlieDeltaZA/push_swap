@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/09 15:56:18 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 16:01:49 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ int		main(int ac, char **av)
 {
 	t_stack		*a;
 	t_stack		*b;
-//	t_stack		*tmp;
-//	int			i;
 	char		*line;
 
 	if (ac < 2)
@@ -29,12 +27,10 @@ int		main(int ac, char **av)
 //		ft_putendl_col_fd(RED, "Too few args!", 1);
 		return (0);
 //	}
-	//things
 	validate(ac, av);
 	a = stack_init(ac, av);
 //	b = stack_create_node(15);
 	b = NULL;
-	// GNL to read commands
 	while (get_next_line(0, &line))
 	{
 		if (err_ops(line))
