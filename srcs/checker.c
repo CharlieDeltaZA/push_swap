@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/09 08:55:06 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 09:55:14 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <stdio.h>
 
 // STUFF AND THINGS
-/*int		main(int ac, char **av)
+int		main(int ac, char **av)
 {
 	t_stack		*a;
 	t_stack		*b;
@@ -50,8 +50,8 @@
 	else
 		ft_putendl_col_fd(YELLOW, "KO", 1);
 	return (0);
-}*/
-
+}
+/*
 int		main(int ac, char **av)
 {
 	t_stack *a;
@@ -115,17 +115,17 @@ int		main(int ac, char **av)
 		tmp2 = tmp2->next;
 	}
 	pa(&a, &b);
-	//pb(a, b);
+	//pb(&a, &b);
 	i = 1;
 	
 	printf("-----B-----\n");
-	while (b)
+	while (a)
 	{
-		printf("Node %d\nValue: %d\n", i, b->value);
+		printf("Node %d\nValue: %d\n", i, a->value);
 		i++;
-		b = b->next;
+		a = a->next;
 	}
 //	error_out(1);
 //	printf("Henlo");
 	return (0);
-}
+}*/
