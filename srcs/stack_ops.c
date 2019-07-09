@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 20:26:28 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 08:36:38 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,24 +34,6 @@ t_stack		*stack_init(int ac, char **av)
 }
 
 /*
-** Add node to the beginning of an existing list
-*/
-
-void		stack_add_head(t_stack **head, t_stack *node)
-{
-	//TODO -- Done?
-//	t_stack	*node;
-	t_stack	*tmp;
-
-	tmp = *head;
-	tmp->prev = node;
-//	node = stack_create_node(value);
-	node->next = *head;
-	node->prev = NULL;
-	*head = node;
-}
-
-/*
 ** Create a new node with data supplied and return pointer to it
 */
 
@@ -68,6 +50,24 @@ t_stack		*stack_create_node(int value)
 		node->prev = NULL; //Do I want to use DLL? 
 	}
 	return (node);
+}
+
+/*
+** Add node to the beginning of an existing list
+*/
+
+void		stack_add_head(t_stack **head, t_stack *node)
+{
+	//TODO -- Done?
+//	t_stack	*node;
+	t_stack	*tmp;
+
+	tmp = *head;
+	tmp->prev = node;
+//	node = stack_create_node(value);
+	node->next = *head;
+	node->prev = NULL;
+	*head = node;
 }
 
 /*
