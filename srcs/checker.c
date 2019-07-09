@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/08 11:56:27 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 08:55:06 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ int		main(int ac, char **av)
 	printf("------After Edit--------\n");
 	i = 1;
 	//a = tmp;
-	//sa(&tmp2);
+	sa(&tmp2);
 	
 	while (tmp2)
 	{
@@ -114,7 +114,7 @@ int		main(int ac, char **av)
 		i++;
 		tmp2 = tmp2->next;
 	}
-	//pb(a, b);
+	pa(&a, &b);
 	//pb(a, b);
 	i = 1;
 	

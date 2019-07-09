@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 20:21:54 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 08:49:22 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # define DUPE 4
 # define OPS 5
 
-//TODO
+//TODO -- Just needs to be checked that everything is perfect
 typedef struct		s_struct
 {
 	int				value;
