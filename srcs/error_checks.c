@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 11:15:50 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 11:05:08 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,29 +22,17 @@
 void	error_out(int code)
 {
 	if (code == INPUT)
-	{
 		ft_putendl_col_fd(RED, "Error: Inputs Invalid", 2);
-		exit(1);
-	}
 	if (code == MAXSIZE)
-	{
 		ft_putendl_col_fd(RED, "Error: Input Over INT_MAX", 2);
-		exit(1);
-	}
 	if (code == MINSIZE)
-	{
 		ft_putendl_col_fd(RED, "Error: Input Over INT_MIN", 2);
-		exit(1);
-	}
 	if (code == DUPE)
-	{
 		ft_putendl_col_fd(RED, "Error: Duplicate Inputs", 2);
-		exit(1);
-	}
 	if (code == OPS)
 		ft_putendl_col_fd(RED, "Error: Incorrect Operation", 2);
 
-//	exit(1);
+	exit(1);
 }
 
 /*
