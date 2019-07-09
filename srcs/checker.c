@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/09 14:57:53 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 15:26:18 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ int		main(int ac, char **av)
 	//things
 	validate(ac, av);
 	a = stack_init(ac, av);
-	b = stack_create_node(15);
+//	b = stack_create_node(15);
+	b = NULL;
 	// GNL to read commands
 	while (get_next_line(0, &line))
 	{
