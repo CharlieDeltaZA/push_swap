@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:56:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/08 08:38:14 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 15:02:34 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	rr(t_stack **stack_a, t_stack **stack_b)
 void	do_op(t_stack **stack_a, t_stack **stack_b, char *str)
 {
 	//TODO -- Done?
-	write(1, "Hep\n", 4);
+	ft_putendl_col_fd(CYAN, "HEP!", 1);
 	if (ft_strequ(str, "pa"))
 		pa(stack_a, stack_b);
 	else if (ft_strequ(str, "pb"))

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/09 11:49:45 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 14:52:31 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void				stack_add_head(t_stack **head, t_stack *node);
 t_stack				*stack_init(int ac, char **av);
 void				stack_add_tail(t_stack **head, t_stack *node);
 void				free_stack(t_stack **head);
-void				print_stack(t_stack **head, char stack_id);
+void				print_stack(t_stack *head, char stack_id);
 
 /*
 ** Operation Funcs
@@ -77,7 +77,7 @@ int					err_ops(char *op);
 */
 
 void				validate(int ac, char **av);
-int					check_sorted(t_stack **stack_a, t_stack **stack_b);
-size_t				stack_size(t_stack **head);
+int					check_sorted(t_stack *stack_a);
+size_t				stack_size(t_stack *head);
 
 #endif

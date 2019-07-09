@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/09 11:20:08 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 14:56:36 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,43 +38,35 @@ void	validate(int ac, char **av)
 ** printing of an appropriate message.
 */
 
-int		check_sorted(t_stack **stack_a, t_stack **stack_b)
+int		check_sorted(t_stack *stack_a)
 {
-	//TODO -- Done
-	t_stack	*node;
-	
-	node = *stack_a;
-	if (stack_size(stack_b) > 0)
+	t_stack *tmp;
+	int temp;
+
+	if (!stack_a)
+		return (FEELSBADMAN);
+	tmp = stack_a;
+	while (stack_a->next)
 	{
-		free_stack(stack_a);
-		free_stack(stack_b);
-		return (FEELSBADMAN); //still values in stack b after last command given
+		temp = stack_a->value;
+		stack_a = stack_a->next;
+		printf("temp: %d   value: %d\n", temp, stack_a->value);
+		if (temp > stack_a->value)
+			return (FEELSBADMAN);
 	}
-	while (node->next != NULL)
-	{
-		if (node->value > node->next->value)
-		{
-			free_stack(stack_a);
-			free_stack(stack_b);
-			return (FEELSBADMAN); //not sorted
-		}
-		node = node->next;
-	}
-	free_stack(stack_a);
-	free_stack(stack_b);
-	return (FEELSGOODMAN); //sorted
+	return (FEELSGOODMAN);
 }
 
 /*
 ** Get the size of the list (stack)
 */
 
-size_t	stack_size(t_stack **head)
+size_t	stack_size(t_stack *head)
 {
 	size_t	i;
 	t_stack	*list;
 
-	list = *head;
+	list = head;
 	i = 0;
 	while (list)
 	{
