@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/09 15:26:18 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/09 15:56:18 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int		main(int ac, char **av)
 	// 	}
 	}
 
-	if (check_sorted(a))
+	if ((check_sorted(a)) && !b)
 		ft_putendl_col_fd(GREEN, "OK", 1);
 	else
 		ft_putendl_col_fd(YELLOW, "KO", 1);
