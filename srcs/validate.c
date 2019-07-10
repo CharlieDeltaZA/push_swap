@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/09 15:58:44 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/10 16:14:26 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 
 void	validate(int ac, char **av)
 {
-	//TODO -- Done?
 	int	i;
 
 	i = 1;
@@ -40,8 +39,8 @@ void	validate(int ac, char **av)
 
 int		check_sorted(t_stack *stack_a)
 {
-	t_stack *tmp;
-	int temp;
+	t_stack	*tmp;
+	int		temp;
 
 	if (!stack_a)
 		return (FEELSBADMAN);
@@ -50,7 +49,7 @@ int		check_sorted(t_stack *stack_a)
 	{
 		temp = stack_a->value;
 		stack_a = stack_a->next;
-	//	printf("temp: %d   value: %d\n", temp, stack_a->value);
+//		printf("temp: %d   value: %d\n", temp, stack_a->value);
 		if (temp > stack_a->value)
 			return (FEELSBADMAN);
 	}
