@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/09 14:52:31 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/10 16:12:09 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,17 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
-//FOR TESTING
+
+/*
+** FOR TESTING VVV
+*/
+
 # include <stdio.h>
-//FOR TESTING
+
+/*
+** FOR TESTING ^^^
+*/
+
 # define FEELSGOODMAN 1
 # define FEELSBADMAN 0
 
@@ -26,7 +34,9 @@
 # define DUPE 4
 # define OPS 5
 
-//TODO -- Just needs to be checked that everything is perfect
+/*
+** TODO -- Just needs to be checked that everything is perfect
+*/
 typedef struct		s_struct
 {
 	int				value;
