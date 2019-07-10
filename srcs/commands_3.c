@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:58:45 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/07 20:25:13 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/10 16:22:06 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 void	rra(t_stack **stack_a)
 {
 	//TODO -- Seems to work, might need some protection
-	// Store last node in temp, make 2nd last node point to NULL, make temp node new head
 	t_stack	*last;
 	t_stack	*second_last;
 
@@ -45,7 +44,6 @@ void	rra(t_stack **stack_a)
 void	rrb(t_stack **stack_b)
 {
 	//TODO -- Seems to work, might need some protection
-	// Store last node in temp, make 2nd last node point to NULL, make temp node new head
 	t_stack	*last;
 	t_stack	*second_last;
 
