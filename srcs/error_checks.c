@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/09 15:29:49 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/10 16:16:38 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	error_out(int code)
 		ft_putendl_col_fd(RED, "Error: Duplicate Inputs", 2);
 	if (code == OPS)
 		ft_putendl_col_fd(RED, "Error: Incorrect Operation", 2);
-
 	exit(1);
 }
 
@@ -44,7 +43,6 @@ void	err_duplicate(int ac, char **av)
 {
 	//TODO -- Done?
 	int		i;
-	int		j;
 	int		k;
 	int		*args;
 
