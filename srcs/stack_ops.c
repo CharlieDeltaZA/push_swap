@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/09 14:43:09 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/10 16:23:43 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,6 @@ void		stack_add_head(t_stack **head, t_stack *node)
 		node->prev = NULL;
 		*head = node;
 	}
-	
-//	*head = node;
 }
 
 /*
@@ -118,7 +116,7 @@ void		free_stack(t_stack **head)
 	}
 	*head = NULL;
 }
-
+/*
 void		print_stack(t_stack *head, char stack_id)
 {
 	t_stack *node;
@@ -135,4 +133,4 @@ void		print_stack(t_stack *head, char stack_id)
 		}
 		printf("---------------\n");
 	}
-}
+}*/
