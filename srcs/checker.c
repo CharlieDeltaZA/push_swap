@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/09 16:01:49 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/12 18:26:45 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int		main(int ac, char **av)
 			do_op(&a, &b, line);
 			print_stack(a, 'A');
 			print_stack(b, 'B');
+			free(line);
 		}
 	// 	else
 	// 	{
