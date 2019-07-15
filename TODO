@@ -2,7 +2,8 @@
 Handle a single string argument with multiple args
 |___ Need to free the **arr!
 |___ Need a counter to replicate ac
-|___ Need to potentially change up how I validate
+|___ Need to potentially change up how I validate considering av[0] is binary name
+|___ Might need to change how stack_init works as well
 Potential protection on some functions
 Better Makefile
 Further memory leak checks

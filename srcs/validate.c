@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 10:07:20 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 10:15:26 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,10 @@ size_t	stack_size(t_stack *head)
 int		arr_size(char **array)
 {
 	int		size;
+	int		i;
 
+	i = 0;
 	size = 0;
+	while ()
 	return (size);
 }
