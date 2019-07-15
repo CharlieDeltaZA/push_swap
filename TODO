@@ -2,7 +2,7 @@
 Handle a single string argument with multiple args
 |___ Need to free the **arr!
 |___ Need a counter to replicate ac
-|___ Need to potentially change up how I validate considering av[0] is binary name
+|___ Need to potentially change up how I validate considering av[0] is binary name --Done, check it!
 |___ Might need to change how stack_init works as well
 Potential protection on some functions
 Better Makefile
@@ -12,3 +12,8 @@ Further memory leak checks
 Algo for 3 & 5 numbers
 Algo for 100 & 500 numbers
 Ensure we print the command to STD_OUT
+
+
+
+
+✔
