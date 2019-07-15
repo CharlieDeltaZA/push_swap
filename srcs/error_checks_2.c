@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 10:46:13 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 16:15:32 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 16:33:56 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,23 @@ void	err_duplicate_arr(int size, char **av)
 t_stack	*split_input(char *str, int ac)
 {
 	char	**arr;
+	t_stack	*a;
 
 	arr = ft_strsplit(str, ' ');
 	validate(arr_size(arr), ac, arr);
-	return (stack_init(arr_size(arr), ac, arr));
+	a = stack_init(arr_size(arr), ac, arr);
+	//free(arr);
+	//ft_strdel(arr);
+	arr_free(arr);
+	return (a);
+}
+
+void	arr_free(char **array)
+{
+	while (array != NULL)
+	{
+		free(*array);
+		array++;
+	}
+	*array = NULL;
 }

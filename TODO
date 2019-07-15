@@ -8,6 +8,7 @@ Handle a single string argument with multiple args
 Potential protection on some functions --Done on a few commands, might need to look at others
 Better Makefile
 Further memory leak checks
+Shorten the line count in checker.c
 
 -- PUSH_SWAP --
 Algo for 3 & 5 numbers

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 16:17:32 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 16:24:00 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ int		main(int ac, char **av)
 		a = stack_init(ac, ac, av);
 	}
 	b = NULL;
-//	DEBUG
+	DEBUG
 	while (get_next_line(0, &line))
 	{
 		if (err_ops(line))
 		{
 			do_op(&a, &b, line);
-//			DEBUG
-//			ft_putendl_col_fd(GREEN, line, 1);//debugging
+			DEBUG
+			ft_putendl_col_fd(GREEN, line, 1);//debugging
 			free(line);
 		}
 		else

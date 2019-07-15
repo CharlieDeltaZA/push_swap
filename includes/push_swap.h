@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 16:12:34 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 16:32:59 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ void				err_int(const char *str);
 void				err_input(const char *str);
 int					err_ops(char *op);
 void				err_duplicate_arr(int size, char **av);
+void				arr_free(char **array);
 
 /*
 ** Validation Funcs
