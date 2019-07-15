@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 15:55:40 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 16:17:32 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,11 @@ int		main(int ac, char **av)
 	t_stack		*a;
 	t_stack		*b;
 	char		*line;
-	char		**arr;
 
 	if (ac < 2)
 		return (0);
 	if (ac == 2)
-	{
-		arr = ft_strsplit(av[1], ' ');
-		validate(arr_size(arr), ac, arr);
-		a = stack_init(arr_size(arr), ac, arr);
-		//ft_strdel(arr);
-	}
+		a = split_input(av[1], ac);
 	else
 	{
 		validate(ac, ac, av);
@@ -41,7 +35,7 @@ int		main(int ac, char **av)
 		{
 			do_op(&a, &b, line);
 //			DEBUG
-			ft_putendl_col_fd(GREEN, line, 1);//debugging
+//			ft_putendl_col_fd(GREEN, line, 1);//debugging
 			free(line);
 		}
 		else

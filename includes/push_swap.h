@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 15:46:49 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 16:12:34 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,6 @@ void				validate(int size, int ac, char **av);
 int					check_sorted(t_stack *stack_a);
 size_t				stack_size(t_stack *head);
 int					arr_size(char **array);
+t_stack				*split_input(char *str, int ac);
 
 #endif
