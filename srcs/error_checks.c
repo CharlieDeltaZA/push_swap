@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/10 16:16:38 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 09:24:23 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,5 @@ int		err_ops(char *op)
 		return (1);
 	else if (ft_strequ(op, "rrr"))
 		return (1);
-	else
-		error_out(OPS);
 	return (0);
 }
