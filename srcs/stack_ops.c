@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/13 14:10:03 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 10:08:50 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,10 @@ void		free_stack(t_stack **head)
 	}
 	*head = NULL;
 }
+
+/*
+** Prints out the stack given to it, and appropriately identifies it
+*/
 
 void		print_stack(t_stack *head, char stack_id)
 {

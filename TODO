@@ -1,5 +1,8 @@
 -- CHECKER --
 Handle a single string argument with multiple args
+|___ Need to free the **arr!
+|___ Need a counter to replicate ac
+|___ Need to potentially change up how I validate
 Potential protection on some functions
 Better Makefile
 Further memory leak checks

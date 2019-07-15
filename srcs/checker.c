@@ -6,41 +6,41 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 09:24:39 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 10:09:55 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-//TESTS
-#include <stdio.h>
-
-// STUFF AND THINGS
 int		main(int ac, char **av)
 {
 	t_stack		*a;
 	t_stack		*b;
 	char		*line;
+	char		**arr;
 
 	if (ac < 2)
-//	{
-//		ft_putendl_col_fd(RED, "Too few args!", 1);
 		return (0);
-//	}
-	validate(ac, av);
+	if (ac == 2)
+	{
+		arr = ft_strsplit(av[1], ' ');
+		validate(arr_size(arr), arr);
+	}
+	else
+		validate(ac, av);
 	a = stack_init(ac, av);
 //	b = stack_create_node(15);
 	b = NULL;
-	print_stack(a, 'A');
-	print_stack(b, 'B');
+	print_stack(a, 'A');//debugging
+	print_stack(b, 'B');//debugging
 	while (get_next_line(0, &line))
 	{
 		if (err_ops(line))
 		{
 			do_op(&a, &b, line);
-			print_stack(a, 'A');
-			print_stack(b, 'B');
-			ft_putendl_col_fd(GREEN, line, 1);
+			print_stack(a, 'A');//debugging
+			print_stack(b, 'B');//debugging
+			ft_putendl_col_fd(GREEN, line, 1);//debugging
 			free(line);
 		}
 	 	else
