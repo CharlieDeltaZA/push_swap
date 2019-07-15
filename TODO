@@ -1,0 +1,10 @@
+-- CHECKER --
+Handle a single string argument with multiple args
+Potential protection on some functions
+Better Makefile
+Further memory leak checks
+
+-- PUSH_SWAP --
+Algo for 3 & 5 numbers
+Algo for 100 & 500 numbers
+Ensure we print the command to STD_OUT
