@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:58:45 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/10 16:22:06 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 14:37:46 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	rra(t_stack **stack_a)
 	t_stack	*last;
 	t_stack	*second_last;
 
+	if ((!*stack_a) || (stack_size(*stack_a) < 2))
+		return ;
 	last = *stack_a;
 	second_last = NULL;
 	while (last->next != NULL)
@@ -47,6 +49,8 @@ void	rrb(t_stack **stack_b)
 	t_stack	*last;
 	t_stack	*second_last;
 
+	if ((!*stack_b) || (stack_size(*stack_b) < 2))
+		return ;
 	last = *stack_b;
 	second_last = NULL;
 	while (last->next != NULL)
