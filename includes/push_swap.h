@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 10:25:32 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 10:36:12 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ typedef struct		s_struct
 
 t_stack				*stack_create_node(int value);
 void				stack_add_head(t_stack **head, t_stack *node);
-t_stack				*stack_init(int ac, char **av);
+t_stack				*stack_init(int size, int ac, char **av);
 void				stack_add_tail(t_stack **head, t_stack *node);
 void				free_stack(t_stack **head);
 void				print_stack(t_stack *head, char stack_id);

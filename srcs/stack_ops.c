@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 10:08:50 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 10:39:14 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,35 @@
 ** Initialize a list (stack) using values received during input
 */
 
-t_stack		*stack_init(int ac, char **av)
+t_stack		*stack_init(int size, int ac, char **av)
 {
 	//TODO -- Done?
 	t_stack	*head;
 	t_stack	*node;
 	int	i;
 
-	head = stack_create_node(ft_atoi(av[1]));
-	i = 1;
-	while (++i < ac)
+	if (size == ac)
 	{
-		node = stack_create_node(ft_atoi(av[i]));
-		//node = NULL;
-		stack_add_tail(&head, node);
+		head = stack_create_node(ft_atoi(av[1]));
+		i = 1;
+		while (++i < ac)
+		{
+			node = stack_create_node(ft_atoi(av[i]));
+			stack_add_tail(&head, node);
+		}
 	}
+	else
+	{
+		head = stack_create_node(ft_atoi(av[0]));
+		i = 0;
+		while (++i < size)
+		{
+			node = stack_create_node(ft_atoi(av[i]));
+			stack_add_tail(&head, node);
+		}
+	}
+	
+
 	return (head);
 }
 
