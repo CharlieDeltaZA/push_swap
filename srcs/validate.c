@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 10:33:03 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 10:51:48 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	validate(int size, int ac, char **av)
 			err_int(av[i]);
 			i++;
 		}
-		err_duplicate(size, av);
+		err_duplicate_arr(size, av);
 	}
 }
 
