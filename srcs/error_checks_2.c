@@ -6,11 +6,16 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 10:46:13 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 10:49:11 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 13:34:52 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+/*
+** Determines whether there are any duplicate numbers in the array input,
+** and outputs an appropriate error and exits if there are.
+*/
 
 void	err_duplicate_arr(int size, char **av)
 {

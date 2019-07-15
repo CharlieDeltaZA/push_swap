@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 10:58:10 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 13:33:08 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int		main(int ac, char **av)
 		validate(ac, ac, av);
 		a = stack_init(ac, ac, av);
 	}
-//	a = stack_init(ac, av);
 //	b = stack_create_node(15);
 	b = NULL;
 	print_stack(a, 'A');//debugging
