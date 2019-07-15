@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 10:48:00 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 15:46:49 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 */
 
 # include <stdio.h>
+# define DEBUG print_stack(a, 'A'); print_stack(b, 'B');
 
 /*
 ** FOR TESTING ^^^
@@ -33,6 +34,9 @@
 # define MINSIZE 3
 # define DUPE 4
 # define OPS 5
+
+# define OP_FREE {free(line); free_stack(&a); free_stack(&b); error_out(OPS);}
+# define STACK_FREE {free_stack(&a); free_stack(&b);}
 
 /*
 ** TODO -- Just needs to be checked that everything is perfect

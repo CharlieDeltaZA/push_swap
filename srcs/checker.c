@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 14:21:03 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/15 15:55:40 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,33 +33,31 @@ int		main(int ac, char **av)
 		validate(ac, ac, av);
 		a = stack_init(ac, ac, av);
 	}
-//	b = stack_create_node(15);
 	b = NULL;
-	print_stack(a, 'A');//debugging
-	print_stack(b, 'B');//debugging
+//	DEBUG
 	while (get_next_line(0, &line))
 	{
 		if (err_ops(line))
 		{
 			do_op(&a, &b, line);
-			print_stack(a, 'A');//debugging
-			print_stack(b, 'B');//debugging
+//			DEBUG
 			ft_putendl_col_fd(GREEN, line, 1);//debugging
 			free(line);
 		}
 		else
 		{
+			//OP_FREE
 			free(line);
 			free_stack(&a);
 			free_stack(&b);
 			error_out(OPS);
 		}
 	}
-
 	if ((check_sorted(a)) && !b)
 		ft_putendl_col_fd(GREEN, "OK", 1);
 	else
 		ft_putendl_col_fd(YELLOW, "KO", 1);
+//	STACK_FREE
 	free_stack(&a);
 	free_stack(&b);
 	return (0);
