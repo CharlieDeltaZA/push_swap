@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:58:45 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/16 09:10:47 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/16 13:43:48 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,22 @@ void	rrr(t_stack **stack_a, t_stack **stack_b)
 	//TODO -- Done?
 	rra(stack_a);
 	rrb(stack_b);
+}
+
+void	read_input(t_stack **a, t_stack **b)
+{
+	char	*line;
+
+	while (get_next_line(0, &line))
+	{
+		if (err_ops(line))
+		{
+			do_op(a, b, line);
+			DEBUG;
+			ft_putendl_col_fd(GREEN, line, 1);//debugging
+			free(line);
+		}
+		else
+			OP_FREE;
+	}
 }

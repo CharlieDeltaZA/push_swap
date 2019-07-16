@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/16 09:09:52 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/16 15:00:35 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ void	sa(t_stack **stack_a)
 	//TODO -- Seems to work
 	int		val1;
 
+	if (!*stack_a)
+		return ;
 	if ((*stack_a)->next != NULL)
 	{
 		val1 = (*stack_a)->next->value;
@@ -42,6 +44,8 @@ void	sb(t_stack **stack_b)
 	//TODO -- Should work because sa works
 	int		val1;
 
+	if (!*stack_b)
+		return ;
 	if ((*stack_b)->next != NULL)
 	{
 		val1 = (*stack_b)->next->value;

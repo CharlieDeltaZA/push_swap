@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/16 09:05:39 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/16 14:53:16 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 
 # include <stdio.h>
 # define DEBUG print_stack(a, 'A'); print_stack(b, 'B');
+# define DEBUG_2 print_stack(&a, 'A'); print_stack(&b, 'B');
 
 /*
 ** FOR TESTING ^^^
@@ -35,7 +36,7 @@
 # define DUPE 4
 # define OPS 5
 
-# define OP_FREE {free(line); free_stack(&a); free_stack(&b); error_out(OPS);}
+# define OP_FREE {free(line); free_stack(a); free_stack(b); error_out(OPS);}
 # define STACK_FREE {free_stack(&a); free_stack(&b);}
 
 /*
@@ -57,7 +58,7 @@ void				stack_add_head(t_stack **head, t_stack *node);
 t_stack				*stack_init(int size, int ac, char **av);
 void				stack_add_tail(t_stack **head, t_stack *node);
 void				free_stack(t_stack **head);
-void				print_stack(t_stack *head, char stack_id);
+void				print_stack(t_stack **head, char stack_id);
 
 /*
 ** Operation Funcs
@@ -86,6 +87,7 @@ void				err_int(const char *str);
 void				err_input(const char *str);
 int					err_ops(char *op);
 void				err_duplicate_arr(int size, char **av);
+void				read_input(t_stack **stack_a, t_stack **stack_b);
 
 /*
 ** Validation Funcs

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 16:24:00 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/16 14:54:14 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int		main(int ac, char **av)
 {
 	t_stack		*a;
 	t_stack		*b;
-	char		*line;
 
 	if (ac < 2)
 		return (0);
@@ -28,32 +27,13 @@ int		main(int ac, char **av)
 		a = stack_init(ac, ac, av);
 	}
 	b = NULL;
-	DEBUG
-	while (get_next_line(0, &line))
-	{
-		if (err_ops(line))
-		{
-			do_op(&a, &b, line);
-			DEBUG
-			ft_putendl_col_fd(GREEN, line, 1);//debugging
-			free(line);
-		}
-		else
-		{
-			//OP_FREE
-			free(line);
-			free_stack(&a);
-			free_stack(&b);
-			error_out(OPS);
-		}
-	}
+	DEBUG_2;
+	read_input(&a, &b);
 	if ((check_sorted(a)) && !b)
 		ft_putendl_col_fd(GREEN, "OK", 1);
 	else
 		ft_putendl_col_fd(YELLOW, "KO", 1);
-//	STACK_FREE
-	free_stack(&a);
-	free_stack(&b);
+	STACK_FREE;
 	return (0);
 }
 /*
