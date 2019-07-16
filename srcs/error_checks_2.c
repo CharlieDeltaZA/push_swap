@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 10:46:13 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/16 08:45:19 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/16 09:05:34 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,35 +47,26 @@ void	err_duplicate_arr(int size, char **av)
 }
 
 /*
-** Split the single string input, validates it, initializes it and returns
-** a pointer to the stack.
+** Splits the single string input, validates it, initializes it and returns
+** a pointer to the stack. Also frees the malloc'd array and malloc'd array
+** elements.
 */
 
 t_stack	*split_input(char *str, int ac)
 {
 	char	**arr;
 	t_stack	*a;
+	int		i;
 
+	i = 0;
 	arr = ft_strsplit(str, ' ');
 	validate(arr_size(arr), ac, arr);
 	a = stack_init(arr_size(arr), ac, arr);
-	arr_free(arr);
-	return (a);
-}
-
-/*
-** Frees the contents of a malloc array with malloc elements.
-*/
-
-void	arr_free(char **array)
-{
-	int	i;
-
-	i = 0;
-	while (array[i] != '\0')
+	while (arr[i] != '\0')
 	{
-		free(array[i]);
+		free(arr[i]);
 		i++;
 	}
-	free(array);
+	free(arr);
+	return (a);
 }

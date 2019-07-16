@@ -7,7 +7,7 @@ Handle a single string argument with multiple args
 |___ 2nd Duplicate check? Yikes --Done, check it!
 Potential protection on some functions --Done on a few commands, might need to look at others
 Better Makefile
-Further memory leak checks
+Further memory leak checks --Fixed an array error, haven't found more leaks yet.
 Shorten the line count in checker.c
 
 -- PUSH_SWAP --
