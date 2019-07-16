@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/16 14:53:16 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/16 16:19:00 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@
 
 # define OP_FREE {free(line); free_stack(a); free_stack(b); error_out(OPS);}
 # define STACK_FREE {free_stack(&a); free_stack(&b);}
+# define ERR_INT_INPUT err_input(av[i]); err_int(av[i]);
 
 /*
 ** TODO -- Just needs to be checked that everything is perfect
