@@ -6,8 +6,8 @@
 #
 
 LIB = libft
-NAME1 = checker
-NAME2 = push_swap
+NAME_CH = checker
+NAME_PS = push_swap
 CC = gcc
 FLAGS = -Wall -Werror -Wextra -c
 # Compile to .o or straight to exe?
@@ -16,11 +16,12 @@ FLAGS = -Wall -Werror -Wextra -c
 SRC_DIR = ./srcs/
 INCLUDES = ./includes/
 OPTIONS = -I./includes -I./libft
-SRC1 = $(SRC_DIR)checker.c $(SRC_DIR)stack_ops.c $(SRC_DIR)commands_*.c \
-					$(SRC_DIR)error_checks.c $(SRC_DIR)validate.c #sources_here_Checker
-SRC2 = push_swap.c                                   #sources_here_PushSwap
-OBJ1 = $(SRC1:.c=.o)
-OBJ2 = $(SRC2:.c=.o)
+SRC_CH = $(SRC_DIR)checker.c $(SRC_DIR)stack_ops.c $(SRC_DIR)commands_1.c \
+		$(SRC_DIR)commands_2.c $(SRC_DIR)commands_3.c $(SRC_DIR)error_checks.c \
+		$(SRC_DIR)error_checks_2.c $(SRC_DIR)validate.c
+SRC_PS = push_swap.c                                   #sources_here_PushSwap
+OBJ_CH = $(SRC_CH:.c=.o)
+OBJ_PS = $(SRC_PS:.c=.o)
 
 all: $(LIB) $(NAME1) $(NAME2)
 
@@ -28,15 +29,15 @@ $(LIB): relib cleanlib
 #	$(MAKE) -C ./libft
 #	$(MAKE) -C ./libft clean
 
-$(NAME1): 
-	@echo "NAME1 TODO = Needs files"
-#	$(CC) $(FLAGS) $(OPTIONS) $(SRC1)
-#	$(CC) -o $(NAME1) $(OBJ1)
+$(NAME_CH): 
+	@echo "NAME_CH TODO = Needs files"
+#	$(CC) $(FLAGS) $(OPTIONS) $(SRC_CH)
+#	$(CC) -o $(NAME_CH) $(OBJ_CH)
 
-$(NAME2):
-	@echo "NAME2 TODO = Needs files"
-#	$(CC) $(FLAGS) $(OPTIONS) $(SRC2)
-#	$(CC) -o $(NAME2) $(OBJ2)
+$(NAME_PS):
+	@echo "NAME_PS TODO = Needs files"
+#	$(CC) $(FLAGS) $(OPTIONS) $(SRC_PS)
+#	$(CC) -o $(NAME_PS) $(OBJ_PS)
 
 clean:
 	@echo "clean TODO"
@@ -44,7 +45,7 @@ clean:
 
 fclean: clean
 	@echo "fclean TODO"
-#	/bin/rm -f $(NAME1) $(NAME2)
+#	/bin/rm -f $(NAME_CH) $(NAME_PS)
 
 re: fclean all
 
