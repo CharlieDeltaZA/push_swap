@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:58:45 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 14:37:46 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/16 09:10:47 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,6 @@ void	rrb(t_stack **stack_b)
 void	rrr(t_stack **stack_a, t_stack **stack_b)
 {
 	//TODO -- Done?
-	// Call both at once
 	rra(stack_a);
 	rrb(stack_b);
 }

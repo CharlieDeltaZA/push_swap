@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 10:39:14 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/16 09:09:22 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,9 @@ t_stack		*stack_create_node(int value)
 	node = (t_stack*)malloc(sizeof(t_stack));
 	if (node)
 	{
-		node->value = value; //EDIT
+		node->value = value;
 		node->next = NULL;
-		node->prev = NULL; //Do I want to use DLL? 
+		node->prev = NULL;
 	}
 	return (node);
 }

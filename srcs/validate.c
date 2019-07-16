@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/16 08:44:25 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/16 09:11:11 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ int		check_sorted(t_stack *stack_a)
 	{
 		temp = stack_a->value;
 		stack_a = stack_a->next;
-//		printf("temp: %d   value: %d\n", temp, stack_a->value);
 		if (temp > stack_a->value)
 			return (FEELSBADMAN);
 	}

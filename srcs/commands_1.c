@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/10 16:20:14 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/16 09:09:52 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ void	sb(t_stack **stack_b)
 void	ss(t_stack **stack_a, t_stack **stack_b)
 {
 	//TODO -- Probably works, just calls the other 2 funcs
-	// Have a safety check in here even tho each function already has one?
 	sa(stack_a);
 	sb(stack_b);
 }
