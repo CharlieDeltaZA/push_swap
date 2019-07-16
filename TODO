@@ -6,9 +6,9 @@ Handle a single string argument with multiple args
 |___ Need to potentially change up how I validate considering av[0] is binary name --Done, check it!✔
 |___ Might need to change how stack_init works as well --Done, check it!✔
 |___ 2nd Duplicate check? Yikes --Done, check it!✔
-|___ Fix invalid input with single string!
-|___ "val1 val2" breaks, first element lost
-|___ val1 val2 breaks, Duplicate Inputs (even tho both are unique)
+|___ Fix invalid input with single string! "henlo 42" should break, but doesn't
+|___ "val1 val2" breaks, first element lost --Fixed
+|___ `any_val 0` breaks, Duplicate Inputs (even tho both are unique) Only when one value is 0 tho --Done?
 Potential protection on some functions --Done on a few commands, might need to look at others✔
 Better Makefile
 |___ Fix it so it compiles .o appropriately

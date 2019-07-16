@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/16 11:45:58 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/16 12:55:09 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	err_duplicate(int ac, char **av)
 	while (i < ac)
 	{
 		k = i + 1;
-		while (k < ac)
+		while (k + i < ac)
 		{
 			if (args[i] == args[k])
 				error_out(DUPE);
