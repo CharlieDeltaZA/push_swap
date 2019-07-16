@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/15 10:51:48 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/16 08:44:25 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ size_t	stack_size(t_stack *head)
 }
 
 /*
-** Returns the size of an array. [???In this case (size + 1) to replicate argc???]
+** Returns the size of an array.
 */
 
 int		arr_size(char **array)
