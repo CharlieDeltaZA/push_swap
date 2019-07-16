@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/16 14:52:52 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/16 16:37:13 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,40 +18,29 @@
 
 t_stack		*stack_init(int size, int ac, char **av)
 {
-	//TODO -- Done?
 	t_stack	*head;
 	t_stack	*node;
 	int	i;
 
+	i = 0;
 	if (size == 2 && ac == 2)
 	{
 		head = stack_create_node(ft_atoi(av[0]));
-		i = 0;
 		while (++i < size)
-		{
-			node = stack_create_node(ft_atoi(av[i]));
-			stack_add_tail(&head, node);
-		}
+			ADD_NODES;
 	}
 	else if (size == ac)
 	{
 		head = stack_create_node(ft_atoi(av[1]));
 		i = 1;
 		while (++i < ac)
-		{
-			node = stack_create_node(ft_atoi(av[i]));
-			stack_add_tail(&head, node);
-		}
+			ADD_NODES;
 	}
 	else
 	{
 		head = stack_create_node(ft_atoi(av[0]));
-		i = 0;
 		while (++i < size)
-		{
-			node = stack_create_node(ft_atoi(av[i]));
-			stack_add_tail(&head, node);
-		}
+			ADD_NODES;
 	}
 	return (head);
 }
@@ -62,7 +51,6 @@ t_stack		*stack_init(int size, int ac, char **av)
 
 t_stack		*stack_create_node(int value)
 {
-	//TODO -- Done?
 	t_stack	*node;
 
 	node = (t_stack*)malloc(sizeof(t_stack));
@@ -81,7 +69,6 @@ t_stack		*stack_create_node(int value)
 
 void		stack_add_head(t_stack **head, t_stack *node)
 {
-	//TODO -- Done?
 	t_stack	*tmp;
 
 	if (!(head) || (!(node)))
@@ -108,7 +95,6 @@ void		stack_add_head(t_stack **head, t_stack *node)
 
 void		stack_add_tail(t_stack **head, t_stack *node)
 {
-	//TODO -- Done?
 	t_stack	*tmp;
 
 	if (!(head) || (!(node)))
@@ -129,7 +115,6 @@ void		stack_add_tail(t_stack **head, t_stack *node)
 
 void		free_stack(t_stack **head)
 {
-	//TODO -- Done?
 	t_stack	*current;
 	t_stack	*next;
 

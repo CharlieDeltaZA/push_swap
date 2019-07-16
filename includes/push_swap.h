@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/16 16:19:00 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/16 16:31:49 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,11 @@
 # define DUPE 4
 # define OPS 5
 
+# define S_C_N stack_create_node
 # define OP_FREE {free(line); free_stack(a); free_stack(b); error_out(OPS);}
 # define STACK_FREE {free_stack(&a); free_stack(&b);}
-# define ERR_INT_INPUT err_input(av[i]); err_int(av[i]);
+# define ERR_INT_INPUT {err_input(av[i]); err_int(av[i]);}
+# define ADD_NODES {node = S_C_N(ft_atoi(av[i])); stack_add_tail(&head, node);}
 
 /*
 ** TODO -- Just needs to be checked that everything is perfect
