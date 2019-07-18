@@ -6,13 +6,11 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/18 13:43:23 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/18 13:58:21 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-// IDEALLY PASSING THE HEAD TO EACH FUNCTION !
 
 /*
 ** sa: swap a - swap the first 2 elements at the top of stack a. Do nothing if
@@ -21,12 +19,11 @@
 
 void	sa(t_stack **stack_a)
 {
-	//TODO -- Seems to work
 	t_stack		*temp;
 	t_stack		*next_temp;
 
 	if (!*stack_a)
-	 	return ;
+		return ;
 	if ((*stack_a)->next != NULL)
 	{
 		temp = *stack_a;
@@ -46,7 +43,6 @@ void	sa(t_stack **stack_a)
 
 void	sb(t_stack **stack_b)
 {
-	//TODO -- Should work because sa works
 	t_stack		*temp;
 	t_stack		*next_temp;
 
@@ -70,7 +66,6 @@ void	sb(t_stack **stack_b)
 
 void	ss(t_stack **stack_a, t_stack **stack_b)
 {
-	//TODO -- Probably works, just calls the other 2 funcs
 	sa(stack_a);
 	sb(stack_b);
 }
@@ -82,7 +77,6 @@ void	ss(t_stack **stack_a, t_stack **stack_b)
 
 void	pa(t_stack **stack_a, t_stack **stack_b)
 {
-	//TODO -- Done?
 	t_stack	*tmp;
 
 	if (!*stack_b)
@@ -110,7 +104,6 @@ void	pa(t_stack **stack_a, t_stack **stack_b)
 
 void	pb(t_stack **stack_a, t_stack **stack_b)
 {
-	//TODO -- Done?
 	t_stack	*tmp;
 
 	if (!*stack_a)

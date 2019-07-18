@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_checks.c                                     :+:      :+:    :+:   */
+/*   error_checks_1.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/16 12:55:09 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/18 13:55:06 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ void	error_out(int code)
 
 void	err_duplicate(int ac, char **av)
 {
-	//TODO -- Done?
 	int		i;
 	int		k;
 	int		*args;
@@ -76,7 +75,6 @@ void	err_duplicate(int ac, char **av)
 
 void	err_int(const char *str)
 {
-	//TODO -- Done?
 	if (ft_atol(str) > 2147483647)
 		error_out(MAXSIZE);
 	if (ft_atol(str) < -2147483648)
@@ -90,7 +88,6 @@ void	err_int(const char *str)
 
 void	err_input(const char *str)
 {
-	//TODO -- Done?
 	if (ft_str_is_numeric(str) != 1)
 		error_out(INPUT);
 }
@@ -103,7 +100,6 @@ void	err_input(const char *str)
 
 int		err_ops(char *op)
 {
-	//TODO -- Done??
 	if (ft_strequ(op, "pa"))
 		return (1);
 	else if (ft_strequ(op, "pb"))

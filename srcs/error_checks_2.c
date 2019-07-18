@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 10:46:13 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/16 09:05:34 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/18 13:55:12 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 
 void	err_duplicate_arr(int size, char **av)
 {
-	//TODO -- Done?
 	int		i;
 	int		k;
 	int		*args;

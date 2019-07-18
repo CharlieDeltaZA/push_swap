@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:56:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/16 09:10:10 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/18 13:55:56 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 
 void	ra(t_stack **stack_a)
 {
-	//TODO -- Seems to work, might need some protection
 	t_stack	*first;
 	t_stack	*last;
 
@@ -42,7 +41,6 @@ void	ra(t_stack **stack_a)
 
 void	rb(t_stack **stack_b)
 {
-	//TODO -- Seems to work, might need some protection
 	t_stack	*first;
 	t_stack	*last;
 
@@ -64,14 +62,12 @@ void	rb(t_stack **stack_b)
 
 void	rr(t_stack **stack_a, t_stack **stack_b)
 {
-	//TODO -- Done?
 	ra(stack_a);
 	rb(stack_b);
 }
 
 void	do_op(t_stack **stack_a, t_stack **stack_b, char *str)
 {
-	//TODO -- Done?
 	if (ft_strequ(str, "pa"))
 		pa(stack_a, stack_b);
 	else if (ft_strequ(str, "pb"))
