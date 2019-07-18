@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/18 11:28:21 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/18 13:43:23 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,29 +22,20 @@
 void	sa(t_stack **stack_a)
 {
 	//TODO -- Seems to work
-	// ! CHANGE THIS !
-	// int		val1;
 	t_stack		*temp;
 	t_stack		*next_temp;
 
 	if (!*stack_a)
 	 	return ;
-	// if ((*stack_a)->next != NULL)
-	// {
-	//  	val1 = (*stack_a)->next->value;
-	//  	(*stack_a)->next->value = (*stack_a)->value;
-	//  	(*stack_a)->value = val1;
-	// }
 	if ((*stack_a)->next != NULL)
 	{
 		temp = *stack_a;
-		next_temp = (*stack_a)->next->next;
-		*stack_a = (*stack_a)->next;
-		(*stack_a)->prev = NULL;
-		temp->prev = *stack_a;
-		temp->next = next_temp;
-		next_temp->prev = temp;
-		(*stack_a)->next = temp;
+		next_temp = (*stack_a)->next;
+		temp->prev = next_temp;
+		temp->next = next_temp->next;
+		next_temp->prev = NULL;
+		next_temp->next = temp;
+		*stack_a = next_temp;
 	}
 }
 
@@ -56,29 +47,20 @@ void	sa(t_stack **stack_a)
 void	sb(t_stack **stack_b)
 {
 	//TODO -- Should work because sa works
-	// ! CHANGE THIS !
-	// int		val1;
 	t_stack		*temp;
 	t_stack		*next_temp;
 
 	if (!*stack_b)
 		return ;
-	// if ((*stack_b)->next != NULL)
-	// {
-	// 	val1 = (*stack_b)->next->value;
-	// 	(*stack_b)->next->value = (*stack_b)->value;
-	// 	(*stack_b)->value = val1;
-	// }
 	if ((*stack_b)->next != NULL)
 	{
 		temp = *stack_b;
-		next_temp = (*stack_b)->next->next;
-		*stack_b = (*stack_b)->next;
-		(*stack_b)->prev = NULL;
-		temp->prev = *stack_b;
-		temp->next = next_temp;
-		next_temp->prev = temp;
-		(*stack_b)->next = temp;
+		next_temp = (*stack_b)->next;
+		temp->prev = next_temp;
+		temp->next = next_temp->next;
+		next_temp->prev = NULL;
+		next_temp->next = temp;
+		*stack_b = next_temp;
 	}
 }
 
