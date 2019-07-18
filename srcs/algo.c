@@ -1,41 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/01 15:04:09 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/18 10:42:41 by cdiogo           ###   ########.fr       */
+/*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
+/*   Updated: 2019/07/18 10:45:37 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// STUFF AND THINGS
-
-int		main(int ac, char **av)
+void	sort_this_bitch(t_stack **head_a, t_stack **head_b)
 {
-	t_stack		*a;
-	t_stack		*b;
+	//YIKES - THIS IS JUST BUBBLE SORT
+	t_stack *stack_a;
+	t_stack *stack_b;
 
-	if (ac < 2)
-		return (0);
-	if (ac == 2)
-		a = split_input(av[1], ac);
-	else
-	{
-		validate(ac, ac, av);
-		a = stack_init(ac, ac, av);
-	}
-	b = NULL;
-	sort_this_bitch(&a, &b);
-	//DEBUG_2;
-	//read_input(&a, &b);
-	//if ((check_sorted(a)) && !b)
-	//	ft_putendl_col_fd(GREEN, "OK", 1);
-	//else
-	//	ft_putendl_col_fd(YELLOW, "KO", 1);
-	STACK_FREE;
-	return (0);
+	stack_a = *head_a;
+	stack_b = *head_b;
+	
 }

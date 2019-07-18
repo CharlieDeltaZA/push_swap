@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/16 15:00:35 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/18 10:42:21 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 void	sa(t_stack **stack_a)
 {
 	//TODO -- Seems to work
+	// ! CHANGE THIS !
 	int		val1;
 
 	if (!*stack_a)
@@ -42,6 +43,7 @@ void	sa(t_stack **stack_a)
 void	sb(t_stack **stack_b)
 {
 	//TODO -- Should work because sa works
+	// ! CHANGE THIS !
 	int		val1;
 
 	if (!*stack_b)
