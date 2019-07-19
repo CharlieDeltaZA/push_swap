@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 09:13:32 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/19 09:34:06 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,18 @@ void	sort_3(t_stack **stack_a)
 {
 	//TODO
 	t_stack	*node;
+	int		l1_val;
+	int		l2_val;
+	int		l3_val;
 
 	node = *stack_a;
-
+	l1_val = node->value;
+	l2_val = node->next->value;
+	l3_val = node->next->next->value;
+	if (l1_val > (l2_val && l3_val))
+		ft_putendl_fd("ra", 1);
+	else if (l3_val < (l1_val && l2_val))
+		ft_putendl_fd("rra", 1);
+	else if (l1_val > l2_val && l1_val < l3_val)
+		ft_putendl_fd("sa", 1);
 }

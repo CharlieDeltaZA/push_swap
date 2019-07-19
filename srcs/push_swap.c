@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 15:04:09 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/18 10:46:50 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/19 09:26:13 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ int		main(int ac, char **av)
 	}
 	b = NULL;
 	DEBUG_2;
-	sort_this_bitch(&a, &b);
+	if (stack_size(a) == 3)
+		sort_3(&a);
 	DEBUG_2;
 	//read_input(&a, &b);
 	//if ((check_sorted(a)) && !b)
