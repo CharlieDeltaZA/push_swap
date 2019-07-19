@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:56:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/18 13:55:56 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/19 14:30:50 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** becomes the last one.
 */
 
-void	ra(t_stack **stack_a)
+void	ra(t_stack **stack_a, int p_bool)
 {
 	t_stack	*first;
 	t_stack	*last;
@@ -32,6 +32,8 @@ void	ra(t_stack **stack_a)
 	first->next = NULL;
 	last->next = first;
 	first->prev = last;
+	if (p_bool)
+		ft_putendl_col_fd(CYAN, "ra", 1);
 }
 
 /*
@@ -39,7 +41,7 @@ void	ra(t_stack **stack_a)
 ** becomes the last one.
 */
 
-void	rb(t_stack **stack_b)
+void	rb(t_stack **stack_b, int p_bool)
 {
 	t_stack	*first;
 	t_stack	*last;
@@ -54,40 +56,44 @@ void	rb(t_stack **stack_b)
 	first->next = NULL;
 	last->next = first;
 	first->prev = last;
+	if (p_bool)
+		ft_putendl_col_fd(CYAN, "rb", 1);
 }
 
 /*
 ** rr: ra and rb at the same time.
 */
 
-void	rr(t_stack **stack_a, t_stack **stack_b)
+void	rr(t_stack **stack_a, t_stack **stack_b, int p_bool)
 {
-	ra(stack_a);
-	rb(stack_b);
+	ra(stack_a, 0);
+	rb(stack_b, 0);
+	if (p_bool)
+		ft_putendl_col_fd(CYAN, "rr", 1);
 }
 
 void	do_op(t_stack **stack_a, t_stack **stack_b, char *str)
 {
 	if (ft_strequ(str, "pa"))
-		pa(stack_a, stack_b);
+		pa(stack_a, stack_b, 0);
 	else if (ft_strequ(str, "pb"))
-		pb(stack_a, stack_b);
+		pb(stack_a, stack_b, 0);
 	else if (ft_strequ(str, "sa"))
-		sa(stack_a);
+		sa(stack_a, 0);
 	else if (ft_strequ(str, "sb"))
-		sb(stack_b);
+		sb(stack_b, 0);
 	else if (ft_strequ(str, "ra"))
-		ra(stack_a);
+		ra(stack_a, 0);
 	else if (ft_strequ(str, "rb"))
-		rb(stack_b);
+		rb(stack_b, 0);
 	else if (ft_strequ(str, "rra"))
-		rra(stack_a);
+		rra(stack_a, 0);
 	else if (ft_strequ(str, "rrb"))
-		rrb(stack_b);
+		rrb(stack_b, 0);
 	else if (ft_strequ(str, "ss"))
-		ss(stack_a, stack_b);
+		ss(stack_a, stack_b, 0);
 	else if (ft_strequ(str, "rr"))
-		rr(stack_a, stack_b);
+		rr(stack_a, stack_b, 0);
 	else if (ft_strequ(str, "rrr"))
-		rrr(stack_a, stack_b);
+		rrr(stack_a, stack_b, 0);
 }

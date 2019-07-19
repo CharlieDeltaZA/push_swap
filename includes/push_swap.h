@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 09:27:04 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/19 14:25:07 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,17 +66,17 @@ void				free_stack(t_stack **head);
 ** Operation Funcs
 */
 
-void				sa(t_stack **stack_a);
-void				sb(t_stack **stack_b);
-void				ss(t_stack **stack_a, t_stack **stack_b);
-void				pa(t_stack **stack_a, t_stack **stack_b);
-void				pb(t_stack **stack_a, t_stack **stack_b);
-void				ra(t_stack **stack_a);
-void				rb(t_stack **stack_b);
-void				rr(t_stack **stack_a, t_stack **stack_b);
-void				rra(t_stack **stack_a);
-void				rrb(t_stack **stack_b);
-void				rrr(t_stack **stack_a, t_stack **stack_b);
+void				sa(t_stack **stack_a, int p_bool);
+void				sb(t_stack **stack_b, int p_bool);
+void				ss(t_stack **stack_a, t_stack **stack_b, int p_bool);
+void				pa(t_stack **stack_a, t_stack **stack_b, int p_bool);
+void				pb(t_stack **stack_a, t_stack **stack_b, int p_bool);
+void				ra(t_stack **stack_a, int p_bool);
+void				rb(t_stack **stack_b, int p_bool);
+void				rr(t_stack **stack_a, t_stack **stack_b, int p_bool);
+void				rra(t_stack **stack_a, int p_bool);
+void				rrb(t_stack **stack_b, int p_bool);
+void				rrr(t_stack **stack_a, t_stack **stack_b, int p_bool);
 void				do_op(t_stack **stack_a, t_stack **stack_b, char *str);
 
 /*

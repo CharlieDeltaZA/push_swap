@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 12:50:04 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/19 14:32:08 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,31 +38,37 @@ void	sort_3(t_stack **stack_a)
 	l3 = node->next->next->value;
 	if (l1 > l2 && l1 > l3 && l3 < l2)
 	{
-		ft_putendl_col_fd(CYAN, "sa", 1);
-		sa(stack_a);
-		ft_putendl_col_fd(CYAN, "rra", 1);
-		rra(stack_a);
+		//ft_putendl_col_fd(CYAN, "sa", 1);
+		sa(stack_a, 1);
+		//ft_putendl_col_fd(CYAN, "rra", 1);
+		rra(stack_a, 1);
 	}
 	else if (l1 < l2 && l2 > l3 && l3 > l1)
 	{
-		ft_putendl_col_fd(CYAN, "sa", 1);
-		sa(stack_a);
-		ft_putendl_col_fd(CYAN, "ra", 1);
-		rra(stack_a);
+		//ft_putendl_col_fd(CYAN, "sa", 1);
+		sa(stack_a, 1);
+		//ft_putendl_col_fd(CYAN, "ra", 1);
+		rra(stack_a, 1);
 	}
 	else if (l1 > l2 && l1 < l3 && l3 > l2)
 	{
-		ft_putendl_col_fd(CYAN, "sa", 1);
-		sa(stack_a);
+		//ft_putendl_col_fd(CYAN, "sa", 1);
+		sa(stack_a, 1);
 	}
 	else if (l1 > l3 && l3 > l2 && l1 > l2)
 	{
-		ft_putendl_col_fd(CYAN, "ra", 1);
-		ra(stack_a);
+		//ft_putendl_col_fd(CYAN, "ra", 1);
+		ra(stack_a, 1);
 	}
 	else if (l3 < l1 && l3 < l2 && l1 < l2)
 	{
-		ft_putendl_col_fd(CYAN, "rra", 1);
-		rra(stack_a);
+		//ft_putendl_col_fd(CYAN, "rra", 1);
+		rra(stack_a, 1);
 	}
+}
+
+void	sort_5(t_stack **stack_a, t_stack **stack_b)
+{
+	//TODO
+
 }

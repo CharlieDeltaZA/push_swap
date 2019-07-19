@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/18 13:58:21 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/19 14:30:02 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** there is only one or no elements).
 */
 
-void	sa(t_stack **stack_a)
+void	sa(t_stack **stack_a, int p_bool)
 {
 	t_stack		*temp;
 	t_stack		*next_temp;
@@ -33,6 +33,8 @@ void	sa(t_stack **stack_a)
 		next_temp->prev = NULL;
 		next_temp->next = temp;
 		*stack_a = next_temp;
+		if (p_bool)
+			ft_putendl_col_fd(CYAN, "sa", 1);
 	}
 }
 
@@ -41,7 +43,7 @@ void	sa(t_stack **stack_a)
 ** there is only one or no elements).
 */
 
-void	sb(t_stack **stack_b)
+void	sb(t_stack **stack_b, int p_bool)
 {
 	t_stack		*temp;
 	t_stack		*next_temp;
@@ -57,6 +59,8 @@ void	sb(t_stack **stack_b)
 		next_temp->prev = NULL;
 		next_temp->next = temp;
 		*stack_b = next_temp;
+		if (p_bool)
+			ft_putendl_col_fd(CYAN, "sb", 1);
 	}
 }
 
@@ -64,10 +68,12 @@ void	sb(t_stack **stack_b)
 ** ss: sa and sb at the same time.
 */
 
-void	ss(t_stack **stack_a, t_stack **stack_b)
+void	ss(t_stack **stack_a, t_stack **stack_b, int p_bool)
 {
-	sa(stack_a);
-	sb(stack_b);
+	sa(stack_a, 0);
+	sb(stack_b, 0);
+	if (p_bool)
+			ft_putendl_col_fd(CYAN, "ss", 1);
 }
 
 /*
@@ -75,7 +81,7 @@ void	ss(t_stack **stack_a, t_stack **stack_b)
 ** a. Do nothing if b is empty.
 */
 
-void	pa(t_stack **stack_a, t_stack **stack_b)
+void	pa(t_stack **stack_a, t_stack **stack_b, int p_bool)
 {
 	t_stack	*tmp;
 
@@ -94,6 +100,8 @@ void	pa(t_stack **stack_a, t_stack **stack_b)
 			stack_add_head(stack_a, tmp);
 		else if (stack_a != NULL)
 			stack_add_head(stack_a, tmp);
+		if (p_bool)
+			ft_putendl_col_fd(CYAN, "pa", 1);
 	}
 }
 
@@ -102,7 +110,7 @@ void	pa(t_stack **stack_a, t_stack **stack_b)
 ** b. Do nothing if a is empty.
 */
 
-void	pb(t_stack **stack_a, t_stack **stack_b)
+void	pb(t_stack **stack_a, t_stack **stack_b, int p_bool)
 {
 	t_stack	*tmp;
 
@@ -121,5 +129,7 @@ void	pb(t_stack **stack_a, t_stack **stack_b)
 			stack_add_head(stack_b, tmp);
 		else if (stack_b != NULL)
 			stack_add_head(stack_b, tmp);
+		if (p_bool)
+			ft_putendl_col_fd(CYAN, "pb", 1);
 	}
 }

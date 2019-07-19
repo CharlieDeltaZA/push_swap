@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:58:45 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/18 13:56:07 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/19 14:31:23 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** element becomes the first one.
 */
 
-void	rra(t_stack **stack_a)
+void	rra(t_stack **stack_a, int p_bool)
 {
 	t_stack	*last;
 	t_stack	*second_last;
@@ -35,6 +35,8 @@ void	rra(t_stack **stack_a)
 	last->prev = NULL;
 	last->next = *stack_a;
 	*stack_a = last;
+	if (p_bool)
+		ft_putendl_col_fd(CYAN, "rra", 1);
 }
 
 /*
@@ -42,7 +44,7 @@ void	rra(t_stack **stack_a)
 ** element becomes the first one.
 */
 
-void	rrb(t_stack **stack_b)
+void	rrb(t_stack **stack_b, int p_bool)
 {
 	t_stack	*last;
 	t_stack	*second_last;
@@ -60,16 +62,20 @@ void	rrb(t_stack **stack_b)
 	last->prev = NULL;
 	last->next = *stack_b;
 	*stack_b = last;
+	if (p_bool)
+		ft_putendl_col_fd(CYAN, "rrb", 1);
 }
 
 /*
 ** rrr: rra and rrb at the same time.
 */
 
-void	rrr(t_stack **stack_a, t_stack **stack_b)
+void	rrr(t_stack **stack_a, t_stack **stack_b, int p_bool)
 {
-	rra(stack_a);
-	rrb(stack_b);
+	rra(stack_a, 0);
+	rrb(stack_b, 0);
+	if (p_bool)
+		ft_putendl_col_fd(CYAN, "rrr", 1);
 }
 
 void	read_input(t_stack **a, t_stack **b)
