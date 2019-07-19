@@ -28,17 +28,18 @@ SRC_PS = $(SRC_DIR)push_swap.c $(SRC_COMMON) $(SRC_DIR)algo.c
 all: $(LIB) $(NAME_CH) $(NAME_PS)
 
 $(LIB): relib cleanlib
+	@echo "$(LIB) compiled"
 #	$(MAKE) -C ./libft
 #	$(MAKE) -C ./libft clean
 
 $(NAME_CH): 
-	@echo "NAME_CH TODO = Needs files"
-	$(CC) $(FLAGS) $(OPTIONS) $(SRC_CH) -o $(NAME_CH)
+	@echo "$(NAME_CH) compiled"
+	@$(CC) $(FLAGS) $(OPTIONS) $(SRC_CH) -o $(NAME_CH)
 #	$(CC) -o $(NAME_CH) $(OBJ_CH)
 
 $(NAME_PS):
-	@echo "NAME_PS TODO = Needs files"
-	$(CC) $(FLAGS) $(OPTIONS) $(SRC_PS) -o $(NAME_PS)
+	@echo "$(NAME_PS) compiled"
+	@$(CC) $(FLAGS) $(OPTIONS) $(SRC_PS) -o $(NAME_PS)
 #	$(CC) -o $(NAME_PS) $(OBJ_PS)
 
 clean:
@@ -46,8 +47,8 @@ clean:
 #	/bin/rm -f $(OBJ) # *.o?
 
 fclean: clean
-	@echo "fclean TODO"
-	/bin/rm -f $(NAME_CH) $(NAME_PS)
+	@echo "$(NAME_CH) & $(NAME_PS) removed"
+	@/bin/rm -f $(NAME_CH) $(NAME_PS)
 
 re: fclean all
 
