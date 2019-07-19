@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 09:54:30 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/19 12:45:28 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,44 @@ void	sort_3(t_stack **stack_a)
 {
 	//TODO
 	t_stack	*node;
-	int		l1_val;
-	int		l2_val;
-	int		l3_val;
+	int		l1;
+	int		l2;
+	int		l3;
 
 	node = *stack_a;
-	l1_val = node->value;
-	l2_val = node->next->value;
-	l3_val = node->next->next->value;
-	if (l1_val > l3_val && l3_val > l2_val)
-		ft_putendl_fd("ra", 1);
-	else if (l3_val < l1_val && l3_val < l2_val)
 		ft_putendl_fd("rra", 1);
-	else if (l1_val > l2_val && l1_val < l3_val)
-		ft_putendl_fd("sa", 1);
+	l1 = node->value;
+	l2 = node->next->value;
+	l3 = node->next->next->value;
+	if (l1 > l2 && l1 > l3 && l3 < l2)
+	{
+		ft_putendl_col_fd(CYAN, "sa", 1);
+		sa(stack_a);
+		ft_putendl_col_fd(CYAN, "rra", 1);
+		rra(stack_a);
+	}
+	else if (l1 < l2 && l2 > l3 && l3 > l1)
+	{
+		ft_putendl_col_fd(CYAN, "sa", 1);
+		sa(stack_a);
+		ft_putendl_col_fd(CYAN, "ra", 1);
+		rra(stack_a);
+	}
+	else if (l1 > l2 && l1 < l3 && l3 > l2)
+	{
+		ft_putendl_col_fd(CYAN, "sa", 1);
+		sa(stack_a);
+	}
+	else if (l1 > l3 && l3 > l2 && l1 > l2)
+	{
+		ft_putendl_col_fd(CYAN, "ra", 1);
+		ra(stack_a);
+	}
+	else if (l3 < l1 && l3 < l2 && l1 < l2)
+	{
+		ft_putendl_col_fd(CYAN, "rra", 1);
+		rra(stack_a);
+	}
+	// if (!(check_sorted(*stack_a)))
+	// 	sort_3(stack_a);
 }
