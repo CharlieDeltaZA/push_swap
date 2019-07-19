@@ -33,7 +33,6 @@ void	sort_3(t_stack **stack_a)
 	int		l3;
 
 	node = *stack_a;
-		ft_putendl_fd("rra", 1);
 	l1 = node->value;
 	l2 = node->next->value;
 	l3 = node->next->next->value;
