@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 10:46:13 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/18 13:55:12 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/19 16:36:54 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,6 @@ t_stack	*split_input(char *str, int ac)
 		free(arr[i]);
 		i++;
 	}
-	free(arr);
+	free(arr); //THIS ARRAY NOT FREED IF VALIDATE FAILS
 	return (a);
 }

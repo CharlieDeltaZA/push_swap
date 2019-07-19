@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 15:04:09 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 15:39:07 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/19 16:46:50 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ int		main(int ac, char **av)
 		sort_2(&a);
 	if (size_a == 3)
 		sort_3(&a);
-	//if (size_a > 3 && size_a < 6)
-	//	sort_5(&a, &b);
+	if (size_a > 3 && size_a < 6)
+		sort_5(&a, &b);
 	DEBUG_2;
 	//read_input(&a, &b);
 	//if ((check_sorted(a)) && !b)
