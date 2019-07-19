@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/05 09:47:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/05 09:59:11 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/19 09:12:26 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,9 @@
 
 long	ft_atol(const char *str)
 {
-	//TODO
-	int i;
-	long neg;
-	long res;
+	int		i;
+	long	neg;
+	long	res;
 
 	i = 0;
 	neg = 1;
