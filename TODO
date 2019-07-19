@@ -17,6 +17,7 @@ Further memory leak checks --Fixed an array error, haven't found more leaks yet.
 Shorten the line count in checker.c --Done
 Shorten the line count in validate.c --Done
 Shorten the line count in stack_ops.c --Done
+Change how sa() & sb() work --Done
 
 -- PUSH_SWAP --
 Algo for 3 & 5 numbers

@@ -9,21 +9,23 @@ LIB = libft
 NAME_CH = checker
 NAME_PS = push_swap
 CC = gcc
-FLAGS = -Wall -Werror -Wextra -c
+FLAGS = -Wall -Werror -Wextra
 # Compile to .o or straight to exe?
 # Would need to explicity list all .o files then,
 # for each exe. Might be worth it.
 SRC_DIR = ./srcs/
 INCLUDES = ./includes/
-OPTIONS = -I./includes -I./libft
-SRC_CH = $(SRC_DIR)checker.c $(SRC_DIR)stack_ops.c $(SRC_DIR)commands_1.c \
-		$(SRC_DIR)commands_2.c $(SRC_DIR)commands_3.c $(SRC_DIR)error_checks.c \
-		$(SRC_DIR)error_checks_2.c $(SRC_DIR)validate.c
-SRC_PS = push_swap.c                                   #sources_here_PushSwap
-OBJ_CH = $(SRC_CH:.c=.o)
-OBJ_PS = $(SRC_PS:.c=.o)
+OPTIONS = -I./includes -I./libft -lft -L./libft
+SRC_COMMON = $(SRC_DIR)stack_ops.c $(SRC_DIR)commands_1.c
+SRC_COMMON += $(SRC_DIR)commands_2.c $(SRC_DIR)commands_3.c
+SRC_COMMON += $(SRC_DIR)error_checks_1.c $(SRC_DIR)error_checks_2.c
+SRC_COMMON += $(SRC_DIR)validate.c $(SRC_DIR)debugging.c
+SRC_CH = $(SRC_DIR)checker.c $(SRC_COMMON)
+SRC_PS = $(SRC_DIR)push_swap.c $(SRC_COMMON) $(SRC_DIR)algo.c
+#OBJ_CH = $(SRC_CH:.c=.o)
+#OBJ_PS = $(SRC_PS:.c=.o)
 
-all: $(LIB) $(NAME1) $(NAME2)
+all: $(LIB) $(NAME_CH) $(NAME_PS)
 
 $(LIB): relib cleanlib
 #	$(MAKE) -C ./libft
@@ -31,12 +33,12 @@ $(LIB): relib cleanlib
 
 $(NAME_CH): 
 	@echo "NAME_CH TODO = Needs files"
-#	$(CC) $(FLAGS) $(OPTIONS) $(SRC_CH)
+	$(CC) $(FLAGS) $(OPTIONS) $(SRC_CH) -o $(NAME_CH)
 #	$(CC) -o $(NAME_CH) $(OBJ_CH)
 
 $(NAME_PS):
 	@echo "NAME_PS TODO = Needs files"
-#	$(CC) $(FLAGS) $(OPTIONS) $(SRC_PS)
+	$(CC) $(FLAGS) $(OPTIONS) $(SRC_PS) -o $(NAME_PS)
 #	$(CC) -o $(NAME_PS) $(OBJ_PS)
 
 clean:
@@ -45,7 +47,7 @@ clean:
 
 fclean: clean
 	@echo "fclean TODO"
-#	/bin/rm -f $(NAME_CH) $(NAME_PS)
+	/bin/rm -f $(NAME_CH) $(NAME_PS)
 
 re: fclean all
 
