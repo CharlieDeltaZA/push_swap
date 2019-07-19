@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 14:25:07 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/19 15:36:46 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,7 @@ void				print_stack(t_stack **head, char stack_id);
 ** Algo
 */
 
+void				sort_2(t_stack **stack_a);
 void				sort_3(t_stack **stack_a);
 
 #endif

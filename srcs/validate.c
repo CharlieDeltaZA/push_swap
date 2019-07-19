@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/16 16:32:37 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/19 15:36:59 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,17 +52,17 @@ void	validate(int size, int ac, char **av)
 
 int		check_sorted(t_stack *stack_a)
 {
-	t_stack	*tmp;
+	t_stack	*node;
 	int		temp;
 
 	if (!stack_a)
 		return (FEELSBADMAN);
-	tmp = stack_a;
-	while (stack_a->next)
+	node = stack_a;
+	while (node->next)
 	{
-		temp = stack_a->value;
-		stack_a = stack_a->next;
-		if (temp > stack_a->value)
+		temp = node->value;
+		node = node->next;
+		if (temp > node->value)
 			return (FEELSBADMAN);
 	}
 	return (FEELSGOODMAN);
