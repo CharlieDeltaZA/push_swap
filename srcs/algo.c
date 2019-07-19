@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 12:45:28 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/19 12:50:04 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	sort_this_bitch(t_stack **head_a, t_stack **head_b)
 
 void	sort_3(t_stack **stack_a)
 {
-	//TODO
+	//TODO --Done
 	t_stack	*node;
 	int		l1;
 	int		l2;
@@ -65,6 +65,4 @@ void	sort_3(t_stack **stack_a)
 		ft_putendl_col_fd(CYAN, "rra", 1);
 		rra(stack_a);
 	}
-	// if (!(check_sorted(*stack_a)))
-	// 	sort_3(stack_a);
 }
