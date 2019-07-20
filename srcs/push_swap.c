@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 15:04:09 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 16:46:50 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/20 15:47:24 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,10 @@ int		main(int ac, char **av)
 	if (size_a > 3 && size_a < 6)
 		sort_5(&a, &b);
 	DEBUG_2;
-	//read_input(&a, &b);
-	//if ((check_sorted(a)) && !b)
-	//	ft_putendl_col_fd(GREEN, "OK", 1);
-	//else
-	//	ft_putendl_col_fd(YELLOW, "KO", 1);
+	if ((check_sorted(a)) && !b)
+		ft_putendl_col_fd(GREEN, "OK", 1);
+	else
+		ft_putendl_col_fd(YELLOW, "KO", 1);
 	STACK_FREE;
 	return (0);
 }

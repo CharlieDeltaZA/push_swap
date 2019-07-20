@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 16:51:08 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/20 15:49:10 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,11 @@ void	sort_3(t_stack **stack_a)
 
 void	sort_5(t_stack **stack_a, t_stack **stack_b)
 {
-	//TODO
+	//TODO -Works for 1/120 permutations :) Yay me.
 	size_t	i;
 
 	i = 0;
-	while (i < (stack_size(*stack_a) - 3))
+	while (i < (stack_size(*stack_a) - 2))
 	{
 		pb(stack_a, stack_b, 1);
 		i++;

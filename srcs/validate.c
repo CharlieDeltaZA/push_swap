@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 15:36:59 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/20 15:30:21 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ size_t	stack_size(t_stack *head)
 	size_t	i;
 	t_stack	*list;
 
+	if (!head)
+		return (0);
 	list = head;
 	i = 0;
 	while (list)
