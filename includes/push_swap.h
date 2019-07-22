@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 16:45:49 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/22 10:08:51 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@
 # define STACK_FREE {free_stack(&a); free_stack(&b);}
 # define ERR_INT_INPUT {err_input(av[i]); err_int(av[i]);}
 # define ADD_NODES {node = S_C_N(ft_atoi(av[i])); stack_add_tail(&head, node);}
+# define FREE_ERR_DUPE {free(args); error_out(DUPE);}
 
 /*
 ** TODO -- Just needs to be checked that everything is perfect
@@ -90,6 +91,7 @@ void				err_input(const char *str);
 int					err_ops(char *op);
 void				err_duplicate_arr(int size, char **av);
 void				read_input(t_stack **stack_a, t_stack **stack_b);
+void				array_free(char **arr);
 
 /*
 ** Validation Funcs

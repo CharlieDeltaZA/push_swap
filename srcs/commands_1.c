@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 14:30:02 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/22 10:17:20 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	ss(t_stack **stack_a, t_stack **stack_b, int p_bool)
 	sa(stack_a, 0);
 	sb(stack_b, 0);
 	if (p_bool)
-			ft_putendl_col_fd(CYAN, "ss", 1);
+		ft_putendl_col_fd(CYAN, "ss", 1);
 }
 
 /*

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 10:46:13 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 16:36:54 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/22 10:16:08 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** and outputs an appropriate error and exits if there are.
 */
 
-void	err_duplicate_arr(int size, char **av)
+void	err_duplicate_arr(int size, char **arr)
 {
 	int		i;
 	int		k;
@@ -27,9 +27,10 @@ void	err_duplicate_arr(int size, char **av)
 	args = (int*)malloc(size * sizeof(int));
 	while (i < size)
 	{
-		args[i] = ft_atoi(av[i]);
+		args[i] = ft_atoi(arr[i]);
 		i++;
 	}
+	array_free(arr);
 	i = 0;
 	while (i < size)
 	{
@@ -37,7 +38,7 @@ void	err_duplicate_arr(int size, char **av)
 		while (k < size)
 		{
 			if (args[i] == args[k])
-				error_out(DUPE);
+				FREE_ERR_DUPE;
 			k++;
 		}
 		i++;
@@ -55,17 +56,23 @@ t_stack	*split_input(char *str, int ac)
 {
 	char	**arr;
 	t_stack	*a;
-	int		i;
 
-	i = 0;
 	arr = ft_strsplit(str, ' ');
 	validate(arr_size(arr), ac, arr);
 	a = stack_init(arr_size(arr), ac, arr);
+	array_free(arr);
+	return (a);
+}
+
+void	array_free(char **arr)
+{
+	int	i;
+
+	i = 0;
 	while (arr[i] != '\0')
 	{
 		free(arr[i]);
 		i++;
 	}
-	free(arr); //THIS ARRAY NOT FREED IF VALIDATE FAILS
-	return (a);
+	free(arr);
 }
