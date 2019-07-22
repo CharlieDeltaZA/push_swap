@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/22 12:54:14 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/22 15:03:50 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	sort_master(t_stack **stack_a, t_stack **stack_b)
 		sort_3(stack_a);
 	else if (size_a > 3 && size_a < 6)
 		sort_5(stack_a, stack_b);
-	else
-		sort_me(stack_a, stack_b);
+	// else
+	// 	sort_me(stack_a, stack_b);
 }
 
 /*
@@ -85,18 +85,24 @@ void	sort_3(t_stack **stack_a)
 void	sort_5(t_stack **stack_a, t_stack **stack_b)
 {
 	//TODO -Works for 1/120 permutations :) Yay me.
-	size_t	i;
+	// size_t	i;
 
-	i = 0;
-	while (i < (stack_size(*stack_a) - 2))
-	{
-		pb(stack_a, stack_b, 1);
-		i++;
-	}
-	print_stack(stack_a, 'A');
-	print_stack(stack_b, 'B');
-	sort_3(stack_a);
-	pa(stack_a, stack_b, 1);
-	ra(stack_a, 1);
-	pa(stack_a, stack_b, 1);
+	// i = 0;
+	// while (i < (stack_size(*stack_a) - 2))
+	// {
+	// 	pb(stack_a, stack_b, 1);
+	// 	i++;
+	// }
+	// print_stack(stack_a, 'A');
+	// print_stack(stack_b, 'B');
+	// sort_3(stack_a);
+	// pa(stack_a, stack_b, 1);
+	// ra(stack_a, 1);
+	// pa(stack_a, stack_b, 1);
+
+	int largest = find_largest(stack_a);
+	t_stack	*b = *stack_b;
+	t_stack	*a = *stack_a;
+	printf("Largest Num: %d\n", largest);
+	DEBUG_2;
 }
