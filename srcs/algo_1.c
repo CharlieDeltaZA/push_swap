@@ -1,16 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algo.c                                             :+:      :+:    :+:   */
+/*   algo_1.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/20 15:49:10 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/22 10:26:26 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+void	sort_master(t_stack **stack_a, t_stack **stack_b)
+{
+	//TODO
+	size_t	size_a;
+
+	size_a = stack_size(*stack_a);
+	if (size_a == 2)
+		sort_2(stack_a);
+	if (size_a == 3)
+		sort_3(stack_a);
+	if (size_a > 3 && size_a < 6)
+		sort_5(stack_a, stack_b);
+}
 
 void	sort_2(t_stack **stack_a)
 {
