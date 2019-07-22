@@ -21,7 +21,8 @@ SRC_COMMON += $(SRC_DIR)commands_2.c $(SRC_DIR)commands_3.c
 SRC_COMMON += $(SRC_DIR)error_checks_1.c $(SRC_DIR)error_checks_2.c
 SRC_COMMON += $(SRC_DIR)validate.c $(SRC_DIR)debugging.c
 SRC_CH = $(SRC_DIR)checker.c $(SRC_COMMON)
-SRC_PS = $(SRC_DIR)push_swap.c $(SRC_COMMON) $(SRC_DIR)algo.c
+SRC_PS = $(SRC_DIR)push_swap.c $(SRC_COMMON) $(SRC_DIR)algo_1.c
+SRC_PS += $(SRC_DIR)algo_2.c
 #OBJ_CH = $(SRC_CH:.c=.o)
 #OBJ_PS = $(SRC_PS:.c=.o)
 
