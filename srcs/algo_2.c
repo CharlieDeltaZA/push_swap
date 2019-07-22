@@ -6,11 +6,13 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 10:30:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/22 10:31:27 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/22 10:33:33 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	sort_me()
+#include "../includes/push_swap.h"
+
+void	sort_me(t_stack **stack_a, t_stack **stack_b)
 {
 	//TODO
 }
