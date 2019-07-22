@@ -6,11 +6,15 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/22 10:33:45 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/22 12:54:14 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+/*
+** Master handler for sort funcs
+*/
 
 void	sort_master(t_stack **stack_a, t_stack **stack_b)
 {
@@ -28,6 +32,10 @@ void	sort_master(t_stack **stack_a, t_stack **stack_b)
 		sort_me(stack_a, stack_b);
 }
 
+/*
+** Sorts 2 numbers, if required.
+*/
+
 void	sort_2(t_stack **stack_a)
 {
 	t_stack	*node;
@@ -36,6 +44,10 @@ void	sort_2(t_stack **stack_a)
 	if (node->value > node->next->value)
 		sa(stack_a, 1);
 }
+
+/*
+** Sorts 3 numbers.
+*/
 
 void	sort_3(t_stack **stack_a)
 {
@@ -65,6 +77,10 @@ void	sort_3(t_stack **stack_a)
 	else if (l3 < l1 && l3 < l2 && l1 < l2)
 		rra(stack_a, 1);
 }
+
+/*
+** Sorts 5 numbers.
+*/
 
 void	sort_5(t_stack **stack_a, t_stack **stack_b)
 {

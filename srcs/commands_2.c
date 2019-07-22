@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:56:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 14:30:50 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/22 12:55:35 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,10 @@ void	rr(t_stack **stack_a, t_stack **stack_b, int p_bool)
 	if (p_bool)
 		ft_putendl_col_fd(CYAN, "rr", 1);
 }
+
+/*
+** Determines which operation to perform based on the STD_IN input received.
+*/
 
 void	do_op(t_stack **stack_a, t_stack **stack_b, char *str)
 {

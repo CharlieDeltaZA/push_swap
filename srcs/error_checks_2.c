@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 10:46:13 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/22 10:16:08 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/22 12:54:48 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,10 @@ t_stack	*split_input(char *str, int ac)
 	array_free(arr);
 	return (a);
 }
+
+/*
+** Frees the elements of an array before freeing the pointer to the array
+*/
 
 void	array_free(char **arr)
 {

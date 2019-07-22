@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:58:45 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 14:31:23 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/22 12:56:38 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,11 @@ void	rrr(t_stack **stack_a, t_stack **stack_b, int p_bool)
 	if (p_bool)
 		ft_putendl_col_fd(CYAN, "rrr", 1);
 }
+
+/*
+** Reads input from STD_IN, performs the operation if valid, otherwise
+** frees appropriately and displays an error message
+*/
 
 void	read_input(t_stack **a, t_stack **b)
 {
