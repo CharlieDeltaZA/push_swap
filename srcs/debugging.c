@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 13:49:44 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/23 13:35:20 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/23 13:54:14 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void		print_stack(t_stack **head, char stack_id)
 	}
 }
 
-void		print_node(t_stack *node)
+void		print_norm(t_stack *node)
 {
 	if (node)
 	{
