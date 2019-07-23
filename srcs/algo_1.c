@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/23 08:55:15 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/23 09:42:41 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,12 @@ void	sort_5(t_stack **stack_a, t_stack **stack_b)
 	// pa(stack_a, stack_b, 1);
 
 	int largest = find_largest(stack_a);
+	int smallest = find_smallest(stack_a);
 	t_stack	*b = *stack_b;
 	t_stack	*a = *stack_a;
 	printf("Largest Num: %d\n", largest);
 	printf("Pos Largest: %d\n", find_largest_pos(stack_a, largest));
+	printf("Smallest Num: %d\n", smallest);
+	printf("Pos Smallest: %d\n", find_smallest_pos(stack_a, smallest));
 	DEBUG_2;
 }

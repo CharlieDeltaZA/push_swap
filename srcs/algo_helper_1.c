@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 08:36:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/23 09:15:44 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/23 09:41:02 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,10 @@ int		find_smallest(t_stack **head)
 	int		smallest;
 
 	node = *head;
-	smallest = 0;
+	smallest = node->value;
 	while (node)
 	{
-		if (node->value < smallest)
+		if (node->value <= smallest)
 			smallest = node->value;
 		node = node->next;
 	}

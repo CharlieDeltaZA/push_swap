@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/23 08:54:56 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/23 09:40:11 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,15 @@ void				sort_2(t_stack **stack_a);
 void				sort_3(t_stack **stack_a);
 void				sort_5(t_stack **stack_a, t_stack **stack_b);
 void				sort_me(t_stack **stack_a, t_stack **stack_b);
+
+/*
+** Algo Helpers
+*/
+
 int					find_largest(t_stack **head);
 int					find_largest_pos(t_stack **head, int largest);
+int					find_smallest(t_stack **head);
+int					find_smallest_pos(t_stack **head, int smallest);
+
 
 #endif
