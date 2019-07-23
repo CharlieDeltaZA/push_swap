@@ -1,45 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   debugging.c                                        :+:      :+:    :+:   */
+/*   stack_ops_2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/18 13:49:44 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/23 13:35:20 by cdiogo           ###   ########.fr       */
+/*   Created: 2019/07/23 13:36:02 by cdiogo            #+#    #+#             */
+/*   Updated: 2019/07/23 13:41:57 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-/*
-** Prints out the stack given to it, and appropriately identifies it
-*/
-
-void		print_stack(t_stack **head, char stack_id)
+void	normalize(t_stack **stack_a)
 {
-	t_stack *node;
+	t_stack    *temp1; // this is going to set the actual normalize values;
+	t_stack    *temp2; // used to incriment through the nodes;
 
-	node = *head;
-	if (node)
+	temp1->norm = stack_size(*stack_a);
+	temp1 = (*stack_a)->next;
+	while (temp1 != NULL)
 	{
-		printf("--- Stack %c ---\n", stack_id);
-		while (node)
+		temp2 = (*stack_a)->next;
+		while (temp2)
 		{
-			ft_putnbr(node->value);
-			print_norm(node);
-			ft_putendl("");
-			node = node->next;
+			if (temp1->value > temp2->value)
+				temp1->norm--;
+			temp2 = temp2->next;
 		}
-		printf("---------------\n");
-	}
-}
-
-void		print_node(t_stack *node)
-{
-	if (node)
-	{
-		ft_putstr(" - Norm: ");
-		ft_putnbr(node->norm);
+		temp1->norm = temp1->norm * -1;
+		temp1 = temp1->next;
 	}
 }

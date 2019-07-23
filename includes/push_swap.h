@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/23 13:30:19 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/23 13:39:13 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void				stack_add_head(t_stack **head, t_stack *node);
 t_stack				*stack_init(int size, int ac, char **av);
 void				stack_add_tail(t_stack **head, t_stack *node);
 void				free_stack(t_stack **head);
+void				normalize(t_stack **stack_a);
 
 /*
 ** Operation Funcs
@@ -109,6 +110,7 @@ t_stack				*split_input(char *str, int ac);
 */
 
 void				print_stack(t_stack **head, char stack_id);
+void				print_norm(t_stack *node);
 
 /*
 ** Algo
