@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/23 11:25:34 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/23 13:30:19 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@
 typedef struct		s_struct
 {
 	int				value;
+	int				norm;
 	struct s_struct	*next;
 	struct s_struct	*prev;
 }					t_stack;

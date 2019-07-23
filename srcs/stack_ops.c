@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/18 13:58:50 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/23 13:30:21 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ t_stack		*stack_create_node(int value)
 		node->value = value;
 		node->next = NULL;
 		node->prev = NULL;
+		node->norm = -1;
 	}
 	return (node);
 }
