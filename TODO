@@ -22,8 +22,10 @@ Change how sa() & sb() work --Done
 -- PUSH_SWAP --
 Algo for 3 & 5 numbers
 Algo for 100 & 500 numbers
-Ensure we print the command to STD_OUT
+Ensure we print the command to STD_OUT --Adjusted command funcs to do this
 
+Make a basic insert sort, then work on making chunks. Start somewhere, anywhere ffs
+Normalize the stack ; should help with chunks and sorting, independent of whatever the value is 
 
 
 
