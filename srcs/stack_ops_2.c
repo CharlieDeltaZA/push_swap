@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:36:02 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/25 13:11:58 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/25 14:20:24 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	normalize(t_stack **stacka)
 	t_stack    *fast; // used to increment through the nodes;
 	int			norm;
 
+	printf("START OF NORMALIZE\n");
 	slow = *stacka;
 	while (slow)
 	{
@@ -29,17 +30,17 @@ void	normalize(t_stack **stacka)
 		slow->norm = norm;
 		fast = *stacka;
 		//NORM;
-		if (slow->next == NULL)
-		{
-			fast = slow->prev;
-			while (fast)
-			{
-				if (slow->value < fast->value)
-					slow->norm--;
-				fast = fast->prev;
-			}
-		}
-		else
+		// if (slow->next == NULL)
+		// {
+		// 	fast = slow->prev;
+		// 	while (fast)
+		// 	{
+		// 		if (slow->value < fast->value)
+		// 			slow->norm--;
+		// 		fast = fast->prev;
+		// 	}
+		// }
+		// else
 			while (fast)
 			{
 				if (slow->value < fast->value)
@@ -48,4 +49,5 @@ void	normalize(t_stack **stacka)
 			}
 		slow = slow->next;
 	}
+	printf("END OF NORMALIZE\n");
 }

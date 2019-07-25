@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/20 15:30:21 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/25 13:57:20 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	validate(int size, int ac, char **av)
 {
 	int	i;
 
+	printf("START OF VALIDATE\n");
 	if (size == 2 && ac == 2)
 	{
 		i = -1;
@@ -43,6 +44,7 @@ void	validate(int size, int ac, char **av)
 			ERR_INT_INPUT;
 		err_duplicate_arr(size, av);
 	}
+	printf("END OF VALIDATE\n");
 }
 
 /*
