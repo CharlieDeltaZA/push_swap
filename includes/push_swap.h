@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/23 13:39:13 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/25 13:04:27 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@
 ** FOR TESTING ^^^
 */
 
+/*
+** MACROS GALORE
+*/
+
 # define FEELSGOODMAN 1
 # define FEELSBADMAN 0
 
@@ -42,6 +46,7 @@
 # define ERR_INT_INPUT {err_input(av[i]); err_int(av[i]);}
 # define ADD_NODES {node = S_C_N(ft_atoi(av[i])); stack_add_tail(&head, node);}
 # define FREE_ERR_DUPE {free(args); error_out(DUPE);}
+# define NORM norm = stack_size(*stacka); slow->norm = norm; fast = slow->next;
 
 /*
 ** TODO -- Just needs to be checked that everything is perfect

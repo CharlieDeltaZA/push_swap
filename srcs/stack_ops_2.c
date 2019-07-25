@@ -6,34 +6,46 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:36:02 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/24 21:27:38 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/25 13:11:58 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	normalize(t_stack **stack_a)
+/*
+** Increment through the stack and normalize the values for easier sorting
+*/
+
+void	normalize(t_stack **stacka)
 {
-	t_stack    *temp1; // this is going to set the actual normalize values;
-	t_stack    *temp2; // used to increment through the nodes;
+	t_stack    *slow; // this is going to set the actual normalize values;
+	t_stack    *fast; // used to increment through the nodes;
 	int			norm;
 
-	norm = stack_size(*stack_a);
-	temp1 = *stack_a;
-	temp1->norm = norm;
-	while (temp1 != NULL)
+	slow = *stacka;
+	while (slow)
 	{
-		temp2 = (*stack_a)->next;
-		while (temp2)
+		norm = stack_size(*stacka);
+		slow->norm = norm;
+		fast = *stacka;
+		//NORM;
+		if (slow->next == NULL)
 		{
-			if (temp1->value > temp2->value)
+			fast = slow->prev;
+			while (fast)
 			{
-				temp1->norm = norm;
-				norm--;
+				if (slow->value < fast->value)
+					slow->norm--;
+				fast = fast->prev;
 			}
-			temp2 = temp2->next;
 		}
-		norm = norm * -1;
-		temp1 = temp1->next;
+		else
+			while (fast)
+			{
+				if (slow->value < fast->value)
+					slow->norm--;
+				fast = fast->next;
+			}
+		slow = slow->next;
 	}
 }

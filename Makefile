@@ -9,7 +9,7 @@ LIB = libft
 NAME_CH = checker
 NAME_PS = push_swap
 CC = gcc
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra -g
 # Compile to .o or straight to exe?
 # Would need to explicity list all .o files then,
 # for each exe. Might be worth it.
@@ -19,8 +19,8 @@ OPTIONS = -I./includes -I./libft -lft -L./libft
 SRC_COMMON = $(SRC_DIR)stack_ops_1.c $(SRC_DIR)commands_1.c
 SRC_COMMON += $(SRC_DIR)commands_2.c $(SRC_DIR)commands_3.c
 SRC_COMMON += $(SRC_DIR)error_checks_1.c $(SRC_DIR)error_checks_2.c
-SRC_COMMON += $(SRC_DIR)validate.c $(SRC_DIR)debugging.c
-SRC_COMMON += $(SRC_DIR)stack_ops_2.c
+SRC_COMMON += $(SRC_DIR)validate.c $(SRC_DIR)stack_ops_2.c
+SRC_COMMON += $(SRC_DIR)debugging.c
 SRC_ALGO = $(SRC_DIR)algo_1.c $(SRC_DIR)algo_2.c $(SRC_DIR)algo_helper_1.c
 SRC_CH = $(SRC_DIR)checker.c $(SRC_COMMON)
 SRC_PS = $(SRC_DIR)push_swap.c $(SRC_COMMON) $(SRC_ALGO)

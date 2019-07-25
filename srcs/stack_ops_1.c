@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_ops.c                                        :+:      :+:    :+:   */
+/*   stack_ops_1.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/23 13:30:21 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/25 13:25:22 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,20 @@ t_stack		*stack_init(int size, int ac, char **av)
 	int		i;
 
 	i = 0;
-	if (size == 2 && ac == 2)
+	if (size == 2 && ac == 2) //edge case for a str input with 2 values
 	{
 		head = stack_create_node(ft_atoi(av[0]));
 		while (++i < size)
 			ADD_NODES;
 	}
-	else if (size == ac)
+	else if (size == ac)	//regular av input
 	{
 		head = stack_create_node(ft_atoi(av[1]));
 		i = 1;
 		while (++i < ac)
 			ADD_NODES;
 	}
-	else
+	else					//str input from custom arr.
 	{
 		head = stack_create_node(ft_atoi(av[0]));
 		while (++i < size)
