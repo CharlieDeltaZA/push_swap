@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/26 13:50:05 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/26 14:33:26 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 19:54:36 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,9 @@
 
 void	ra_rra_x_times(t_stack **head, int pos)
 {
-	int		median;
 	int		stacksize;
 
 	stacksize = stack_size(*head);
-	median = ((stacksize / 2) + (stacksize % 2));
-	//printf("Median: %d\n", median);
 	if (pos > stacksize / 2)
 	{
 		pos = stacksize - pos;
