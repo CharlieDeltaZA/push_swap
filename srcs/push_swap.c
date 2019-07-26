@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 15:04:09 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/24 20:54:48 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 14:32:49 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int		main(int ac, char **av)
 	}
 	b = NULL;
 	// size_a = stack_size(a);
-	DEBUG_2;
+//	DEBUG_2;
 	normalize(&a);
-	DEBUG_2;
+//	DEBUG_2;
 	///////////////////////// Sort4 + 5 - find the smallest vals, push b, sort3, pa
 	sort_master(&a, &b);
 	// if (size_a == 2)
@@ -42,7 +42,7 @@ int		main(int ac, char **av)
 	// 	sort_3(&a);
 	// if (size_a > 3 && size_a < 6)
 	// 	sort_5(&a, &b);
-	DEBUG_2;
+//	DEBUG_2;
 	// if ((check_sorted(a)) && !b)
 	// 	ft_putendl_col_fd(GREEN, "OK", 1);
 	// else

@@ -22,6 +22,7 @@ SRC_COMMON += $(SRC_DIR)error_checks_1.c $(SRC_DIR)error_checks_2.c
 SRC_COMMON += $(SRC_DIR)validate.c $(SRC_DIR)stack_ops_2.c
 SRC_COMMON += $(SRC_DIR)debugging.c
 SRC_ALGO = $(SRC_DIR)algo_1.c $(SRC_DIR)algo_2.c $(SRC_DIR)algo_helper_1.c
+SRC_ALGO += $(SRC_DIR)algo_helper_2.c
 SRC_CH = $(SRC_DIR)checker.c $(SRC_COMMON)
 SRC_PS = $(SRC_DIR)push_swap.c $(SRC_COMMON) $(SRC_ALGO)
 

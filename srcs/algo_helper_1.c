@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 08:36:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/26 12:57:52 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 13:46:07 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int		find_largest_pos(t_stack **head, int largest)
 		if (node->value == largest)
 		{
 			pos = i;
-			// break ;
+			break ;
 		}
 		node = node->next;
 		i++;
@@ -100,7 +100,30 @@ int		find_smallest_pos(t_stack **head, int smallest)
 		if (node->value == smallest)
 		{
 			pos = i;
-			// break ;
+			break ;
+		}
+		node = node->next;
+		i++;
+	}
+	return (pos);
+}
+
+int		find_nsmallest_pos(t_stack **head, int smallest)
+{
+	//TODO
+	t_stack	*node;
+	int 	pos;
+	int		i;
+
+	node = *head;
+	pos = 0;
+	i = 0;
+	while (node)
+	{
+		if (node->norm == smallest)
+		{
+			pos = i;
+			break ;
 		}
 		node = node->next;
 		i++;

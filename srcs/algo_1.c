@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/26 12:56:36 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 14:44:42 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,17 +103,18 @@ void	sort_5(t_stack **stack_a, t_stack **stack_b)
 	// int largest = find_largest(stack_a);
 	// int smallest = find_smallest(stack_a);
 	int	size;
+	int	pos;
 	int	i;
 
 	size = stack_size(*stack_a);
 	i = 0;
-	print_stack(stack_a, 'A');
+	//print_stack(stack_a, 'A');
 	while (i < (size - 3))
 	{
 		//find smallest (norm val?)
-
+		pos = find_nsmallest_pos(stack_a, (i + 1));
 		//rotate / rrotate x num times to get smallest to top
-		
+		ra_rra_x_times(stack_a, pos);
 		//push b
 		pb(stack_a, stack_b, 1);
 		i++;
@@ -125,8 +126,6 @@ void	sort_5(t_stack **stack_a, t_stack **stack_b)
 		pa(stack_a, stack_b, 1);
 		i--;
 	}
-	// t_stack	*a = *stack_a;
-	// t_stack	*b = *stack_b;
 	// printf("Largest Num: %d\n", largest);
 	// printf("Pos Largest: %d\n", find_largest_pos(stack_a, largest));
 	// printf("Smallest Num: %d\n", smallest);

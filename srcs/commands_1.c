@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:53:51 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/22 10:17:20 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 14:39:12 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	sa(t_stack **stack_a, int p_bool)
 		next_temp->next = temp;
 		*stack_a = next_temp;
 		if (p_bool)
-			ft_putendl_col_fd(CYAN, "sa", 1);
+			ft_putendl_fd("sa", 1);
 	}
 }
 
@@ -60,7 +60,7 @@ void	sb(t_stack **stack_b, int p_bool)
 		next_temp->next = temp;
 		*stack_b = next_temp;
 		if (p_bool)
-			ft_putendl_col_fd(CYAN, "sb", 1);
+			ft_putendl_fd("sb", 1);
 	}
 }
 
@@ -73,7 +73,7 @@ void	ss(t_stack **stack_a, t_stack **stack_b, int p_bool)
 	sa(stack_a, 0);
 	sb(stack_b, 0);
 	if (p_bool)
-		ft_putendl_col_fd(CYAN, "ss", 1);
+		ft_putendl_fd("ss", 1);
 }
 
 /*
@@ -101,7 +101,7 @@ void	pa(t_stack **stack_a, t_stack **stack_b, int p_bool)
 		else if (stack_a != NULL)
 			stack_add_head(stack_a, tmp);
 		if (p_bool)
-			ft_putendl_col_fd(CYAN, "pa", 1);
+			ft_putendl_fd("pa", 1);
 	}
 }
 
@@ -130,6 +130,6 @@ void	pb(t_stack **stack_a, t_stack **stack_b, int p_bool)
 		else if (stack_b != NULL)
 			stack_add_head(stack_b, tmp);
 		if (p_bool)
-			ft_putendl_col_fd(CYAN, "pb", 1);
+			ft_putendl_fd("pb", 1);
 	}
 }

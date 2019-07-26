@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:58:45 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/22 12:56:38 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 14:40:26 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	rra(t_stack **stack_a, int p_bool)
 	last->next = *stack_a;
 	*stack_a = last;
 	if (p_bool)
-		ft_putendl_col_fd(CYAN, "rra", 1);
+		ft_putendl_fd("rra", 1);
 }
 
 /*
@@ -63,7 +63,7 @@ void	rrb(t_stack **stack_b, int p_bool)
 	last->next = *stack_b;
 	*stack_b = last;
 	if (p_bool)
-		ft_putendl_col_fd(CYAN, "rrb", 1);
+		ft_putendl_fd("rrb", 1);
 }
 
 /*
@@ -75,7 +75,7 @@ void	rrr(t_stack **stack_a, t_stack **stack_b, int p_bool)
 	rra(stack_a, 0);
 	rrb(stack_b, 0);
 	if (p_bool)
-		ft_putendl_col_fd(CYAN, "rrr", 1);
+		ft_putendl_fd("rrr", 1);
 }
 
 /*

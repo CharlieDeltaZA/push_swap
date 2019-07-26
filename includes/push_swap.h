@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/26 10:32:09 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 14:28:57 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,6 +135,8 @@ int					find_largest(t_stack **head);
 int					find_largest_pos(t_stack **head, int largest);
 int					find_smallest(t_stack **head);
 int					find_smallest_pos(t_stack **head, int smallest);
+int					find_nsmallest_pos(t_stack **head, int smallest);
+void				ra_rra_x_times(t_stack **head, int pos);
 
 
 #endif
