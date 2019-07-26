@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/26 14:44:42 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 19:51:58 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,51 +84,23 @@ void	sort_3(t_stack **stack_a)
 
 void	sort_5(t_stack **stack_a, t_stack **stack_b)
 {
-	//TODO -Works for 1/120 permutations :) Yay me.
-	// size_t	i;
-
-	// i = 0;
-	// while (i < (stack_size(*stack_a) - 2))
-	// {
-	// 	pb(stack_a, stack_b, 1);
-	// 	i++;
-	// }
-	// print_stack(stack_a, 'A');
-	// print_stack(stack_b, 'B');
-	// sort_3(stack_a);
-	// pa(stack_a, stack_b, 1);
-	// ra(stack_a, 1);
-	// pa(stack_a, stack_b, 1);
-
-	// int largest = find_largest(stack_a);
-	// int smallest = find_smallest(stack_a);
 	int	size;
 	int	pos;
 	int	i;
 
 	size = stack_size(*stack_a);
 	i = 0;
-	//print_stack(stack_a, 'A');
 	while (i < (size - 3))
 	{
-		//find smallest (norm val?)
 		pos = find_nsmallest_pos(stack_a, (i + 1));
-		//rotate / rrotate x num times to get smallest to top
 		ra_rra_x_times(stack_a, pos);
-		//push b
 		pb(stack_a, stack_b, 1);
 		i++;
 	}
 	sort_3(stack_a);
 	while (i > 0)
 	{
-		//push a
 		pa(stack_a, stack_b, 1);
 		i--;
 	}
-	// printf("Largest Num: %d\n", largest);
-	// printf("Pos Largest: %d\n", find_largest_pos(stack_a, largest));
-	// printf("Smallest Num: %d\n", smallest);
-	// printf("Pos Smallest: %d\n", find_smallest_pos(stack_a, smallest));
-	// DEBUG_2;
 }
