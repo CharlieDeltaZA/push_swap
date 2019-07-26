@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 13:49:44 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/23 13:54:14 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 13:00:31 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ void		print_stack(t_stack **head, char stack_id)
 		printf("---------------\n");
 	}
 }
+
+/*
+** Prints out the normalized values from each node in the stack
+*/
 
 void		print_norm(t_stack *node)
 {

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/26 12:20:10 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 12:56:36 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	sort_3(t_stack **stack_a)
 }
 
 /*
-** Sorts 5 numbers.
+** Sorts 4 or 5 numbers.
 */
 
 void	sort_5(t_stack **stack_a, t_stack **stack_b)
@@ -110,7 +110,7 @@ void	sort_5(t_stack **stack_a, t_stack **stack_b)
 	print_stack(stack_a, 'A');
 	while (i < (size - 3))
 	{
-		//find smallest
+		//find smallest (norm val?)
 
 		//rotate / rrotate x num times to get smallest to top
 		

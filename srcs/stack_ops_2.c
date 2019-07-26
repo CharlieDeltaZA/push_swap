@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:36:02 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/26 12:22:38 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 12:59:38 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,23 +29,12 @@ void	normalize(t_stack **stacka)
 		slow->norm = norm;
 		fast = *stacka;
 		//NORM;
-		// if (slow->next == NULL)
-		// {
-		// 	fast = slow->prev;
-		// 	while (fast)
-		// 	{
-		// 		if (slow->value < fast->value)
-		// 			slow->norm--;
-		// 		fast = fast->prev;
-		// 	}
-		// }
-		// else
-			while (fast)
-			{
-				if (slow->value < fast->value)
-					slow->norm--;
-				fast = fast->next;
-			}
+		while (fast)
+		{
+			if (slow->value < fast->value)
+				slow->norm--;
+			fast = fast->next;
+		}
 		slow = slow->next;
 	}
 }

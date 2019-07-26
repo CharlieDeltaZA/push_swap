@@ -6,11 +6,15 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 08:36:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/23 11:24:10 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 12:57:52 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+/*
+** Finds largest number in stack
+*/
 
 int		find_largest(t_stack **head)
 {
@@ -28,6 +32,10 @@ int		find_largest(t_stack **head)
 	}
 	return (largest);
 }
+
+/*
+** Finds position of largest number in stack
+*/
 
 int		find_largest_pos(t_stack **head, int largest)
 {
@@ -52,6 +60,10 @@ int		find_largest_pos(t_stack **head, int largest)
 	return (pos);
 }
 
+/*
+** Finds smallest number in stack
+*/
+
 int		find_smallest(t_stack **head)
 {
 	//TODO --Erm. 0 might break it
@@ -68,6 +80,10 @@ int		find_smallest(t_stack **head)
 	}
 	return (smallest);
 }
+
+/*
+** Finds position of smallest number in stack
+*/
 
 int		find_smallest_pos(t_stack **head, int smallest)
 {
