@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:36:02 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/26 12:59:38 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 19:41:37 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 void	normalize(t_stack **stacka)
 {
-	t_stack    *slow; // this is going to set the actual normalize values;
-	t_stack    *fast; // used to increment through the nodes;
+	t_stack    *slow;
+	t_stack    *fast;
 	int			norm;
 
 	slow = *stacka;
@@ -28,7 +28,6 @@ void	normalize(t_stack **stacka)
 		norm = stack_size(*stacka);
 		slow->norm = norm;
 		fast = *stacka;
-		//NORM;
 		while (fast)
 		{
 			if (slow->value < fast->value)
