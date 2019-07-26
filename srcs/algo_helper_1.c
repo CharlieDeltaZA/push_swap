@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 08:36:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/26 13:46:07 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 14:57:24 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		find_largest(t_stack **head)
 	int		largest;
 
 	node = *head;
-	largest = 0;
+	largest = 0; //change me?
 	while (node)
 	{
 		if (node->value > largest)
