@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 10:46:13 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/25 13:56:46 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 10:34:33 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	err_duplicate_arr(int size, char **arr)
 		args[i] = ft_atoi(arr[i]);
 		i++;
 	}
-	array_free(arr);
 	i = 0;
 	while (i < size)
 	{
@@ -61,7 +60,7 @@ t_stack	*split_input(char *str, int ac)
 	arr = ft_strsplit(str, ' ');
 	validate(arr_size(arr), ac, arr);
 	a = stack_init(arr_size(arr), ac, arr);
-	//array_free(arr);
+	array_free(arr);
 	printf("END OF SPLIT INPUT\n");
 	return (a);
 }

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/25 14:00:26 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 09:30:30 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,9 @@ t_stack		*stack_create_node(int value)
 	if (node)
 	{
 		node->value = value;
+		node->norm = -1;
 		node->next = NULL;
 		node->prev = NULL;
-		node->norm = -1;
 	}
 	printf("END OF SCN\n");
 	return (node);
