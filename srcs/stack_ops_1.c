@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/26 09:30:30 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 12:23:45 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ t_stack		*stack_init(int size, int ac, char **av)
 	t_stack	*node;
 	int		i;
 
-	printf("START OF STACK INIT\n");
 	i = 0;
 	if (size == 2 && ac == 2) //edge case for a str input with 2 values
 	{
@@ -43,7 +42,6 @@ t_stack		*stack_init(int size, int ac, char **av)
 		while (++i < size)
 			ADD_NODES;
 	}
-	printf("END OF STACK INIT\n");
 	return (head);
 }
 
@@ -55,7 +53,6 @@ t_stack		*stack_create_node(int value)
 {
 	t_stack	*node;
 
-	printf("START OF SCN\n");
 	node = (t_stack*)malloc(sizeof(t_stack));
 	if (node)
 	{
@@ -64,7 +61,6 @@ t_stack		*stack_create_node(int value)
 		node->next = NULL;
 		node->prev = NULL;
 	}
-	printf("END OF SCN\n");
 	return (node);
 }
 
@@ -102,7 +98,6 @@ void		stack_add_tail(t_stack **head, t_stack *node)
 {
 	t_stack	*tmp;
 
-	printf("START OF SAT\n");
 	if (!(head) || (!(node)))
 		return ;
 	tmp = *head;
@@ -113,7 +108,6 @@ void		stack_add_tail(t_stack **head, t_stack *node)
 		tmp->next = node;
 		node->prev = tmp;
 	}
-	printf("END OF SAT\n");
 }
 
 /*

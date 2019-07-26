@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/23 13:09:29 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/26 12:20:10 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,16 +102,34 @@ void	sort_5(t_stack **stack_a, t_stack **stack_b)
 
 	// int largest = find_largest(stack_a);
 	// int smallest = find_smallest(stack_a);
-	t_stack	*a = *stack_a;
-	t_stack	*b = *stack_b;
+	int	size;
+	int	i;
+
+	size = stack_size(*stack_a);
+	i = 0;
+	print_stack(stack_a, 'A');
+	while (i < (size - 3))
+	{
+		//find smallest
+
+		//rotate / rrotate x num times to get smallest to top
+		
+		//push b
+		pb(stack_a, stack_b, 1);
+		i++;
+	}
+	sort_3(stack_a);
+	while (i > 0)
+	{
+		//push a
+		pa(stack_a, stack_b, 1);
+		i--;
+	}
+	// t_stack	*a = *stack_a;
+	// t_stack	*b = *stack_b;
 	// printf("Largest Num: %d\n", largest);
 	// printf("Pos Largest: %d\n", find_largest_pos(stack_a, largest));
 	// printf("Smallest Num: %d\n", smallest);
 	// printf("Pos Smallest: %d\n", find_smallest_pos(stack_a, smallest));
-	pb(&a, &b, 1);
-	pb(&a, &b, 1);
-	DEBUG_2;
-	sort_3(&a);
-	DEBUG_2;
-	
+	// DEBUG_2;
 }
