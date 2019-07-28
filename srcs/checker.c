@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 15:36:25 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/28 15:06:04 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		main(int ac, char **av)
 		a = stack_init(ac, ac, av);
 	}
 	b = NULL;
-	DEBUG_2;
+//	DEBUG_2;
 	read_input(&a, &b);
 	if ((check_sorted(a)) && !b)
 		ft_putendl_col_fd(GREEN, "OK", 1);

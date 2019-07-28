@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/28 12:10:46 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/28 15:03:03 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,10 @@ void	sort_master(t_stack **stack_a, t_stack **stack_b)
 		sort_5(stack_a, stack_b);
 	else if (size_a > 5 && size_a <= 20)
 		sort_20(stack_a, stack_b);
+	else if (size_a > 20 && size_a <= 100)
+		sort_100(stack_a, stack_b);
+	else if (size_a > 100 && size_a <= 500)
+		sort_500(stack_a, stack_b);
 	// else
 	// 	sort_me(stack_a, stack_b);
 }
@@ -130,6 +134,8 @@ void	sort_20(t_stack **stack_a, t_stack **stack_b)
 		range_max += 5;
 		while (i <= range_max)
 		{
+			if (!(*stack_a))
+				break ;
 			if ((*stack_a)->norm <= range_max)
 			{
 				pb(stack_a, stack_b, 1);
