@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 15:04:09 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/26 19:50:43 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/28 12:03:34 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int		main(int ac, char **av)
 	// size_a = stack_size(a);
 //	DEBUG_2;
 	normalize(&a);
-	DEBUG_2;
+//	DEBUG_2;
 	sort_master(&a, &b);
 //	DEBUG_2;
 	STACK_FREE;

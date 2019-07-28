@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/26 14:28:57 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/28 11:58:44 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,6 +125,7 @@ void				sort_master(t_stack **stack_a, t_stack **stack_b);
 void				sort_2(t_stack **stack_a);
 void				sort_3(t_stack **stack_a);
 void				sort_5(t_stack **stack_a, t_stack **stack_b);
+void				sort_20(t_stack **stack_a, t_stack **stack_b);
 void				sort_me(t_stack **stack_a, t_stack **stack_b);
 
 /*
@@ -136,7 +137,10 @@ int					find_largest_pos(t_stack **head, int largest);
 int					find_smallest(t_stack **head);
 int					find_smallest_pos(t_stack **head, int smallest);
 int					find_nsmallest_pos(t_stack **head, int smallest);
+int					find_nlargest_pos(t_stack **head, int largest);
+int					find_nsmallest_range(t_stack **head, int range);
 void				ra_rra_x_times(t_stack **head, int pos);
+void				rb_rrb_x_times(t_stack **head, int pos);
 
 
 #endif
