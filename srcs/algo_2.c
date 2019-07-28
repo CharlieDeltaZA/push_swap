@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 10:30:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/28 15:02:29 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/28 19:45:58 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	sort_100(t_stack **stack_a, t_stack **stack_b)
 		// if (!stack_a)
 		// 	break ;
 		group += 1;
-		range_max += 20;
+		range_max += 16;
 		while (i <= range_max)
 		{
 			if (!(*stack_a))
@@ -67,14 +67,14 @@ void	sort_100(t_stack **stack_a, t_stack **stack_b)
 	while (*stack_b) // will this work? :thinking:
 	{
 		
-		while (i > 0 && i >= range_max - 20)
+		while (i > 0 && i >= range_max - 16)
 		{
 			pos = find_nlargest_pos(stack_b, i);
 			rb_rrb_x_times(stack_b, pos);
 			pa(stack_a, stack_b, 1);
 			i--;
 		}
-		range_max -= 20;
+		range_max -= 16;
 	}
 }
 
@@ -98,7 +98,7 @@ void	sort_500(t_stack **stack_a, t_stack **stack_b)
 		// if (!stack_a)
 		// 	break ;
 		group += 1;
-		range_max += 50;
+		range_max += 45;
 		while (i <= range_max)
 		{
 			if (!(*stack_a))
@@ -128,13 +128,13 @@ void	sort_500(t_stack **stack_a, t_stack **stack_b)
 	while (*stack_b) // will this work? :thinking:
 	{
 		
-		while (i > 0 && i >= range_max - 50)
+		while (i > 0 && i >= range_max - 45)
 		{
 			pos = find_nlargest_pos(stack_b, i);
 			rb_rrb_x_times(stack_b, pos);
 			pa(stack_a, stack_b, 1);
 			i--;
 		}
-		range_max -= 50;
+		range_max -= 45;
 	}
 }
