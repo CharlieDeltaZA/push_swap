@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 08:36:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/29 13:25:56 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/29 15:37:53 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,10 @@ int		find_smallest_pos(t_stack **head, int smallest)
 	return (pos);
 }
 
+/*
+** Finds position of the smallest norm value
+*/
+
 int		find_nsmallest_pos(t_stack **head, int smallest)
 {
 	//TODO
@@ -130,6 +134,10 @@ int		find_nsmallest_pos(t_stack **head, int smallest)
 	}
 	return (pos);
 }
+
+/*
+** Finds position of the largest norm value
+*/
 
 int		find_nlargest_pos(t_stack **head, int largest)
 {
