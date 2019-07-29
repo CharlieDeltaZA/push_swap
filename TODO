@@ -20,7 +20,7 @@ Shorten the line count in stack_ops.c --Done
 Change how sa() & sb() work --Done
 
 0 in the input is breaking my duplicate check. (Passes while in debugger)
-|___ 0 1 ; 0 1 2 3 ; ---- I think I fixed this. Eeek --NOT FIXED
+|___ 0 1 ; 0 1 2 3 ; ---- I think I fixed this. Eeek --NOT FIXED --NowFixed
 
 -- PUSH_SWAP --
 Algo for 3 & 5 numbers

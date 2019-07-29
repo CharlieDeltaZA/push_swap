@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/26 13:50:05 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/29 13:19:01 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/29 13:38:05 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,22 @@ void	rb_rrb_x_times(t_stack **head, int pos)
 			rb(head, 1);
 			pos--;
 		}
+	}
+}
+
+void	pushback_b(t_stack **stack_a, t_stack **stack_b, int i, int range_max)
+{
+	int		pos;
+
+	while (*stack_b)
+	{
+		while (i > 0 && i >= range_max - 5)
+		{
+			pos = find_nlargest_pos(stack_b, i);
+			rb_rrb_x_times(stack_b, pos);
+			pa(stack_a, stack_b, 1);
+			i--;
+		}
+		range_max -= 5;
 	}
 }
