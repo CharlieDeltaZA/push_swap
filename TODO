@@ -19,6 +19,9 @@ Shorten the line count in validate.c --Done
 Shorten the line count in stack_ops.c --Done
 Change how sa() & sb() work --Done
 
+0 in the input is breaking my duplicate check. (Passes while in debugger)
+|___ 0 1 ; 0 1 2 3 ; ---- I think I fixed this. Eeek
+
 -- PUSH_SWAP --
 Algo for 3 & 5 numbers
 Algo for 100 & 500 numbers
