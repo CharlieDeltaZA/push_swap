@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/29 15:35:03 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/29 16:55:13 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,7 @@ void	sort_20(t_stack **stack_a, t_stack **stack_b)
 	int		size;
 	int		range_max;
 	int		i;
+	// int		pos;
 
 	size = stack_size(*stack_a);
 	range_max = 0;
@@ -131,6 +132,10 @@ void	sort_20(t_stack **stack_a, t_stack **stack_b)
 		{
 			if (!(*stack_a))
 				break ;
+			// pos = find_nsmallest_range_pos(stack_a, range_max);
+			// ra_rra_x_times(stack_a, pos);
+			// pb(stack_a, stack_b, 1);
+			// i++;
 			if ((*stack_a)->norm <= range_max)
 			{
 				pb(stack_a, stack_b, 1);

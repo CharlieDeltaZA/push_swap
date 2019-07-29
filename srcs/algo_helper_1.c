@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 08:36:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/29 15:37:53 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/29 16:33:11 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -162,38 +162,47 @@ int		find_nlargest_pos(t_stack **head, int largest)
 	return (pos);
 }
 
-// int		find_nsmallest_range_pos(t_stack **head, int range)
-// {
-// 	//TODO
-// 	t_stack	*node;
-// 	t_stack *lnode;
-// 	int 	pos;
-// 	int		i;
-// 	int		l;
+int		find_nsmallest_range_pos(t_stack **head, int range)
+{
+	//TODO
+	t_stack	*node;
+	t_stack *lnode;
+	int 	pos_front;
+	int		pos_rear;
+	int		i;
+	int		l;
 
-// 	node = *head;
-// 	lnode = *head;
-// 	pos = 0;
-// 	i = 0;
-// 	l = stack_size(*head);
-// 	while (lnode->next)
-// 		lnode = lnode->next;
-// 	while (node && lnode)
-// 	{
-// 		if (node->norm <= range)
-// 		{
-// 			pos = i;
-// 			//break ;
-// 		}
-// 		if (lnode->norm <= range && (stack_size(*head) - l) < i)
-// 		{
-// 			pos = i;
-// 			break ;
-// 		}		
-// 		node = node->next;
-// 		lnode = lnode->prev;
-// 		i++;
-// 		l--;
-// 	}
-// 	return (pos);
-// }
+	node = *head;
+	lnode = *head;
+	pos_front = 0;
+	pos_rear = 0;
+	i = 0;
+	l = stack_size(*head);
+	while (lnode->next)
+		lnode = lnode->next;
+	while (node)
+	{
+		if (node->norm <= range)
+		{
+			pos_front = i;
+			break ;
+		}
+		node = node->next;
+		i++;
+	}
+	while (lnode)
+	{
+		if (lnode->norm <= range)
+		{
+			pos_rear = l;
+			break ;
+		}
+		lnode = lnode->prev;
+		l--;
+	}
+	if (pos_front < (stack_size(*head) - pos_rear))
+		return (pos_front);
+	else
+		return (pos_rear);
+	return (0);
+}
