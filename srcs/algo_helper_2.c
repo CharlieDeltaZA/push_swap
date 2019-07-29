@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/26 13:50:05 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/27 12:31:05 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/29 13:19:01 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 ** Determines how many times to ra or rra to get a number to top of stack.
 ** Used in sort_5
 */
-
-//MIGHT BREAK - Even stack sizes / or after stack size decreases by one in a call
-//from a loop. idk yet.
 
 void	ra_rra_x_times(t_stack **head, int pos)
 {

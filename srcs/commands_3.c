@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:58:45 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/28 15:06:19 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/29 13:15:02 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,8 +93,8 @@ void	read_input(t_stack **a, t_stack **b)
 		{
 			do_op(a, b, line);
 //			DEBUG;
-			ft_putendl_col_fd(CYAN, "Last Command:", 1);//debugging
-			ft_putendl_col_fd(GREEN, line, 1);//debugging
+//			ft_putendl_col_fd(CYAN, "Last Command:", 1);//debugging
+//			ft_putendl_col_fd(GREEN, line, 1);//debugging
 			free(line);
 		}
 		else
