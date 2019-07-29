@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/29 12:04:25 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/29 12:18:33 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 void	sort_master(t_stack **stack_a, t_stack **stack_b)
 {
 	//TODO
-	size_t	size_a;
+	int		size_a;
 
 	size_a = stack_size(*stack_a);
 	if (size_a == 2)
