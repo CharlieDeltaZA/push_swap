@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/29 14:04:34 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/29 15:35:03 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,10 @@ void	sort_5(t_stack **stack_a, t_stack **stack_b)
 		i--;
 	}
 }
+
+/*
+** Sorts between 6 and 20 numbers
+*/
 
 void	sort_20(t_stack **stack_a, t_stack **stack_b)
 {
