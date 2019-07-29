@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/28 14:59:52 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/29 11:58:23 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ void				array_free(char **arr);
 
 void				validate(int size, int ac, char **av);
 int					check_sorted(t_stack *stack_a);
-size_t				stack_size(t_stack *head);
+int					stack_size(t_stack *head);
 int					arr_size(char **array);
 t_stack				*split_input(char *str, int ac);
 
@@ -140,7 +140,7 @@ int					find_smallest(t_stack **head);
 int					find_smallest_pos(t_stack **head, int smallest);
 int					find_nsmallest_pos(t_stack **head, int smallest);
 int					find_nlargest_pos(t_stack **head, int largest);
-int					find_nsmallest_range(t_stack **head, int range);
+int					find_nsmallest_range_pos(t_stack **head, int range);
 void				ra_rra_x_times(t_stack **head, int pos);
 void				rb_rrb_x_times(t_stack **head, int pos);
 

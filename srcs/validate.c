@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/26 12:23:09 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/29 11:58:13 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,9 @@ int		check_sorted(t_stack *stack_a)
 ** Get the size of the list (stack)
 */
 
-size_t	stack_size(t_stack *head)
+int		stack_size(t_stack *head)
 {
-	size_t	i;
+	int		i;
 	t_stack	*list;
 
 	if (!head)
