@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/26 12:23:45 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/29 13:21:34 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,20 @@ t_stack		*stack_init(int size, int ac, char **av)
 	int		i;
 
 	i = 0;
-	if (size == 2 && ac == 2) //edge case for a str input with 2 values
+	if (size == 2 && ac == 2)
 	{
 		head = stack_create_node(ft_atoi(av[0]));
 		while (++i < size)
 			ADD_NODES;
 	}
-	else if (size == ac)	//regular av input
+	else if (size == ac)
 	{
 		head = stack_create_node(ft_atoi(av[1]));
 		i = 1;
 		while (++i < ac)
 			ADD_NODES;
 	}
-	else					//str input from custom arr.
+	else
 	{
 		head = stack_create_node(ft_atoi(av[0]));
 		while (++i < size)

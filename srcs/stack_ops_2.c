@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:36:02 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/26 19:41:37 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/29 13:22:27 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 void	normalize(t_stack **stacka)
 {
-	t_stack    *slow;
-	t_stack    *fast;
+	t_stack		*slow;
+	t_stack		*fast;
 	int			norm;
 
 	slow = *stacka;
