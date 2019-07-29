@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/29 13:36:02 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/07/29 15:57:31 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,11 @@
 # define ERR_INT_INPUT {err_input(av[i]); err_int(av[i]);}
 # define ADD_NODES {node = S_C_N(ft_atoi(av[i])); stack_add_tail(&head, node);}
 # define FREE_ERR_DUPE {free(args); array_free(arr); error_out(DUPE);}
-# define NORM norm = stack_size(*stacka); slow->norm = norm; fast = slow->next;
 
 /*
 ** TODO -- Just needs to be checked that everything is perfect
 */
+
 typedef struct		s_struct
 {
 	int				value;
@@ -64,9 +64,9 @@ typedef struct		s_struct
 */
 
 t_stack				*stack_create_node(int value);
-void				stack_add_head(t_stack **head, t_stack *node);
 t_stack				*stack_init(int size, int ac, char **av);
 void				stack_add_tail(t_stack **head, t_stack *node);
+void				stack_add_head(t_stack **head, t_stack *node);
 void				free_stack(t_stack **head);
 void				normalize(t_stack **stack_a);
 
@@ -91,17 +91,11 @@ void				do_op(t_stack **stack_a, t_stack **stack_b, char *str);
 ** Other Funcs
 */
 
-void				error_out(int code);
-void				err_duplicate(int ac, char **av);
-void				err_int(const char *str);
-void				err_input(const char *str);
-int					err_ops(char *op);
-void				err_duplicate_arr(int size, char **av);
 void				read_input(t_stack **stack_a, t_stack **stack_b);
 void				array_free(char **arr);
 
 /*
-** Validation Funcs
+** Validation & Error Funcs
 */
 
 void				validate(int size, int ac, char **av);
@@ -109,6 +103,12 @@ int					check_sorted(t_stack *stack_a);
 int					stack_size(t_stack *head);
 int					arr_size(char **array);
 t_stack				*split_input(char *str, int ac);
+void				error_out(int code);
+void				err_duplicate(int ac, char **av);
+void				err_int(const char *str);
+void				err_input(const char *str);
+int					err_ops(char *op);
+void				err_duplicate_arr(int size, char **av);
 
 /*
 ** Debugging
@@ -143,7 +143,7 @@ int					find_nlargest_pos(t_stack **head, int largest);
 int					find_nsmallest_range_pos(t_stack **head, int range);
 void				ra_rra_x_times(t_stack **head, int pos);
 void				rb_rrb_x_times(t_stack **head, int pos);
-void				pushback_b(t_stack **stack_a, t_stack **stack_b, int i, int range_max);
-
+void				pushback_b(t_stack **stack_a, t_stack **stack_b, int i,\
+																int range_max);
 
 #endif
