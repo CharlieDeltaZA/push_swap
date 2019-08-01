@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 10:30:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/30 16:05:12 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/01 11:11:17 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	sort_100(t_stack **stack_a, t_stack **stack_b)
 	i = 1;
 	while (*stack_a)
 	{
-		range_max += 16;
+		range_max += 17;
 		while (i <= range_max)
 		{
 			if (!(*stack_a))
@@ -65,7 +65,7 @@ void	sort_500(t_stack **stack_a, t_stack **stack_b)
 	i = 1;
 	while (*stack_a)
 	{
-		range_max += 45;
+		range_max += 44;
 		while (i <= range_max)
 		{
 			if (!(*stack_a))
