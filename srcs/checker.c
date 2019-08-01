@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/01 13:34:42 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/01 13:48:55 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,12 @@ int		main(int ac, char **av)
 	//ft_putendl("");
 	av += 1;
 	ac--;
-	if (ac < 2)
+	// if (ac < 2)
+	// 	return (0);
+	if (ac <= 0)
 		return (0);
-	if (ac == 2)
-		a = split_input(av[1], ac);
+	if (ac == 1)
+		a = split_input(av[0], ac);
 	else
 	{
 		validate(ac, ac, av);

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 10:30:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/01 13:07:04 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/01 14:25:32 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	sort_100(t_stack **stack_a, t_stack **stack_b)
 	i = 1;
 	while (*stack_a)
 	{
-		range_max += 17;
+		range_max += 17; //test with 30 numbers
 		while (i <= range_max)
 		{
 			if (!(*stack_a))
@@ -49,6 +49,8 @@ void	sort_100(t_stack **stack_a, t_stack **stack_b)
 	i--;
 	pushback_b(stack_a, stack_b, i, range_max);
 }
+
+//DO SORT_250
 
 /*
 ** Sorts between 101 and 500 numbers
