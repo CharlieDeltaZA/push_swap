@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 10:46:13 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/29 11:22:37 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/01 16:21:42 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,8 @@ t_stack	*split_input(char *str, int ac)
 	t_stack	*a;
 
 	arr = ft_strsplit(str, ' ');
-	validate(arr_size(arr), ac, arr);
-	a = stack_init(arr_size(arr), ac, arr);
+	validate(arr_size(arr),/* ac,*/ arr);
+	a = stack_init(/*arr_size(arr), ac, */arr);
 	array_free(arr);
 	return (a);
 }

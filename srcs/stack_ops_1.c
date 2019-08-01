@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:04:47 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/29 13:21:34 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/01 16:16:34 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,31 +16,39 @@
 ** Initialize a list (stack) using values received during input
 */
 
-t_stack		*stack_init(int size, int ac, char **av)
+t_stack		*stack_init(/*int size, int ac, */char **av)
 {
 	t_stack	*head;
 	t_stack	*node;
 	int		i;
 
 	i = 0;
-	if (size == 2 && ac == 2)
+	// if (size == 2 && ac == 2)
+	// {
+	// 	head = stack_create_node(ft_atoi(av[0]));
+	// 	while (++i < size)
+	// 		ADD_NODES;
+	// }
+	// else if (size == ac)
+	// {
+	// 	head = stack_create_node(ft_atoi(av[1]));
+	// 	i = 1;
+	// 	while (++i < ac)
+	// 		ADD_NODES;
+	// }
+	// else
+	// {
+	// 	head = stack_create_node(ft_atoi(av[0]));
+	// 	while (++i < size)
+	// 		ADD_NODES;
+	// }
+	head = stack_create_node(ft_atoi(av[i]));
+	i++;
+	while (av[i])
 	{
-		head = stack_create_node(ft_atoi(av[0]));
-		while (++i < size)
-			ADD_NODES;
-	}
-	else if (size == ac)
-	{
-		head = stack_create_node(ft_atoi(av[1]));
-		i = 1;
-		while (++i < ac)
-			ADD_NODES;
-	}
-	else
-	{
-		head = stack_create_node(ft_atoi(av[0]));
-		while (++i < size)
-			ADD_NODES;
+		node = stack_create_node(ft_atoi(av[i]));
+		stack_add_tail(&head, node);
+		i++;
 	}
 	return (head);
 }
