@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:58:45 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/29 13:15:02 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/01 17:22:18 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	rrr(t_stack **stack_a, t_stack **stack_b, int p_bool)
 ** frees appropriately and displays an error message
 */
 
-void	read_input(t_stack **a, t_stack **b)
+void	read_input(t_stack **a, t_stack **b, t_arguments args)
 {
 	char	*line;
 
@@ -92,7 +92,8 @@ void	read_input(t_stack **a, t_stack **b)
 		if (err_ops(line))
 		{
 			do_op(a, b, line);
-//			DEBUG;
+			(args.v) ? (DEBUG) : NULL;
+			(args.c) ? ft_putendl_col_fd(GREEN, line, 1) : NULL;
 //			ft_putendl_col_fd(CYAN, "Last Command:", 1);//debugging
 //			ft_putendl_col_fd(GREEN, line, 1);//debugging
 			free(line);

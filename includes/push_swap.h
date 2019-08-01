@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/01 16:17:12 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/01 17:21:54 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 */
 
 # include <stdio.h>
-# define DEBUG print_stack(a, 'A'); print_stack(b, 'B');
-# define DEBUG_2 print_stack(&a, 'A'); print_stack(&b, 'B');
+# define DEBUG {print_stack(a, 'A'); print_stack(b, 'B');}
+# define DEBUG_2 {print_stack(&a, 'A'); print_stack(&b, 'B');}
 
 /*
 ** FOR TESTING ^^^
@@ -46,6 +46,7 @@
 # define ERR_INT_INPUT {err_input(av[i]); err_int(av[i]);}
 # define ADD_NODES {node = S_C_N(ft_atoi(av[i])); stack_add_tail(&head, node);}
 # define FREE_ERR_DUPE {free(args); array_free(arr); error_out(DUPE);}
+# define SHIFT_ARGS {av += 1; ac--;}
 
 /*
 ** TODO -- Just needs to be checked that everything is perfect
@@ -99,7 +100,7 @@ void				do_op(t_stack **stack_a, t_stack **stack_b, char *str);
 ** Other Funcs
 */
 
-void				read_input(t_stack **stack_a, t_stack **stack_b);
+void				read_input(t_stack **stack_a, t_stack **stack_b, t_arguments args);
 void				array_free(char **arr);
 void				handle_arguments(int *ac, char ***av, t_arguments *args);
 
@@ -112,7 +113,7 @@ int					is_string(char *str);
 int					check_sorted(t_stack *stack_a);
 int					stack_size(t_stack *head);
 int					arr_size(char **array);
-t_stack				*split_input(char *str, int ac);
+t_stack				*split_input(char *str/*, int ac*/);
 void				error_out(int code);
 void				err_duplicate(int ac, char **av);
 void				err_int(const char *str);

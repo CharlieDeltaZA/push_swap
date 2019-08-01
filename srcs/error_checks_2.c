@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 10:46:13 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/01 16:21:42 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/01 16:28:17 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	err_duplicate_arr(int size, char **arr)
 ** elements.
 */
 
-t_stack	*split_input(char *str, int ac)
+t_stack	*split_input(char *str/*, int ac*/)
 {
 	char	**arr;
 	t_stack	*a;

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/01 16:26:28 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/01 17:03:01 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	err_duplicate(int ac, char **av)
 
 	i = 0;
 	args = (int*)malloc(ac * sizeof(int));
-	while (i <= ac)
+	while (i < ac)
 	{
 		args[i] = ft_atoi(av[i]);
 		i++;

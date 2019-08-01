@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/01 16:16:58 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/01 17:21:56 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,23 @@ int		main(int ac, char **av)
 	t_stack		*a;
 	t_stack		*b;
 	t_arguments args = {0};
-	ft_putnbr(sizeof(args));
-	//handle_arguments(&ac, &av, &args);
-	//ft_putnbr(ac);
-	//ft_putendl("");
-	av += 1;
-	ac--;
-	// if (ac < 2)
-	// 	return (0);
+
+	SHIFT_ARGS;
+	ft_putendl_col_fd(CYAN, *av, 1);
+	handle_arguments(&ac, &av, &args);
+	ft_putendl_col_fd(CYAN, *av, 1);
 	if (ac <= 0)
 		return (0);
 	if (is_string(av[0]))
-		a = split_input(av[0], ac);
+		a = split_input(av[0]/*, ac*/);
 	else
 	{
 		validate(/*ac, */ac, av);
 		a = stack_init(/*ac, ac, */av);
 	}
 	b = NULL;
-//	DEBUG_2;
-	read_input(&a, &b);
+	(args.v) ? (DEBUG_2) : NULL;
+	read_input(&a, &b, args);
 	if (check_sorted(a) && !b)
 		ft_putendl_col_fd(GREEN, "OK", 1);
 	else
