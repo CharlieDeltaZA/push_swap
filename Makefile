@@ -26,10 +26,10 @@ SRC_ALGO += $(SRC_DIR)algo_helper_2.c
 SRC_CH = $(SRC_DIR)checker.c $(SRC_COMMON)
 SRC_PS = $(SRC_DIR)push_swap.c $(SRC_COMMON) $(SRC_ALGO)
 
-OBJ_CH = $(SRC_DIR)checker.o $(SRC_DIR)stack_ops_1.o $(SRC_DIR)commands_1.o
-OBJ_CH += $(SRC_DIR)commands_2.o $(SRC_DIR)commands_3.o $(SRC_DIR)debugging.o
-OBJ_CH += $(SRC_DIR)error_checks_1.o $(SRC_DIR)error_checks_2.o
-OBJ_CH += $(SRC_DIR)validate.o $(SRC_DIR)stack_ops_2.o
+#OBJ_CH = $(SRC_DIR)checker.o $(SRC_DIR)stack_ops_1.o $(SRC_DIR)commands_1.o
+#OBJ_CH += $(SRC_DIR)commands_2.o $(SRC_DIR)commands_3.o $(SRC_DIR)debugging.o
+#OBJ_CH += $(SRC_DIR)error_checks_1.o $(SRC_DIR)error_checks_2.o
+#OBJ_CH += $(SRC_DIR)validate.o $(SRC_DIR)stack_ops_2.o
 #OBJ_PS = $(SRC_PS:.c=.o)
 
 all: $(LIB) $(NAME_CH) $(NAME_PS)
@@ -41,9 +41,9 @@ $(LIB): relib cleanlib
 
 $(NAME_CH): 
 	@echo "$(NAME_CH) compiled"
-#	@$(CC) $(FLAGS) $(OPTIONS) $(SRC_CH) -o $(NAME_CH)
-	@$(CC) $(FLAGS) $(OPTIONS) $(SRC_CH) -c
-	@$(CC) -o $(NAME_CH) $(OPTIONS) $(OBJ_CH) 
+	@$(CC) $(FLAGS) $(OPTIONS) $(SRC_CH) -o $(NAME_CH)
+#	@$(CC) $(FLAGS) $(OPTIONS) $(SRC_CH) -c
+#	@$(CC) -o $(NAME_CH) $(OPTIONS) $(OBJ_CH) 
 
 $(NAME_PS):
 	@echo "$(NAME_PS) compiled"
