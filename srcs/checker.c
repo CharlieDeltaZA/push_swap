@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/01 13:02:00 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/01 13:34:42 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,13 @@ int		main(int ac, char **av)
 {
 	t_stack		*a;
 	t_stack		*b;
-
+	t_arguments args = {0};
+	ft_putnbr(sizeof(args));
+	//handle_arguments(&ac, &av, &args);
+	//ft_putnbr(ac);
+	//ft_putendl("");
+	av += 1;
+	ac--;
 	if (ac < 2)
 		return (0);
 	if (ac == 2)

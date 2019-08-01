@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/29 15:57:31 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/01 13:33:00 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,14 @@
 ** TODO -- Just needs to be checked that everything is perfect
 */
 
+typedef struct		s_arguments
+{
+	char v : 1;
+	char c : 1;
+	char w : 1;
+}					t_arguments;
+
+
 typedef struct		s_struct
 {
 	int				value;
@@ -93,6 +101,7 @@ void				do_op(t_stack **stack_a, t_stack **stack_b, char *str);
 
 void				read_input(t_stack **stack_a, t_stack **stack_b);
 void				array_free(char **arr);
+void				handle_arguments(int *ac, char ***av, t_arguments *args);
 
 /*
 ** Validation & Error Funcs

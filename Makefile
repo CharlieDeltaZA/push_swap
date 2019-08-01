@@ -23,7 +23,7 @@ SRC_COMMON += $(SRC_DIR)validate.c $(SRC_DIR)stack_ops_2.c
 SRC_COMMON += $(SRC_DIR)debugging.c
 SRC_ALGO = $(SRC_DIR)algo_1.c $(SRC_DIR)algo_2.c $(SRC_DIR)algo_helper_1.c
 SRC_ALGO += $(SRC_DIR)algo_helper_2.c
-SRC_CH = $(SRC_DIR)checker.c $(SRC_COMMON)
+SRC_CH = $(SRC_DIR)checker.c $(SRC_COMMON) $(SRC_DIR)args.c
 SRC_PS = $(SRC_DIR)push_swap.c $(SRC_COMMON) $(SRC_ALGO)
 
 #OBJ_CH = $(SRC_DIR)checker.o $(SRC_DIR)stack_ops_1.o $(SRC_DIR)commands_1.o
