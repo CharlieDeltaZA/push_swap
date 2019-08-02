@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:36:02 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/02 10:51:56 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/02 11:18:15 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,15 @@ void	normalize(t_stack **stacka)
 void	read_input(t_stack **a, t_stack **b, t_arguments args)
 {
 	char	*line;
-	int		count;
+	int		move;
 
-	count = 0;
+	move = 0;
 	while (get_next_line(0, &line))
 	{
 		if (err_ops(line))
 		{
 			do_op(a, b, line);
-			count++;
+			move++;
 			(args.v) ? (visualize(*a, *b)) : NULL;
 			(args.p) ? ft_putendl_col_fd(GREEN, line, 1) : NULL;
 			free(line);

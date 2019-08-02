@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/02 10:53:28 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/02 11:17:49 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@
 # define ADD_NODES {node = S_C_N(ft_atoi(av[i])); stack_add_tail(&head, node);}
 # define FREE_ERR_DUPE {free(args); array_free(arr); error_out(DUPE);}
 # define SHIFT_ARGS {av += 1; ac--;}
-# define COUNT {ft_putstr_fd("Command Count: ", 1); ft_putnbr_nl(count);}
+# define COUNT {ft_putstr_col_fd(CYAN, "Move Count: ", 1); ft_putnbr_nl(move);}
 
 # define DEBUG {print_stack(a, 'A'); print_stack(b, 'B');}
 # define DEBUG_2 {print_stack(&a, 'A'); print_stack(&b, 'B');}
@@ -54,10 +54,6 @@
 # define CLEAR ft_putstr("\033[H\033[J");
 # define DIVIDER ft_putchar_col_fd(WHITE, '|', 1); ft_putchar(' ');
 //# define VISUALIZE {ft_putstr("\033[H\033[J"); visualize(a, b);}
-
-/*
-** TODO -- Just needs to be checked that everything is perfect
-*/
 
 typedef struct		s_arguments
 {
@@ -80,7 +76,7 @@ typedef struct		s_struct
 */
 
 t_stack				*stack_create_node(int value);
-t_stack				*stack_init(/*int size, int ac, */char **av);
+t_stack				*stack_init(char **av);
 void				stack_add_tail(t_stack **head, t_stack *node);
 void				stack_add_head(t_stack **head, t_stack *node);
 void				free_stack(t_stack **head);
@@ -115,12 +111,12 @@ void				handle_arguments(int *ac, char ***av, t_arguments *args);
 ** Validation & Error Funcs
 */
 
-void				validate(/*int size, */int ac, char **av);
+void				validate(int ac, char **av);
 int					is_string(char *str);
 int					check_sorted(t_stack *stack_a);
 int					stack_size(t_stack *head);
 int					arr_size(char **array);
-t_stack				*split_input(char *str/*, int ac*/);
+t_stack				*split_input(char *str);
 void				error_out(int code);
 void				err_duplicate(int ac, char **av);
 void				err_int(const char *str);
