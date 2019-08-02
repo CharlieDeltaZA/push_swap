@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/03 10:58:45 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/01 17:22:18 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/02 10:23:53 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,29 +76,4 @@ void	rrr(t_stack **stack_a, t_stack **stack_b, int p_bool)
 	rrb(stack_b, 0);
 	if (p_bool)
 		ft_putendl_fd("rrr", 1);
-}
-
-/*
-** Reads input from STD_IN, performs the operation if valid, otherwise
-** frees appropriately and displays an error message
-*/
-
-void	read_input(t_stack **a, t_stack **b, t_arguments args)
-{
-	char	*line;
-
-	while (get_next_line(0, &line))
-	{
-		if (err_ops(line))
-		{
-			do_op(a, b, line);
-			(args.v) ? (DEBUG) : NULL;
-			(args.c) ? ft_putendl_col_fd(GREEN, line, 1) : NULL;
-//			ft_putendl_col_fd(CYAN, "Last Command:", 1);//debugging
-//			ft_putendl_col_fd(GREEN, line, 1);//debugging
-			free(line);
-		}
-		else
-			OP_FREE;
-	}
 }

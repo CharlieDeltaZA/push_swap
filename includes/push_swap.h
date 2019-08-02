@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/01 17:21:54 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/02 10:53:28 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@
 */
 
 # include <stdio.h>
-# define DEBUG {print_stack(a, 'A'); print_stack(b, 'B');}
-# define DEBUG_2 {print_stack(&a, 'A'); print_stack(&b, 'B');}
 
 /*
 ** FOR TESTING ^^^
@@ -39,6 +37,7 @@
 # define MINSIZE 3
 # define DUPE 4
 # define OPS 5
+# define ARGS 6
 
 # define S_C_N stack_create_node
 # define OP_FREE {free(line); free_stack(a); free_stack(b); error_out(OPS);}
@@ -47,6 +46,14 @@
 # define ADD_NODES {node = S_C_N(ft_atoi(av[i])); stack_add_tail(&head, node);}
 # define FREE_ERR_DUPE {free(args); array_free(arr); error_out(DUPE);}
 # define SHIFT_ARGS {av += 1; ac--;}
+# define COUNT {ft_putstr_fd("Command Count: ", 1); ft_putnbr_nl(count);}
+
+# define DEBUG {print_stack(a, 'A'); print_stack(b, 'B');}
+# define DEBUG_2 {print_stack(&a, 'A'); print_stack(&b, 'B');}
+
+# define CLEAR ft_putstr("\033[H\033[J");
+# define DIVIDER ft_putchar_col_fd(WHITE, '|', 1); ft_putchar(' ');
+//# define VISUALIZE {ft_putstr("\033[H\033[J"); visualize(a, b);}
 
 /*
 ** TODO -- Just needs to be checked that everything is perfect
@@ -56,7 +63,7 @@ typedef struct		s_arguments
 {
 	char v : 1;
 	char c : 1;
-	char w : 1;
+	char p : 1;
 }					t_arguments;
 
 
@@ -119,12 +126,13 @@ void				err_duplicate(int ac, char **av);
 void				err_int(const char *str);
 void				err_input(const char *str);
 int					err_ops(char *op);
-void				err_duplicate_arr(int size, char **av);
+//void				err_duplicate_arr(int size, char **av);
 
 /*
-** Debugging
+** Debugging / Vizualizer
 */
 
+void				visualize(t_stack *stack_a, t_stack *stack_b);
 void				print_stack(t_stack **head, char stack_id);
 void				print_norm(t_stack *node);
 

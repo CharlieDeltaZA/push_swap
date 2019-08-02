@@ -74,7 +74,8 @@ SRC = ft_atoi.c \
 		ft_putstr_col_fd.c \
 		ft_putendl_col_fd.c \
 		ft_putnbr_col_fd.c \
-		ft_str_is_numeric.c
+		ft_str_is_numeric.c \
+		ft_putnbr_nl.c
 
 all: $(NAME)
 

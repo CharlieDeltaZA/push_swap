@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/01 17:03:01 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/02 10:30:10 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void	error_out(int code)
 		ft_putendl_col_fd(RED, "Error: Duplicate Inputs", 2);
 	if (code == OPS)
 		ft_putendl_col_fd(RED, "Error: Incorrect Operation", 2);
+	if (code == ARGS)
+		ft_putendl_col_fd(RED, "Error: Incorrect Arg", 2);
 	exit(1);
 }
 

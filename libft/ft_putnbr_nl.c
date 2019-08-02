@@ -1,39 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_nl.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/01 15:04:09 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/02 10:19:10 by cdiogo           ###   ########.fr       */
+/*   Created: 2019/05/21 09:36:12 by cdiogo            #+#    #+#             */
+/*   Updated: 2019/08/02 10:56:36 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+/*
+** Outputs integer `n` to the standard output. Uses ft_putnbr_fd, passing 1 as
+** the file descriptor. Puts a newline after printing the number.
+*/
 
-// STUFF AND THINGS
+#include "libft.h"
 
-int		main(int ac, char **av)
+void	ft_putnbr_nl(int n)
 {
-	t_stack		*a;
-	t_stack		*b;
-
-	SHIFT_ARGS;
-	if (ac <= 0)
-		return (0);
-	if (is_string(av[0]))
-		a = split_input(av[0]);
-	else
-	{
-		validate(ac, av);
-		a = stack_init(av);
-	}
-	b = NULL;
-	if (check_sorted(a) && !b)
-		return (0);
-	normalize(&a);
-	sort_master(&a, &b);
-	STACK_FREE;
-	return (0);
+	ft_putnbr_fd(n, 1);
+	ft_putendl("");
 }
