@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/02 11:17:49 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/02 13:35:43 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@
 # define ADD_NODES {node = S_C_N(ft_atoi(av[i])); stack_add_tail(&head, node);}
 # define FREE_ERR_DUPE {free(args); array_free(arr); error_out(DUPE);}
 # define SHIFT_ARGS {av += 1; ac--;}
+# define SHIFT_ARGS_2 {*av += 1; *ac -= 1;}
 # define COUNT {ft_putstr_col_fd(CYAN, "Move Count: ", 1); ft_putnbr_nl(move);}
 
 # define DEBUG {print_stack(a, 'A'); print_stack(b, 'B');}
@@ -122,7 +123,6 @@ void				err_duplicate(int ac, char **av);
 void				err_int(const char *str);
 void				err_input(const char *str);
 int					err_ops(char *op);
-//void				err_duplicate_arr(int size, char **av);
 
 /*
 ** Debugging / Vizualizer

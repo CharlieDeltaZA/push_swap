@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/02 10:18:49 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/02 13:26:59 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		main(int ac, char **av)
 {
 	t_stack		*a;
 	t_stack		*b;
-	t_arguments args = {0};
+	t_arguments args/* = {0}*/;
 
 	SHIFT_ARGS;
 	handle_arguments(&ac, &av, &args);
