@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/02 13:35:43 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/02 14:00:27 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ typedef struct		s_arguments
 	char c : 1;
 	char p : 1;
 }					t_arguments;
-
 
 typedef struct		s_struct
 {
