@@ -6,13 +6,13 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/02 13:26:59 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/02 16:46:39 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int		main(int ac, char **av)
+int		main(int ac, char **av) //seg fault when running without any args or numbers.
 {
 	t_stack		*a;
 	t_stack		*b;
