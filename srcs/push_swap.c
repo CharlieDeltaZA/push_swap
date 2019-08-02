@@ -6,13 +6,11 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 15:04:09 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/02 10:19:10 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/02 13:01:26 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-// STUFF AND THINGS
 
 int		main(int ac, char **av)
 {

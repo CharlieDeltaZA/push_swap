@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/01 16:12:03 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/02 13:11:39 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,32 +18,11 @@
 ** limits of an INT.
 */
 
-void	validate(/*int size, */int ac, char **av)
+void	validate(int ac, char **av)
 {
 	int	i;
 
 	i = 0;
-	// if (size == 2 && ac == 2)
-	// {
-	// 	i = -1;
-	// 	while (++i < size)
-	// 		ERR_INT_INPUT;
-	// 	err_duplicate_arr(size, av);
-	// }
-	// else if (size == ac)
-	// {
-	// 	i = 0;
-	// 	while (++i < ac)
-	// 		ERR_INT_INPUT;
-	// 	err_duplicate(ac, av);
-	// }
-	// else
-	// {
-	// 	i = -1;
-	// 	while (++i < size)
-	// 		ERR_INT_INPUT;
-	// 	err_duplicate_arr(size, av);
-	// }
 	while (av[i])
 	{
 		err_input(av[i]);
@@ -51,7 +30,7 @@ void	validate(/*int size, */int ac, char **av)
 		i++;
 	}
 	err_duplicate(ac, av);
-}	
+}
 
 /*
 ** Checks whether the first av value is a string or not, by looking for at

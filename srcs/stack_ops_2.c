@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:36:02 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/02 11:18:15 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/02 13:00:45 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void	normalize(t_stack **stacka)
 		slow = slow->next;
 	}
 }
-
 
 /*
 ** Reads input from STD_IN, performs the operation if valid, otherwise
