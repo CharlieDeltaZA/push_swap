@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 10:30:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/01 14:25:32 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/02 15:53:13 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,9 @@
 
 void	sort_100(t_stack **stack_a, t_stack **stack_b)
 {
-	int		size;
 	int		range_max;
 	int		i;
 
-	size = stack_size(*stack_a);
 	range_max = 0;
 	i = 1;
 	while (*stack_a)
@@ -40,6 +38,7 @@ void	sort_100(t_stack **stack_a, t_stack **stack_b)
 			if ((*stack_a)->norm <= range_max)
 			{
 				pb(stack_a, stack_b, 1);
+				swap_check(stack_b);
 				i++;
 			}
 			else
@@ -58,11 +57,9 @@ void	sort_100(t_stack **stack_a, t_stack **stack_b)
 
 void	sort_500(t_stack **stack_a, t_stack **stack_b)
 {
-	int		size;
 	int		range_max;
 	int		i;
 
-	size = stack_size(*stack_a);
 	range_max = 0;
 	i = 1;
 	while (*stack_a)
@@ -75,6 +72,7 @@ void	sort_500(t_stack **stack_a, t_stack **stack_b)
 			if ((*stack_a)->norm <= range_max)
 			{
 				pb(stack_a, stack_b, 1);
+				swap_check(stack_b);
 				i++;
 			}
 			else

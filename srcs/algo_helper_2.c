@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/26 13:50:05 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/01 11:02:23 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/02 16:11:58 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,13 +80,24 @@ void	pushback_b(t_stack **stack_a, t_stack **stack_b, int i, int range_max)
 
 	while (*stack_b)
 	{
+		// swap_check(stack_b);
 		while (i > 0 && i >= range_max - 5)
 		{
 			pos = find_nlargest_pos(stack_b, i);
 			rb_rrb_x_times(stack_b, pos);
 			pa(stack_a, stack_b, 1);
+			swap_check(stack_b);
 			i--;
 		}
 		range_max -= 5;
+	}
+}
+
+void	swap_check(t_stack **stack_b)
+{
+	if ((*stack_b) && stack_size(*stack_b) >= 2)
+	{
+		if ((*stack_b)->value < (*stack_b)->next->value)
+			sb(stack_b, 1);
 	}
 }
