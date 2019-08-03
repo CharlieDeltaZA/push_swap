@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 14:17:40 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/03 15:59:58 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/03 16:29:30 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int		is_arg(char *av)
 
 void			handle_arguments(int *ac, char ***av, t_arguments *args)
 {
-	if (*ac > 1)
+	if (*ac >= 1)
 		while (is_arg(**av))
 		{
 			**av += 1;

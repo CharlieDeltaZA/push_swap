@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/02 16:57:47 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/03 16:24:44 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 void	error_out(int code)
 {
 	if (code == INPUT)
-		ft_putendl_col_fd(RED, "Error: Inputs Invalid", 2);
+		ft_putendl_col_fd(RED, "Error: Invalid Input", 2);
 	if (code == MAXSIZE)
 		ft_putendl_col_fd(RED, "Error: Input Over INT_MAX", 2);
 	if (code == MINSIZE)

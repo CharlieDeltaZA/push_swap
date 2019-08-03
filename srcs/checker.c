@@ -6,17 +6,19 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/02 16:46:39 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/03 16:33:57 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int		main(int ac, char **av) //seg fault when running without any args or numbers.
+// Current issue: First arg can't be a negative (unless quoted input) - Spits out invalid arg
+
+int		main(int ac, char **av)
 {
 	t_stack		*a;
 	t_stack		*b;
-	t_arguments args/* = {0}*/;
+	t_arguments args;
 
 	SHIFT_ARGS;
 	handle_arguments(&ac, &av, &args);
