@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/02 15:41:41 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/04 09:17:13 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,6 +141,7 @@ void				sort_3(t_stack **stack_a);
 void				sort_5(t_stack **stack_a, t_stack **stack_b);
 void				sort_20(t_stack **stack_a, t_stack **stack_b);
 void				sort_100(t_stack **stack_a, t_stack **stack_b);
+void				sort_250(t_stack **stack_a, t_stack **stack_b);
 void				sort_500(t_stack **stack_a, t_stack **stack_b);
 void				sort_me(t_stack **stack_a, t_stack **stack_b);
 

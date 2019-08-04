@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 08:36:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/29 16:33:11 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/04 11:41:56 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,13 +194,13 @@ int		find_nsmallest_range_pos(t_stack **head, int range)
 	{
 		if (lnode->norm <= range)
 		{
-			pos_rear = l;
+			pos_rear = l - 1;
 			break ;
 		}
 		lnode = lnode->prev;
 		l--;
 	}
-	if (pos_front < (stack_size(*head) - pos_rear))
+	if (pos_front <= (stack_size(*head) - pos_rear))
 		return (pos_front);
 	else
 		return (pos_rear);
