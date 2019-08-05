@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 14:17:40 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/04 14:28:21 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/05 09:55:53 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,33 +21,29 @@ static int		is_arg(char *av)
 
 void			handle_arguments(int *ac, char ***av, t_arguments *args)
 {
-	printf("Before If\n");
-	if (*ac >= 1)
-		while (is_arg(**av))
+	while (*ac > 0 && is_arg(**av))
+	{
+		if (*ac == 0)
+			return ;
+		**av += 1;
+		if (***av >= '0' && ***av <= '9')
+			return ;
+		if (***av == 'v')
 		{
-			printf("In While\n");
-			**av += 1;
-			if (***av >= '0' && ***av <= '9')
-				return ;
-			if (***av == 'v')
-			{
-				printf("-v\n");
-				SHIFT_ARGS_2;
-				args->v = 1;
-			}
-			else if (***av == 'p')
-			{
-				printf("-p\n");
-				SHIFT_ARGS_2;
-				args->p = 1;
-			}
-			else if (***av == 'c')
-			{
-				printf("-c\n");
-				SHIFT_ARGS_2;
-				args->c = 1;
-			}
-			else
-				error_out(ARGS);
+			SHIFT_ARGS_2;
+			args->v = 1;
 		}
+		else if (***av == 'p')
+		{
+			SHIFT_ARGS_2;
+			args->p = 1;
+		}
+		else if (***av == 'c')
+		{
+			SHIFT_ARGS_2;
+			args->c = 1;
+		}
+		else
+			error_out(ARGS);
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/03 16:24:44 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/05 09:03:22 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	error_out(int code)
 ** and outputs an appropriate error and exits if there are.
 */
 
-void	err_duplicate(int ac, char **av) //currently slightly broken with the new AV method. Seems to not be checking last value of input -- Seems fixed, remove comments
+void	err_duplicate(int ac, char **av)
 {
 	int		i;
 	int		k;
