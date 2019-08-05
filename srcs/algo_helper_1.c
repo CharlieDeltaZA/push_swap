@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 08:36:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/04 11:41:56 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/05 09:59:15 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,6 +161,11 @@ int		find_nlargest_pos(t_stack **head, int largest)
 	}
 	return (pos);
 }
+
+/*
+** Ideally find the first number from from and rear within the range given
+** and return the pos the results in least moves to get to top.
+*/
 
 int		find_nsmallest_range_pos(t_stack **head, int range)
 {

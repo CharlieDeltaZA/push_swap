@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/04 09:17:13 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/05 09:59:22 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@
 
 # define CLEAR ft_putstr("\033[H\033[J");
 # define DIVIDER ft_putchar_col_fd(WHITE, '|', 1); ft_putchar(' ');
-//# define VISUALIZE {ft_putstr("\033[H\033[J"); visualize(a, b);}
 
 typedef struct		s_arguments
 {
