@@ -1,18 +1,17 @@
-#
-#             Makefile for push_swap
-#
-# First compiles the library for use in the project
-# Before compiling the programs "checker" & "push_swap"
-#
+##########################################################
+#														 #
+#             Makefile for push_swap					 #
+#														 #
+# First compiles the library for use in the project		 #
+# Before compiling the programs "checker" & "push_swap"	 #
+#														 #
+##########################################################
 
 LIB = libft
 NAME_CH = checker
 NAME_PS = push_swap
 CC = gcc
 FLAGS = -Wall -Werror -Wextra -g
-# Compile to .o or straight to exe?
-# Would need to explicity list all .o files then,
-# for each exe. Might be worth it.
 SRC_DIR = ./srcs/
 INC_DIR = ./includes/
 OBJ_DIR = ./srcs/
@@ -35,6 +34,7 @@ OBJ_PS += $(OBJ_DIR)viz.o
 all: $(LIB) $(NAME_CH) $(NAME_PS)
 
 $(LIB): relib cleanlib
+#	$(MAKE) -C ./libft libft
 	@echo "[$(LIB)] compiled"
 
 %.o: $(SRC_DIR)%.c $(HDR)
@@ -48,11 +48,11 @@ $(NAME_PS): $(OBJ_PS)
 	@$(CC) -o $(NAME_PS) $(FLAGS) $(OPTIONS) $(OBJ_PS)
 	@echo "[$(NAME_PS)] compiled"
 
-clean:
-	@/bin/rm -f ./srcs/*.o
+clean: cleanlib
+	@/bin/rm -f $(SRC_DIR)*.o
 	@echo "Object files removed"
 
-fclean: clean
+fclean: clean fcleanlib
 	@/bin/rm -f $(NAME_CH) $(NAME_PS)
 	@echo "[$(NAME_CH)] & [$(NAME_PS)] removed"
 
