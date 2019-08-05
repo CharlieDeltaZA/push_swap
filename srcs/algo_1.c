@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 10:07:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/04 13:03:49 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/05 15:49:54 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ void	sort_master(t_stack **stack_a, t_stack **stack_b)
 		sort_250(stack_a, stack_b);
 	else if (size_a > 100 && size_a <= 500)
 		sort_500(stack_a, stack_b);
-	// else
-	// 	sort_me(stack_a, stack_b);
+	else
+		sort_me(stack_a, stack_b);
 }
 
 /*

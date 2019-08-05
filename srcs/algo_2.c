@@ -6,16 +6,49 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 10:30:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/04 13:03:34 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/05 15:49:43 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// void	sort_me(t_stack **stack_a, t_stack **stack_b)
-// {
-// 	//TODO
-// }
+/*
+** Sorts above 500 numbers
+*/
+
+void	sort_me(t_stack **stack_a, t_stack **stack_b)
+{
+	//TODO
+	int		range_max;
+	int		i;
+	// int		pos;
+
+	range_max = 0;
+	i = 1;
+	while (*stack_a)
+	{
+		range_max += 50;
+		while (i <= range_max)
+		{
+			if (!(*stack_a))
+				break ;
+			if ((*stack_a)->norm <= range_max)
+			{
+				pb(stack_a, stack_b, 1);
+				// swap_check(stack_b);
+				i++;
+			}
+			else
+				ra(stack_a, 1);
+			// pos = find_nsmallest_range_pos(stack_a, range_max);
+			// ra_rra_x_times(stack_a, pos);
+			// pb(stack_a, stack_b, 1);
+			// i++;
+		}
+	}
+	i--;
+	pushback_b(stack_a, stack_b, i, range_max);
+}
 
 /*
 ** Sorts between 21 and 100 numbers
@@ -39,7 +72,7 @@ void	sort_100(t_stack **stack_a, t_stack **stack_b)
 			if ((*stack_a)->norm <= range_max)
 			{
 				pb(stack_a, stack_b, 1);
-				//swap_check(stack_b);
+				// swap_check(stack_b);
 				i++;
 			}
 			else
