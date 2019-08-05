@@ -14,49 +14,47 @@ FLAGS = -Wall -Werror -Wextra -g
 # Would need to explicity list all .o files then,
 # for each exe. Might be worth it.
 SRC_DIR = ./srcs/
-INCLUDES = ./includes/
-OPTIONS = -I./includes -I./libft -lft -L./libft
-SRC_COMMON = $(SRC_DIR)stack_ops_1.c $(SRC_DIR)commands_1.c
-SRC_COMMON += $(SRC_DIR)commands_2.c $(SRC_DIR)commands_3.c
-SRC_COMMON += $(SRC_DIR)error_checks_1.c $(SRC_DIR)error_checks_2.c
-SRC_COMMON += $(SRC_DIR)validate.c $(SRC_DIR)stack_ops_2.c
-SRC_COMMON += $(SRC_DIR)debugging.c $(SRC_DIR)viz.c
-SRC_ALGO = $(SRC_DIR)algo_1.c $(SRC_DIR)algo_2.c $(SRC_DIR)algo_helper_1.c
-SRC_ALGO += $(SRC_DIR)algo_helper_2.c
-SRC_CH = $(SRC_DIR)checker.c $(SRC_COMMON) $(SRC_DIR)args.c
-SRC_PS = $(SRC_DIR)push_swap.c $(SRC_COMMON) $(SRC_ALGO)
+INC_DIR = ./includes/
+OBJ_DIR = ./srcs/
+OPTIONS = -I$(INC_DIR) -I./libft -lft -L./libft
+HDR = ./includes/push_swap.h
 
-#OBJ_CH = $(SRC_DIR)checker.o $(SRC_DIR)stack_ops_1.o $(SRC_DIR)commands_1.o
-#OBJ_CH += $(SRC_DIR)commands_2.o $(SRC_DIR)commands_3.o $(SRC_DIR)debugging.o
-#OBJ_CH += $(SRC_DIR)error_checks_1.o $(SRC_DIR)error_checks_2.o
-#OBJ_CH += $(SRC_DIR)validate.o $(SRC_DIR)stack_ops_2.o
-#OBJ_PS = $(SRC_PS:.c=.o)
+OBJ_CH = $(OBJ_DIR)checker.o $(OBJ_DIR)stack_ops_1.o $(OBJ_DIR)commands_1.o
+OBJ_CH += $(OBJ_DIR)commands_2.o $(OBJ_DIR)commands_3.o $(OBJ_DIR)debugging.o
+OBJ_CH += $(OBJ_DIR)error_checks_1.o $(OBJ_DIR)error_checks_2.o
+OBJ_CH += $(OBJ_DIR)validate.o $(OBJ_DIR)stack_ops_2.o $(OBJ_DIR)viz.o
+OBJ_CH += $(OBJ_DIR)args.o
+
+OBJ_PS = $(OBJ_DIR)push_swap.o $(OBJ_DIR)algo_1.o $(OBJ_DIR)algo_2.o
+OBJ_PS += $(OBJ_DIR)algo_helper_1.o $(OBJ_DIR)algo_helper_2.o
+OBJ_PS += $(OBJ_DIR)commands_1.o $(OBJ_DIR)commands_2.o $(OBJ_DIR)commands_3.o
+OBJ_PS += $(OBJ_DIR)stack_ops_1.o $(OBJ_DIR)stack_ops_2.o $(OBJ_DIR)validate.o
+OBJ_PS += $(OBJ_DIR)error_checks_1.o $(OBJ_DIR)error_checks_2.o $(OBJ_DIR)debugging.o
+OBJ_PS += $(OBJ_DIR)viz.o
 
 all: $(LIB) $(NAME_CH) $(NAME_PS)
 
 $(LIB): relib cleanlib
-	@echo "$(LIB) compiled"
-#	$(MAKE) -C ./libft
-#	$(MAKE) -C ./libft clean
+	@echo "[$(LIB)] compiled"
 
-$(NAME_CH): 
-	@echo "$(NAME_CH) compiled"
-	@$(CC) $(FLAGS) $(OPTIONS) $(SRC_CH) -o $(NAME_CH)
-#	@$(CC) $(FLAGS) $(OPTIONS) $(SRC_CH) -c
-#	@$(CC) -o $(NAME_CH) $(OPTIONS) $(OBJ_CH) 
+%.o: $(SRC_DIR)%.c $(HDR)
+	@$(CC) $(FLAGS) $(OPTIONS) -c $< -o $@
 
-$(NAME_PS):
-	@echo "$(NAME_PS) compiled"
-	@$(CC) $(FLAGS) $(OPTIONS) $(SRC_PS) -o $(NAME_PS)
-#	$(CC) -o $(NAME_PS) $(OBJ_PS)
+$(NAME_CH): $(OBJ_CH)
+	@$(CC) -o $(NAME_CH) $(FLAGS) $(OPTIONS) $(OBJ_CH) 
+	@echo "[$(NAME_CH)] compiled"
+
+$(NAME_PS): $(OBJ_PS)
+	@$(CC) -o $(NAME_PS) $(FLAGS) $(OPTIONS) $(OBJ_PS)
+	@echo "[$(NAME_PS)] compiled"
 
 clean:
-	@echo "clean TODO"
-#	/bin/rm -f $(OBJ) # *.o?
+	@/bin/rm -f ./srcs/*.o
+	@echo "Object files removed"
 
 fclean: clean
-	@echo "$(NAME_CH) & $(NAME_PS) removed"
 	@/bin/rm -f $(NAME_CH) $(NAME_PS)
+	@echo "[$(NAME_CH)] & [$(NAME_PS)] removed"
 
 re: fclean all
 
