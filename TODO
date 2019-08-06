@@ -1,34 +1,35 @@
 -- CHECKER --
-Try fix that shitty duplicate input error --Done
-Handle a single string argument with multiple args
-|___ Need to free the **arr! --Done, seems to work.✔
-|___ Need a counter to replicate ac? NO✔
-|___ Need to potentially change up how I validate considering av[0] is binary name --Done, check it!✔
-|___ Might need to change how stack_init works as well --Done, check it!✔
-|___ 2nd Duplicate check? Yikes --Done, check it!✔
-|___ Fix invalid input with single string! "henlo 42" should break, but doesn't --Seems fixed but I didn't do anything to fix :eyes:
-|___ "val1 val2" breaks, first element lost --Fixed
-|___ `any_val 0` breaks, Duplicate Inputs (even tho both are unique) Only when one value is 0 tho --Done?
-Potential protection on some functions --Done on a few commands, might need to look at others✔
-Better Makefile
-|___ Fix it so it compiles .o appropriately
-|___ Add the rest of the sources
-Further memory leak checks --Fixed an array error, haven't found more leaks yet.
-Shorten the line count in checker.c --Done
-Shorten the line count in validate.c --Done
-Shorten the line count in stack_ops.c --Done
-Change how sa() & sb() work --Done
+Try fix that shitty duplicate input error --Done ✔
+Handle a single string argument with multiple args ✔
+|___ Need to free the **arr! --Done, seems to work. ✔
+|___ Need a counter to replicate ac? NO ✔
+|___ Need to potentially change up how I validate considering av[0] is binary name --Done, check it! ✔
+|___ Might need to change how stack_init works as well --Done, check it! ✔
+|___ 2nd Duplicate check? Yikes --Done, check it! ✔
+|___ Fix invalid input with single string! "henlo 42" should break, but doesn't --Seems fixed but I didn't do anything to fix :eyes: ✔
+|___ "val1 val2" breaks, first element lost --Fixed ✔
+|___ `any_val 0` breaks, Duplicate Inputs (even tho both are unique) Only when one value is 0 tho --Done? ✔
+Potential protection on some functions --Done on a few commands, might need to look at others ✔
+Better Makefile ✔
+|___ Fix it so it compiles .o appropriately ✔
+|___ Add the rest of the sources ✔
+Further memory leak checks --Fixed an array error, haven't found more leaks yet. ✔
+Shorten the line count in checker.c --Done ✔
+Shorten the line count in validate.c --Done ✔
+Shorten the line count in stack_ops.c --Done ✔
+Change how sa() & sb() work --Done ✔
 
-0 in the input is breaking my duplicate check. (Passes while in debugger)
-|___ 0 1 ; 0 1 2 3 ; ---- I think I fixed this. Eeek --NOT FIXED --NowFixed
+0 in the input is breaking my duplicate check. (Passes while in debugger) ✔
+|___ 0 1 ; 0 1 2 3 ; ---- I think I fixed this. Eeek --NOT FIXED --NowFixed ✔
 
 -- PUSH_SWAP --
-Algo for 3 & 5 numbers
-Algo for 100 & 500 numbers
-Ensure we print the command to STD_OUT --Adjusted command funcs to do this
+Algo for 3 & 5 numbers ✔
+Algo for 100 & 500 numbers ✔
+Added algo for 20, 250 and >500 ✔
+Ensure we print the command to STD_OUT --Adjusted command funcs to do this ✔
 
-Make a basic insert sort, then work on making chunks. Start somewhere, anywhere ffs
-Normalize the stack ; should help with chunks and sorting, independent of whatever the value is 
+Make a basic insert sort, then work on making chunks. Start somewhere, anywhere ffs ✔
+Normalize the stack ; should help with chunks and sorting, independent of whatever the value is ✔
 
 
 
