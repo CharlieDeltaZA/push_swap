@@ -6,13 +6,11 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 14:59:54 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/05 09:33:10 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/06 15:31:42 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-// Current issue - Checker segfaults if passed args and no numbers
 
 int		main(int ac, char **av)
 {
@@ -24,13 +22,12 @@ int		main(int ac, char **av)
 	handle_arguments(&ac, &av, &args);
 	if (ac <= 0)
 		return (0);
-	if (is_string(av[0]))
+	if (is_string(av[0]) && ac > 2)
+		error_out(INPUT);
+	else if (is_string(av[0]) && ac == 1)
 		a = split_input(av[0]);
 	else
-	{
-		validate(ac, av);
-		a = stack_init(av);
-	}
+		VAL_INIT;
 	b = NULL;
 	(args.v) ? (visualize(a, b)) : NULL;
 	read_input(&a, &b, args);

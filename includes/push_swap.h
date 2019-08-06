@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/05 09:59:22 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/06 15:31:06 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@
 # define OPS 5
 # define ARGS 6
 
+# define VAL_INIT {validate(ac, av); a = stack_init(av);}
 # define S_C_N stack_create_node
 # define OP_FREE {free(line); free_stack(a); free_stack(b); error_out(OPS);}
 # define STACK_FREE {free_stack(&a); free_stack(&b);}
