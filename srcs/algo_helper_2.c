@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/26 13:50:05 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/07 14:27:08 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/07 16:32:24 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,11 @@ void	pushback_b(t_stack **stack_a, t_stack **stack_b, int i, int range_max)
 	}
 }
 
+/*
+** Checks whether the next value is larger than the current value and swaps
+** the 2 if appropriate.
+*/
+
 void	swap_check(t_stack **stack_b)
 {
 	if ((*stack_b) && stack_size(*stack_b) >= 2)
@@ -99,4 +104,30 @@ void	swap_check(t_stack **stack_b)
 		if ((*stack_b)->value < (*stack_b)->next->value)
 			sb(stack_b, 1);
 	}
+}
+
+/*
+** Finds position of the largest norm value
+*/
+
+int		find_nlargest_pos(t_stack **head, int largest)
+{
+	t_stack	*node;
+	int		pos;
+	int		i;
+
+	node = *head;
+	pos = 0;
+	i = 0;
+	while (node)
+	{
+		if (node->norm == largest)
+		{
+			pos = i;
+			break ;
+		}
+		node = node->next;
+		i++;
+	}
+	return (pos);
 }
