@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/06 15:31:06 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/07 14:56:01 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,6 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
-
-/*
-** FOR TESTING VVV
-*/
-
-# include <stdio.h>
-
-/*
-** FOR TESTING ^^^
-*/
 
 /*
 ** MACROS GALORE
@@ -103,7 +93,8 @@ void				do_op(t_stack **stack_a, t_stack **stack_b, char *str);
 ** Other Funcs
 */
 
-void				read_input(t_stack **stack_a, t_stack **stack_b, t_arguments args);
+void				read_input(t_stack **stack_a, t_stack **stack_b,\
+															t_arguments args);
 void				array_free(char **arr);
 void				handle_arguments(int *ac, char ***av, t_arguments *args);
 
