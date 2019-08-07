@@ -11,7 +11,7 @@ LIB = libft
 NAME_CH = checker
 NAME_PS = push_swap
 CC = gcc
-FLAGS = -Wall -Werror -Wextra -g
+FLAGS = -Wall -Werror -Wextra
 SRC_DIR = ./srcs/
 INC_DIR = ./includes/
 OBJ_DIR = ./srcs/
@@ -34,7 +34,6 @@ OBJ_PS += $(OBJ_DIR)viz.o
 all: $(LIB) $(NAME_CH) $(NAME_PS)
 
 $(LIB): relib cleanlib
-#	$(MAKE) -C ./libft libft
 	@echo "[$(LIB)] compiled"
 
 %.o: $(SRC_DIR)%.c $(HDR)
