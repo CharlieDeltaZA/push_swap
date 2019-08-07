@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 08:36:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/05 09:59:15 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/07 14:32:30 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,11 @@
 
 int		find_largest(t_stack **head)
 {
-	//TODO
 	t_stack	*node;
 	int		largest;
 
 	node = *head;
-	largest = 0; //change me?
+	largest = 0;
 	while (node)
 	{
 		if (node->value > largest)
@@ -39,9 +38,8 @@ int		find_largest(t_stack **head)
 
 int		find_largest_pos(t_stack **head, int largest)
 {
-	//TODO
 	t_stack	*node;
-	int 	pos;
+	int		pos;
 	int		i;
 
 	node = *head;
@@ -66,7 +64,6 @@ int		find_largest_pos(t_stack **head, int largest)
 
 int		find_smallest(t_stack **head)
 {
-	//TODO --Erm. 0 might break it
 	t_stack	*node;
 	int		smallest;
 
@@ -87,7 +84,6 @@ int		find_smallest(t_stack **head)
 
 int		find_smallest_pos(t_stack **head, int smallest)
 {
-	//TODO
 	t_stack	*node;
 	int		pos;
 	int		i;
@@ -114,9 +110,8 @@ int		find_smallest_pos(t_stack **head, int smallest)
 
 int		find_nsmallest_pos(t_stack **head, int smallest)
 {
-	//TODO
 	t_stack	*node;
-	int 	pos;
+	int		pos;
 	int		i;
 
 	node = *head;
@@ -141,9 +136,8 @@ int		find_nsmallest_pos(t_stack **head, int smallest)
 
 int		find_nlargest_pos(t_stack **head, int largest)
 {
-	//TODO
 	t_stack	*node;
-	int 	pos;
+	int		pos;
 	int		i;
 
 	node = *head;
@@ -167,7 +161,7 @@ int		find_nlargest_pos(t_stack **head, int largest)
 ** and return the pos the results in least moves to get to top.
 */
 
-int		find_nsmallest_range_pos(t_stack **head, int range)
+/* int		find_nsmallest_range_pos(t_stack **head, int range)
 {
 	//TODO
 	t_stack	*node;
@@ -210,4 +204,4 @@ int		find_nsmallest_range_pos(t_stack **head, int range)
 	else
 		return (pos_rear);
 	return (0);
-}
+} */
