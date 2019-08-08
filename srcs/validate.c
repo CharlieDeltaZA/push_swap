@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/08 13:37:32 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/08 16:27:37 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** limits of an INT.
 */
 
-void	validate(int ac, char **av, int check)
+void	validate(int ac, char **av, int check) // Double negative input breaks, takes the number in as 0
 {
 	int	i;
 	int	ret;
