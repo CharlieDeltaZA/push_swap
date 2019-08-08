@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/07 16:09:40 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/08 12:10:41 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,6 @@ int					err_ops(char *op);
 
 void				visualize(t_stack *stack_a, t_stack *stack_b);
 void				print_stack(t_stack **head, char stack_id);
-void				print_norm(t_stack *node);
 
 /*
 ** Algo

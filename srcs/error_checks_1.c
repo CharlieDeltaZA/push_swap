@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/05 09:03:22 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/08 12:12:40 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 ** Determine the error message to output based on code passed
 ** 1 - Invalid Inputs ; 2 - Input over INT_MAX ; 3 - Input over INT_MIN ;
-** 4 - Duplicate Inputs ; 5 - Incorrect Operation ;
+** 4 - Duplicate Inputs ; 5 - Incorrect Operation ; 6 - Incorrect Arg ;
 ** STDERR = fd of 2
 */
 

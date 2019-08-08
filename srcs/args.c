@@ -6,11 +6,15 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 14:17:40 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/08 09:51:37 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/08 12:09:00 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+/*
+** Checks whether the current av input should be handled as an argument.
+*/
 
 static int		is_arg(char *av)
 {
@@ -18,6 +22,10 @@ static int		is_arg(char *av)
 		return (1);
 	return (0);
 }
+
+/*
+** Handles whether any arguments are passed in, and skips over them.
+*/
 
 void			handle_arguments(int *ac, char ***av, t_arguments *args)
 {

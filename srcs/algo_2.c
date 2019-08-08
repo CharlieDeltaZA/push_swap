@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 10:30:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/07 16:17:46 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/08 12:05:27 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	sort_me(t_stack **stack_a, t_stack **stack_b)
 }
 
 /*
-** Sorts between 21 and 100 numbers
+** Sorts between 51 and 100 numbers
 */
 
 void	sort_100(t_stack **stack_a, t_stack **stack_b)
@@ -135,6 +135,10 @@ void	sort_500(t_stack **stack_a, t_stack **stack_b)
 	i--;
 	pushback_b(stack_a, stack_b, i, range_max);
 }
+
+/*
+** Sorts between 21 and 50 numbers
+*/
 
 void	sort_50(t_stack **stack_a, t_stack **stack_b)
 {
