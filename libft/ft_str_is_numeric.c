@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/05 13:40:34 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/07/19 09:13:06 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/08 16:43:51 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,16 @@
 
 int		ft_str_is_numeric(const char *str)
 {
+	int	check;
+
+	check = 0;
 	while ((ft_isdigit(*str) || *str == '-') && *str)
+	{
+		if (*str == '-')
+			check += 1;
 		str++;
-	if (*str)
+	}
+	if (*str || check > 1)
 		return (FALSE);
 	return (TRUE);
 }
