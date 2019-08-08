@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 15:04:09 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/02 13:01:26 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/08 13:19:59 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		main(int ac, char **av)
 		a = split_input(av[0]);
 	else
 	{
-		validate(ac, av);
+		validate(ac, av, 0);
 		a = stack_init(av);
 	}
 	b = NULL;

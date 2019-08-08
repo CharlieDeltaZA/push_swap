@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/04 14:44:23 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/08 12:12:40 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/08 13:32:21 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	error_out(int code)
 ** and outputs an appropriate error and exits if there are.
 */
 
-void	err_duplicate(int ac, char **av)
+int		err_duplicate(int ac, char **av)
 {
 	int		i;
 	int		k;
@@ -61,12 +61,13 @@ void	err_duplicate(int ac, char **av)
 		while (k < ac)
 		{
 			if (args[i] == args[k])
-				error_out(DUPE);
+				return (FEELSBADMAN);
 			k++;
 		}
 		i++;
 	}
 	free(args);
+	return (FEELSGOODMAN);
 }
 
 /*
@@ -75,12 +76,13 @@ void	err_duplicate(int ac, char **av)
 ** and exits if there are.
 */
 
-void	err_int(const char *str)
+int		err_int(const char *str)
 {
 	if (ft_atol(str) > 2147483647)
-		error_out(MAXSIZE);
+		return (MAXSIZE);
 	if (ft_atol(str) < -2147483648)
-		error_out(MINSIZE);
+		return (MINSIZE);
+	return (0);
 }
 
 /*
@@ -88,10 +90,11 @@ void	err_int(const char *str)
 ** and outputs an appropriate error and exits if there are.
 */
 
-void	err_input(const char *str)
+int		err_input(const char *str)
 {
 	if (ft_str_is_numeric(str) != 1)
-		error_out(INPUT);
+		return (FEELSBADMAN);
+	return (FEELSGOODMAN);
 }
 
 /*

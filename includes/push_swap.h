@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/08 12:10:41 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/08 13:37:15 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 # define OPS 5
 # define ARGS 6
 
-# define VAL_INIT {validate(ac, av); a = stack_init(av);}
+# define VAL_INIT {validate(ac, av, 0); a = stack_init(av);}
 # define S_C_N stack_create_node
 # define OP_FREE {free(line); free_stack(a); free_stack(b); error_out(OPS);}
 # define STACK_FREE {free_stack(&a); free_stack(&b);}
@@ -39,6 +39,7 @@
 # define SHIFT_ARGS {av += 1; ac--;}
 # define SHIFT_ARGS_2 {*av += 1; *ac -= 1;}
 # define COUNT {ft_putstr_col_fd(CYAN, "Move Count: ", 1); ft_putnbr_nl(move);}
+# define CHECK {(check) ? (array_free(av)) : NULL;}
 
 # define DEBUG {print_stack(a, 'A'); print_stack(b, 'B');}
 # define DEBUG_2 {print_stack(&a, 'A'); print_stack(&b, 'B');}
@@ -102,16 +103,16 @@ void				handle_arguments(int *ac, char ***av, t_arguments *args);
 ** Validation & Error Funcs
 */
 
-void				validate(int ac, char **av);
+void				validate(int ac, char **av, int check);
 int					is_string(char *str);
 int					check_sorted(t_stack *stack_a);
 int					stack_size(t_stack *head);
 int					arr_size(char **array);
 t_stack				*split_input(char *str);
 void				error_out(int code);
-void				err_duplicate(int ac, char **av);
-void				err_int(const char *str);
-void				err_input(const char *str);
+int					err_duplicate(int ac, char **av);
+int					err_int(const char *str);
+int					err_input(const char *str);
 int					err_ops(char *op);
 
 /*

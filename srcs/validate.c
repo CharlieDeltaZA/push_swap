@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/02 13:11:39 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/08 13:37:32 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,32 @@
 ** limits of an INT.
 */
 
-void	validate(int ac, char **av)
+void	validate(int ac, char **av, int check)
 {
 	int	i;
+	int	ret;
 
 	i = 0;
 	while (av[i])
 	{
-		err_input(av[i]);
-		err_int(av[i]);
+		if (!(ret = err_input(av[i])))
+		{
+			CHECK;
+			error_out(INPUT);
+		}
+		ret = err_int(av[i]);
+		if (ret == MAXSIZE || ret == MINSIZE)
+		{
+			CHECK;
+			error_out(ret);
+		}
 		i++;
 	}
-	err_duplicate(ac, av);
+	if (!(ret = err_duplicate(ac, av)))
+	{
+		CHECK;
+		error_out(DUPE);
+	}
 }
 
 /*
