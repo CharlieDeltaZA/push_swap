@@ -6,14 +6,14 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 10:30:01 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/08 12:05:27 by cdiogo           ###   ########.fr       */
+/*   Updated: 2019/08/12 10:13:10 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
 /*
-** Sorts above 500 numbers
+** Sorts above 505 numbers
 */
 
 void	sort_me(t_stack **stack_a, t_stack **stack_b)
@@ -44,7 +44,7 @@ void	sort_me(t_stack **stack_a, t_stack **stack_b)
 }
 
 /*
-** Sorts between 51 and 100 numbers
+** Sorts between 51 and 105 numbers
 */
 
 void	sort_100(t_stack **stack_a, t_stack **stack_b)
@@ -75,7 +75,7 @@ void	sort_100(t_stack **stack_a, t_stack **stack_b)
 }
 
 /*
-** Sorts between 101 and 250 numbers
+** Sorts between 105 and 250 numbers
 */
 
 void	sort_250(t_stack **stack_a, t_stack **stack_b)
@@ -106,7 +106,7 @@ void	sort_250(t_stack **stack_a, t_stack **stack_b)
 }
 
 /*
-** Sorts between 251 and 500 numbers
+** Sorts between 251 and 505 numbers
 */
 
 void	sort_500(t_stack **stack_a, t_stack **stack_b)
