@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 14:17:40 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/08 20:54:48 by cdiogo           ###   ########.fr       */
+/*   Updated: 2020/05/17 12:25:29 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,23 @@ void			handle_arguments(int *ac, char ***av, t_arguments *args)
 		**av += 1;
 		if (***av == 'v')
 		{
-			SHIFT_ARGS_2;
+			// SHIFT_ARGS_2;
+			*av += 1;
+			*ac -= 1;
 			args->v = 1;
 		}
 		else if (***av == 'p')
 		{
-			SHIFT_ARGS_2;
+			// SHIFT_ARGS_2;
+			*av += 1;
+			*ac -= 1;
 			args->p = 1;
 		}
 		else if (***av == 'c')
 		{
-			SHIFT_ARGS_2;
+			// SHIFT_ARGS_2;
+			*av += 1;
+			*ac -= 1;
 			args->c = 1;
 		}
 		else

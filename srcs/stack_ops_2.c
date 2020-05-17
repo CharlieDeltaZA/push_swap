@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/23 13:36:02 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/02 13:00:45 by cdiogo           ###   ########.fr       */
+/*   Updated: 2020/05/17 12:43:28 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,11 @@ void	read_input(t_stack **a, t_stack **b, t_arguments args)
 			free(line);
 		}
 		else
-			OP_FREE;
+			// OP_FREE;
+			free(line);
+			free_stack(a);
+			free_stack(b);
+			error_out(OPS);
 	}
 	(args.c) ? (COUNT) : NULL;
 }

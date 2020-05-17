@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 15:04:09 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/08 13:19:59 by cdiogo           ###   ########.fr       */
+/*   Updated: 2020/05/17 12:40:09 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ int		main(int ac, char **av)
 	t_stack		*a;
 	t_stack		*b;
 
-	SHIFT_ARGS;
+	// SHIFT_ARGS;
+	av += 1;
+	ac--;
 	if (ac <= 0)
 		return (0);
 	if (is_string(av[0]))
@@ -32,6 +34,8 @@ int		main(int ac, char **av)
 		return (0);
 	normalize(&a);
 	sort_master(&a, &b);
-	STACK_FREE;
+	// STACK_FREE;
+	free_stack(&a);
+	free_stack(&b);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/06 14:48:50 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/08 16:45:52 by cdiogo           ###   ########.fr       */
+/*   Updated: 2020/05/17 12:46:07 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,20 +28,23 @@ void	validate(int ac, char **av, int check)
 	{
 		if (!(ret = err_input(av[i])))
 		{
-			CHECK;
+			// CHECK;
+			(check) ? (array_free(av)) : NULL;
 			error_out(INPUT);
 		}
 		ret = err_int(av[i]);
 		if (ret == MAXSIZE || ret == MINSIZE)
 		{
-			CHECK;
+			// CHECK;
+			(check) ? (array_free(av)) : NULL;
 			error_out(ret);
 		}
 		i++;
 	}
 	if (!(ret = err_duplicate(ac, av)))
 	{
-		CHECK;
+		// CHECK;
+		(check) ? (array_free(av)) : NULL;
 		error_out(DUPE);
 	}
 }

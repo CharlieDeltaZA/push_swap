@@ -6,7 +6,7 @@
 /*   By: cdiogo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/01 12:31:55 by cdiogo            #+#    #+#             */
-/*   Updated: 2019/08/12 14:42:47 by cdiogo           ###   ########.fr       */
+/*   Updated: 2020/05/17 12:45:46 by cdiogo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,17 @@
 # define OPS 5
 # define ARGS 6
 
-# define VAL_INIT {validate(ac, av, 0); a = stack_init(av);}
+// # define VAL_INIT {validate(ac, av, 0); a = stack_init(av);}
 # define S_C_N stack_create_node
-# define OP_FREE {free(line); free_stack(a); free_stack(b); error_out(OPS);}
-# define STACK_FREE {free_stack(&a); free_stack(&b);}
+// # define OP_FREE {free(line); free_stack(a); free_stack(b); error_out(OPS);}
+// # define STACK_FREE {free_stack(&a); free_stack(&b);}
 # define ERR_INT_INPUT {err_input(av[i]); err_int(av[i]);}
 # define ADD_NODES {node = S_C_N(ft_atoi(av[i])); stack_add_tail(&head, node);}
 # define FREE_ERR_DUPE {free(args); array_free(arr); error_out(DUPE);}
-# define SHIFT_ARGS {av += 1; ac--;}
-# define SHIFT_ARGS_2 {*av += 1; *ac -= 1;}
+// # define SHIFT_ARGS {av += 1; ac--;}
+// # define SHIFT_ARGS_2 {*av += 1; *ac -= 1;}
 # define COUNT {ft_putstr_col_fd(CYAN, "Move Count: ", 1); ft_putnbr_nl(move);}
-# define CHECK {(check) ? (array_free(av)) : NULL;}
+// # define CHECK {(check) ? (array_free(av)) : NULL;}
 
 # define DEBUG {print_stack(a, 'A'); print_stack(b, 'B');}
 # define DEBUG_2 {print_stack(&a, 'A'); print_stack(&b, 'B');}
